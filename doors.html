@@ -1,0 +1,468 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Home Interiors | Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">    
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+<!-- //Custom Theme files -->  
+<!-- web-fonts --> 
+ <link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- //web-fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body> 
+	<div class="header-agileits">
+		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+		<div class="w3ls-logo">
+			<a href="index.html">
+				<img src="images/logo-removebg-preview.png" alt="My Home Interiors" style="max-height: 220px; width: 300px;">
+			</a>
+		</div>
+		<ul class="nav-links">
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="about.html">About</a></li>
+			
+			<li><a href="contact.html">Contact</a></li>
+			<li class="dropdown">
+				<a href="products.html" class="active">Products</a>
+				<ul class="dropdown-menu">
+					<li><a href="windows.html">Windows</a></li>
+					<li><a href="doors.html">Doors</a></li>
+					<li><a href="frames.html">Frames</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+				</ul>
+			</li>
+			<li><a href="gallery.html">Portfolio</a></li>
+		</ul>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+</div>
+<style>
+
+.nav-links li a:hover {
+    color: rgb(255, 0, 0); /* Change text color on hover */
+    background-color: rgb(240, 240, 240); /* Light background color */
+}
+.nav-links .dropdown {
+    position: relative;
+}
+
+/* Style the dropdown menu items */
+.nav-links .dropdown-menu {
+    display: none; /* Hide the menu by default */
+    position: absolute; /* Position it relative to the parent */
+    top: 100%; /* Place it below the parent item */
+    left: 0; /* Align to the left of the parent */
+    background-color: white; /* Dropdown background color */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Style for dropdown links */
+.nav-links .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px; /* Add some padding */
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Adjust font size */
+}
+
+/* Add hover effect for dropdown links */
+.nav-links .dropdown-menu li a:hover {
+    background-color: rgb(240, 240, 240); /* Highlight on hover */
+    color: rgb(255, 0, 0); /* Change text color on hover */
+}
+
+/* Show dropdown menu on hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block; /* Display the menu */
+}
+
+
+.header-agileits {
+display: flex;
+align-items: center;
+
+}
+
+.nav-links {
+    display: flex; /* Use flexbox to align items */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Vertically center items */
+    list-style: none; /* Remove bullet points */
+    padding-right: 30px;
+    margin: 0; /* Remove default margin */
+    gap: 30px; /* Add spacing between links */
+    width: 100%; /* Ensure the container spans the full width */
+}
+/* Style for the active menu link */
+.nav-links .active {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.nav-links li a {
+text-decoration: none;
+color: black;
+font-size: 25px;
+font-weight: bold;
+}
+
+.menu-toggle {
+display: none;
+font-size: 30px;
+background: none;
+border: none;
+cursor: pointer;
+}
+@media (max-width: 768px) {
+.menu-toggle {
+display: block; /* Show menu button on mobile */
+z-index: 1001; /* Ensures the button stays on top */
+position: relative;
+background: none;
+border: none;
+cursor: pointer;
+font-size: 30px;
+}
+
+.nav-links {
+display: none; /* Hidden by default */
+flex-direction: column;
+position: fixed; /* Fixed position to cover entire viewport */
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh; /* Full viewport height */
+background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+text-align: center;
+justify-content: center;
+z-index: 1000; /* High z-index to stay on top of all elements */
+}
+
+.nav-links li {
+padding: 15px 0;
+margin: 0;
+}
+
+.nav-links li a {
+color: white; /* White text for better visibility */
+font-size: 22px; /* Adjust font size for visibility */
+text-decoration: none;
+}
+
+.nav-links.show {
+display: flex; /* Show nav links when menu button is clicked */
+}
+}
+
+</style>
+<script>
+function toggleMenu() {
+document.querySelector('.nav-links').classList.toggle('show');
+}
+
+</script>
+	<!-- banner -->
+	
+			<!-- header -->
+			
+			<!-- //header -->
+			<!-- menu js-->
+			<script src="js/jquery-3.1.1.slim.min.js"></script> 
+			<script>
+				$(document).ready(function() {
+					$('.trigger').click(function() {
+					  var $this = $(this),
+					  notThis = $this.hasClass('open'),
+					  thisNav = $this.attr("rel");
+					  //close if you click another menu trigger
+					  if (!notThis) {
+						 $('.triggered-area, .trigger').removeClass('open');
+						 if ( $( '.trigger' ).hasClass( "block-scroll" ) ){
+							$('html').removeClass('disable-scroll');
+							$('#overlay-mobile').removeClass('visible');
+						 }
+					  }
+					  //open the nav
+					  $this.toggleClass('open');
+					  $("#"+thisNav).toggleClass('open');
+					  if ( $( this ).hasClass( "block-scroll" ) ){
+						 $('html').toggleClass('disable-scroll');
+						 $('#overlay-mobile').toggleClass('visible');
+					  }
+					});  
+				});
+			</script>
+			<!-- //menu js-->
+			<!-- banner-text -->
+
+			
+			<div class="banner" >
+				<div class="banner-layer">
+			<div class="banner-text-info">  
+				<div class="banner-w3lstext">
+					<h2 style="padding-right: 40px;">My Home Interiors</h2> 
+				</div> 
+			</div>
+			<!-- //banner-text -->
+		</div>
+		
+	</div>
+	<!-- //banner --> 
+	
+	
+	<!-- Inline CSS for Animation -->
+	<style>
+		@keyframes scroll {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	</style>
+	<!-- gallery -->
+
+<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
+<h1 style="font-weight: bolder;">Windows</h1><br><br>
+    <h3>Residential and Commercial Doors Glass</h3><br>
+    <p>Promising unmatched quality and finish, AIS Windows, one of the leading door manufacturers in India, is the strategic business unit of AIS – India’s top integrated glass manufacturers. We offer an innovative range of window and door solutions (including main door design, front door design, double door design, folding doors designs, sliding doors and much more) to the Indian housing market. Our ethos lies in providing advanced, quality products in a large selection of door designs and delivering our customers an exceptional experience.</p>
+<p>Our extensive product portfolio of best door designs, including sliding doors, aluminium doors, uPVC doors, french doors, front doors, and folding doors, offer superior style to ensure durability and a regal aesthetic finish. Importantly, all our products are unified with advanced technology and offer advantages such as weather resistance, low maintenance, noise insulation, and many more. Also, our door design in India service is ideal for any special requirements - whether you require a unique cut, an alternative to timber veneer, or wish to create something wholly unique and different. You may choose from a full spectrum of world-class front doors per your specific requirements. When you choose us as your door manufacturer & supplier, you can improve the style and performance of your property. You’ll make an excellent investment in your home that will give you returns for the longest time. Know what is uPVC Doors from which you may choose the design that precisely complements the aesthetics of your home</p>
+</div>
+
+
+
+
+
+	<!-- //gallery -->    
+
+	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.629); padding: 20px;  z-index: 99999; ">
+		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: transparent;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+		</div>
+	</div>
+
+	<!-- subscribe -->
+	<div class="subscribe-agileinfo jarallax">    
+		<div class="wthree-sub">    
+			<div class="container"> 
+				<div class="agileits-title">
+					<h3>Subscribe</h3> 
+				</div> 
+				<form action="#" method="post"> 
+					<input type="email" name="email" placeholder="Enter your Email..." required="">
+					<input type="submit" value="Subscribe">
+					<div class="clearfix"> </div>
+				</form> 
+				<div class="w3social-icons w3sub-agileits-icons">
+					<ul>
+						<li><a href="#" class="fa fa-facebook icon icon-border facebook"> </a></li>
+						<li><a href="#" class="fa fa-twitter icon icon-border twitter"> </a></li>
+						<li><a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a></li>
+						<li><a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a></li>
+						<li><a href="#" class="fa fa-rss icon icon-border rss"> </a></li>
+					</ul>
+				</div> 
+			</div> 
+		</div> 
+	</div>
+	<!-- //subscribe --> 
+	<!-- copy rights start here -->
+	<div class="copyw3-agile">
+		<div class="container"> 
+			<p>© 2024 My Home Interiors. All Rights Reserved | azure . Shogun</p>
+		</div>
+		<br><br>
+	</div>
+	<!-- //copy right end here --> 	
+	<!-- js -->
+	<script src="js/jquery-2.2.3.min.js"></script>  
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script> 
+	<!-- //js --> 
+	<!-- start-smooth-scrolling --> 
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	 
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- gallery light-case -->
+		<script src="js/lightcase.js"></script>
+		<script src="js/jquery.events.touch.js"></script>
+		<script>
+			$('.showcase').lightcase();
+		</script>
+		<!-- //gallery light-case -->	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
