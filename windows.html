@@ -25,8 +25,101 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //web-fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
+<style>
+	/* Fullscreen loading container */
+	#loading {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #f7bc63; /* Background color of the loading screen */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; /* Stack dots and text vertically */
+		z-index: 9999; /* Ensure it stays on top */
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+	}
+
+	/* Spinner container with animation */
+	.spinner-container {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 20px; /* Space between the dots and the text */
+	}
+
+	/* Bouncing dots */
+	.dot {
+		width: 15px;
+		height: 15px;
+		background-color: #ffffff; /* White dots */
+		border-radius: 50%; 
+		animation: bounce 1.5s infinite ease-in-out;
+	}
+
+	.dot:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.dot:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.dot:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	/* Bouncing effect for each dot */
+	@keyframes bounce {
+		0%, 80%, 100% {
+			transform: scale(0);
+		}
+		40% {
+			transform: scale(1);
+		}
+	}
+
+	/* Fade-out effect */
+	.fade-out {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	/* Text under the loading animation */
+	.brand-name {
+		font-size: 24px; 
+		font-weight: bold;
+		color: #ffffff; 
+		font-family: 'Arial', sans-serif;
+		text-align: center;
+	}
+</style>
+
+
+
+
+
 </head>
 <body> 
+
+	<script>
+		// Wait for 2 seconds before hiding the loader
+		window.addEventListener('load', function() {
+			setTimeout(() => {
+				const loading = document.getElementById('loading');
+				loading.classList.add('fade-out'); // Fade out the loading screen
+			}, 1500); // 2000 milliseconds = 2 seconds
+		});
+	</script>
+
+<div id="loading">
+	<div class="spinner-container">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+	<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Products - Windows</div>
+</div>
+
 	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
@@ -222,8 +315,12 @@ document.querySelector('.nav-links').classList.toggle('show');
 				<div class="banner-layer">
 			<div class="banner-text-info">  
 				<div class="banner-w3lstext">
-					<h2 style="padding-right: 40px;">My Home Interiors</h2> 
-				</div> 
+					<h2 style="padding-right: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+						My Home Interiors
+					</h2>
+					<hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
+					<h4>Products - Windows</h4>
+				</div>
 			</div>
 			<!-- //banner-text -->
 		</div>
@@ -248,54 +345,18 @@ document.querySelector('.nav-links').classList.toggle('show');
 <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
 <h1 style="font-weight: bolder;">Windows</h1><br><br>
     <h3>Residential and Commercial Windows Glass</h3><br>
-    <p>AIS Windows is the Strategic Business Unit of Asahi India Glass. Ltd, manufacturing a range of high-quality uPVC and Aluminium Windows. We are one of the most trusted manufacturers, serving customers in the construction industry, residential Villas, flats, and commercial buildings.</p>
-<p>Our proficient team has expertise and knowledge to create customized window profiles that exceed in performance and quality. We offer windows that perfectly complement any commercial or residential property they’re installed into.
-
-    At AIS Windows, we offer a myriad of appealing window designs, styles and colours for home & offices that can ultimately enhance the aesthetics of the space. Our highly trained and experienced engineers design these fixtures to provide complete insulation from dust, rain, pollution, and noise.</p>
+    
 </div>
-<p style="text-align:center ;">Customize our innovative window designs to match your preferences as follows:
-<ul style="text-align:center ;">
-    <li>uPVC Windows</li>
-    <li>Window frame design</li>
-    <li>Aluminium window designs</li>
-    <li> Glass Windows</li>
-    <li>French Window designs</li>
-</ul>
-    We pride ourselves on our customer-first approach, from ordering through to delivery with the service & support tools to make your life easier. AIS Windows combines decades of delivering excellent quality with extensive services ranging from consultation to glass and frame selection, all the way down to simple, hassle-free installation at your convenience. As far as glass windows pricing in India is concerned, we offer the most competitive prices in the market.</p>
-<br>
-<p>
-Available Window Glass Variants
-AIS Windows provides different types of window styles for homes and offices, made of high-quality materials having sound and thermal insulation features. Importantly, all our windows are manufactured in India. We understand that every buyer has distinct preferences. Hence, we offer the newest window designs for residential and commercial spaces. Our window glass color and design alternatives allow customers to tailor their window choices as per their property’s architecture. We use cutting-edge equipments for diverse purposes with new innovative and creative concepts to manufacture elegant and beautiful windows.
-uPVC Windows
-Aluminium Windows
-Casement Windows
-Sliding Windows
-French Windows
-Application Areas
-For the last three decades, we've been pioneering new trails in designing and manufacturing windows made from various materials like uPVC and aluminium that can be applicable in different areas of your space like::
-Bathroom
-Kitchen
-Study
-Living Room
-Bedroom
-Conferencing Centres
-Farmhouses
-Porches for apartment buildings
-Medical Centres
-Retail Establishments
-Workplaces
-Educational Institutions
-Offices
-Benefits of Window Glass
-Windows often take up 15% to 20% of the wall's surface area on average. By Installing glass windows, experience the below benefits:
-Add aesthetic appeal
-Comfortable home
-Lower energy bills
-Environment friendly
-Enhance natural light
-Low maintenance
-</p>
+<p style="margin: 30px;">AIS Windows is the Strategic Business Unit of Asahi India Glass. Ltd, manufacturing a range of high-quality uPVC and Aluminium Windows. We are one of the most trusted manufacturers, serving customers in the construction industry, residential Villas, flats, and commercial buildings.
 
+	Our proficient team has expertise and knowledge to create customized window profiles that exceed in performance and quality. We offer windows that perfectly complement any commercial or residential property they’re installed into.
+	
+	At AIS Windows, we offer a myriad of appealing window designs, styles and colours for home & offices that can ultimately enhance the aesthetics of the space. Our highly trained and experienced engineers design these fixtures to provide complete insulation from dust, rain, pollution, and noise.
+	
+	
+	We pride ourselves on our customer-first approach, from ordering through to delivery with the service & support tools to make your life easier. AIS Windows combines decades of delivering excellent quality with extensive services ranging from consultation to glass and frame selection, all the way down to simple, hassle-free installation at your convenience. As far as glass windows pricing in India is concerned, we offer the most competitive prices in the market.</p>
+
+<section class="imgg">
 
 <div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
 
@@ -472,125 +533,73 @@ Low maintenance
                 </div>
                 
             </div>
+		</section>
 
+		<style>
+			section.imgg p {
+				font-weight: bolder;
+			}
+			/* Apply the zoom effect to all images within the section with class "imgg" */
+			section.imgg img {
+				width: 100%; /* Ensure images are responsive */
+				display: block;
+				border: 1px solid #ddd;
+				transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+			}
+	
+			/* Zoom-in effect on hover for images within "imgg" class */
+			section.imgg img:hover {
+				transform: scale(1.1); /* Scale the image to 110% */
+			}
+		</style>
 	<!-- //gallery -->    
 
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.629); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: transparent;">
+	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
+		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			
+			
 		</div>
 	</div>
 

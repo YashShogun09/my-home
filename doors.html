@@ -25,8 +25,106 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //web-fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
+
+
+<style>
+	/* Fullscreen loading container */
+	#loading {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #f7bc63; /* Background color of the loading screen */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; /* Stack dots and text vertically */
+		z-index: 9999; /* Ensure it stays on top */
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+	}
+
+	/* Spinner container with animation */
+	.spinner-container {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 20px; /* Space between the dots and the text */
+	}
+
+	/* Bouncing dots */
+	.dot {
+		width: 15px;
+		height: 15px;
+		background-color: #ffffff; /* White dots */
+		border-radius: 50%; 
+		animation: bounce 1.5s infinite ease-in-out;
+	}
+
+	.dot:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.dot:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.dot:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	/* Bouncing effect for each dot */
+	@keyframes bounce {
+		0%, 80%, 100% {
+			transform: scale(0);
+		}
+		40% {
+			transform: scale(1);
+		}
+	}
+
+	/* Fade-out effect */
+	.fade-out {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	/* Text under the loading animation */
+	.brand-name {
+		font-size: 24px; 
+		font-weight: bold;
+		color: #ffffff; 
+		font-family: 'Arial', sans-serif;
+		text-align: center;
+	}
+</style>
+
+
+
+
+
+
 </head>
 <body> 
+
+	<script>
+		// Wait for 2 seconds before hiding the loader
+		window.addEventListener('load', function() {
+			setTimeout(() => {
+				const loading = document.getElementById('loading');
+				loading.classList.add('fade-out'); // Fade out the loading screen
+			}, 1500); // 2000 milliseconds = 2 seconds
+		});
+	</script>
+
+<div id="loading">
+	<div class="spinner-container">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+	<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Products - Doors</div>
+</div>
+
+
+
 	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
@@ -222,8 +320,12 @@ document.querySelector('.nav-links').classList.toggle('show');
 				<div class="banner-layer">
 			<div class="banner-text-info">  
 				<div class="banner-w3lstext">
-					<h2 style="padding-right: 40px;">My Home Interiors</h2> 
-				</div> 
+					<h2 style="padding-right: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+						My Home Interiors
+					</h2>
+					<hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
+					<h4>Products - Doors</h4>
+				</div>
 			</div>
 			<!-- //banner-text -->
 		</div>
@@ -246,134 +348,226 @@ document.querySelector('.nav-links').classList.toggle('show');
 	<!-- gallery -->
 
 <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
-<h1 style="font-weight: bolder;">Windows</h1><br><br>
+<h1 style="font-weight: bolder;">Doors</h1><br><br>
     <h3>Residential and Commercial Doors Glass</h3><br>
-    <p>Promising unmatched quality and finish, AIS Windows, one of the leading door manufacturers in India, is the strategic business unit of AIS – India’s top integrated glass manufacturers. We offer an innovative range of window and door solutions (including main door design, front door design, double door design, folding doors designs, sliding doors and much more) to the Indian housing market. Our ethos lies in providing advanced, quality products in a large selection of door designs and delivering our customers an exceptional experience.</p>
-<p>Our extensive product portfolio of best door designs, including sliding doors, aluminium doors, uPVC doors, french doors, front doors, and folding doors, offer superior style to ensure durability and a regal aesthetic finish. Importantly, all our products are unified with advanced technology and offer advantages such as weather resistance, low maintenance, noise insulation, and many more. Also, our door design in India service is ideal for any special requirements - whether you require a unique cut, an alternative to timber veneer, or wish to create something wholly unique and different. You may choose from a full spectrum of world-class front doors per your specific requirements. When you choose us as your door manufacturer & supplier, you can improve the style and performance of your property. You’ll make an excellent investment in your home that will give you returns for the longest time. Know what is uPVC Doors from which you may choose the design that precisely complements the aesthetics of your home</p>
+    
 </div>
+<p style="margin-left: 50px;">Promising unmatched quality and finish, AIS Windows, one of the leading door manufacturers in India, is the strategic business unit of AIS – India’s top integrated glass manufacturers. We offer an innovative range of window and door solutions (including main door design, front door design, double door design, folding doors designs, sliding doors and much more) to the Indian housing market. Our ethos lies in providing advanced, quality products in a large selection of door designs and delivering our customers an exceptional experience.</p>
+<br><p style="margin-left: 50px;">Our extensive product portfolio of best door designs, including sliding doors, aluminium doors, uPVC doors, french doors, front doors, and folding doors, offer superior style to ensure durability and a regal aesthetic finish. Importantly, all our products are unified with advanced technology and offer advantages such as weather resistance, low maintenance, noise insulation, and many more. Also, our door design in India service is ideal for any special requirements - whether you require a unique cut, an alternative to timber veneer, or wish to create something wholly unique and different. You may choose from a full spectrum of world-class front doors per your specific requirements. When you choose us as your door manufacturer & supplier, you can improve the style and performance of your property. You’ll make an excellent investment in your home that will give you returns for the longest time. Know what is uPVC Doors from which you may choose the design that precisely complements the aesthetics of your home</p>
+<section class="imgg">
+<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Section Header -->
+    <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+        <h2 style="font-size: 24px; color: #444; margin: 0;">
+            
+            <span style="vertical-align: middle;">uPVC Doors</span>
+        </h2>
+        
+    </div>
+
+    <!-- Grid Container -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+        
+        <!-- Window Card 1 -->
+        <div style="width: 300px; text-align: center;">
+            <img src="images/du1.jpg" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Slide Doors and Fold Doors</p>
+        </div>
+
+        <!-- Window Card 2 -->
+        <div style="width: 300px; text-align: center;">
+            <img src="images/du2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Casement Door</p>
+        </div>
+
+        <!-- Window Card 3 -->
+        <div style="width: 300px; text-align: center;">
+            <img src="images/du3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Lift & Sliding Door</p>
+        </div>
+
+        <!-- Window Card 4 -->
+        <div style="width: 300px; text-align: center;">
+            <img src="images/du4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Sliding Doors</p>
+        </div>
+
+        <!-- Window Card 5 -->
+        <div style="width: 300px; text-align: center;">
+            <img src="images/du5.jpg" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC French Door</p>
+        </div>
+
+       
 
 
+    <div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+        <!-- Section Header -->
+        <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+            <h2 style="font-size: 24px; color: #444; margin: 0;">
+                
+                <span style="vertical-align: middle;">Aluminium Doors</span>
+            </h2>
+            
+        </div>
+    
+        <!-- Grid Container -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+            
+            <!-- Window Card 1 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad1.jpg" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Slide Fold Doors</p>
+            </div>
+    
+            <!-- Window Card 2 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Casement Door</p>
+            </div>
+    
+            <!-- Window Card 3 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Lift and Sliding Doors</p>
+            </div>
+    
+            <!-- Window Card 4 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Sliding Doors</p>
+            </div>
+    
+            <!-- Window Card 5 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad5.jpg" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium French Door</p>
+            </div>
+    
+            <!-- Window Card 6 -->
+            <div style="width: 300px; text-align: center;">
+                <img src="images/ad6.png" alt="uPVC Tilt & Turn Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Tilt and Slide Doors</p>
+            </div>
+    
+            
+        </div>
 
 
+        <div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
 
+            <!-- Section Header -->
+            <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+                <h2 style="font-size: 24px; color: #444; margin: 0;">
+                    
+                    <span style="vertical-align: middle;">Glass Doors Solution</span>
+                </h2>
+                
+            </div>
+        
+            <!-- Grid Container -->
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+                
+                <!-- Window Card 1 -->
+                <div style="width: 300px; text-align: center;">
+                    <img src="images/sd1.png" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Safety and Security doors & Solutions</p>
+                </div>
+        
+                <!-- Window Card 2 -->
+                <div style="width: 300px; text-align: center;">
+                    <img src="images/sd2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Doors and Solution</p>
+                </div>
+        
+                <!-- Window Card 3 -->
+                <div style="width: 300px; text-align: center;">
+                    <img src="images/sd3.png" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Doors Solution</p>
+                </div>
+        
+                <!-- Window Card 4 -->
+                <div style="width: 300px; text-align: center;">
+                    <img src="images/sd4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof doors</p>
+                </div>
+        
+                <!-- Window Card 5 -->
+                <div style="width: 300px; text-align: center;">
+                    <img src="images/sd5.png" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti Pollution Doors & Solutions</p>
+                </div>
+                
+            </div>
+		</section>
+
+		<style>
+			section.imgg p {
+				font-weight: bolder;
+			}
+			/* Apply the zoom effect to all images within the section with class "imgg" */
+			section.imgg img {
+				width: 100%; /* Ensure images are responsive */
+				display: block;
+				border: 1px solid #ddd;
+				transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+			}
+	
+			/* Zoom-in effect on hover for images within "imgg" class */
+			section.imgg img:hover {
+				transform: scale(1.1); /* Scale the image to 110% */
+			}
+		</style>
 	<!-- //gallery -->    
 
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.629); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: transparent;">
+	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
+		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			
+			
 		</div>
 	</div>
 
@@ -464,5 +658,5 @@ document.querySelector('.nav-links').classList.toggle('show');
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
-</body>
+</div>
 </html>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>My Home Interiors | Home</title>
+<title>My Home Interiors | About Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -10,8 +10,7 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">   
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" property="" /> 
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">    
 <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
 <!-- //Custom Theme files -->  
 <!-- web-fonts --> 
@@ -23,9 +22,7 @@
 </head>
 <body> 
 	
-	<!-- banner -->
-
-	<div class="header-agileits" >
+	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
 			<a href="index.html">
@@ -33,9 +30,10 @@
 			</a>
 		</div>
 		<ul class="nav-links">
-			<li><a href="index.html" class="active">Home</a></li>
-			<li><a href="about.html">About</a></li>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="about.html" class="active">About</a></li>
 			<li><a href="contact.html">Contact</a></li>
+			
 			<li class="dropdown">
 				<a href="products.html" >Products</a>
 				<ul class="dropdown-menu">
@@ -45,18 +43,23 @@
                     <li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
-			
 			<li><a href="gallery.html">Portfolio</a></li>
 		</ul>
+		
 		<div class="clearfix"> </div>
 	</div>
 		</div>
 	</div>
 	<style>
+		.nav-links li a:hover {
+    color: rgb(255, 0, 0); /* Change text color on hover */
+    background-color: rgb(240, 240, 240); /* Light background color */
+}
 	.header-agileits {
+		position: fixed;
+		z-index: 1002;
 display: flex;
 align-items: center;
-
 
 }
 .nav-links .dropdown {
@@ -65,7 +68,6 @@ align-items: center;
 
 /* Style the dropdown menu items */
 .nav-links .dropdown-menu {
-
     display: none; /* Hide the menu by default */
     position: absolute; /* Position it relative to the parent */
     top: 100%; /* Place it below the parent item */
@@ -91,10 +93,6 @@ align-items: center;
 .nav-links .dropdown-menu li a:hover {
     background-color: rgb(240, 240, 240); /* Highlight on hover */
     color: rgb(255, 0, 0); /* Change text color on hover */
-}
-.nav-links li a:hover {
-    color: rgb(255, 0, 0); /* Change text color on hover */
-    background-color: rgb(240, 240, 240); /* Light background color */
 }
 
 /* Show dropdown menu on hover */
@@ -167,15 +165,18 @@ align-items: center;
     .nav-links.show {
         display: flex; /* Show nav links when menu button is clicked */
     }
+	
+	
 }
 
 	</style>
-	<script>
-		function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-}
-
-	</script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+    
 			<!-- header -->
 			
 			<!-- //header -->
@@ -206,27 +207,17 @@ align-items: center;
 				});
 			</script>
 			<!-- //menu js-->
-			<!-- banner-text -->
-
 			
-
-
+			<!-- banner-text -->
 			<div class="banner" >
-				<div class="banner-layer">
-			<div class="banner-text-info"> 
-				<div class="container">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="banner-w3lstext">
-									<h2 style="padding-right: 40px;">My Home Interiors</h2>
-									<h4>Transforming Homes, Elevating Lifestyles</h4>
-									
-								</div>
-							</li>
-							
-						</ul> 
-					</div> 	 
+				<div class="banner-layer">			 
+			<div class="banner-text-info">  
+				<div class="banner-w3lstext">
+					<h2 style="padding-right: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+						My Home Interiors
+					</h2>
+					<hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
+					<h4>About Us</h4>
 				</div>
 			</div>
 			<!-- //banner-text -->
@@ -234,24 +225,120 @@ align-items: center;
 		
 	</div>
 	<!-- //banner --> 
+	
+	<!-- about -->
+	<div class="about">
+		<div class="container">
+			<div class="agileits-title">
+				<h1>About Us</h1> <br>
+				
+					<p style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color: black; text-align: justify;">
+						At My Home Interiors, we are led by our founder, Kishore Narsipuram, a seasoned Upvc system and Aluminum windows and door interior design spalcialst. With over 170 completed projects, Bheemarao has built a legacy of quality craftsmanship and innovative design. His expertise lies in creating customized solutions that blend aesthetics with functionality, transforming every space into a masterpiece.
 
-
-	<div class="banner-bottom jarallax">
-		<div class="col-sm-6 video-w3lsleft">	 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-7I_VWWXGMc?si=jtskRc7U1g3DYvGS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+With a deep understanding of both technical precision and creative design, My Home Interiors delivers exceptional results that meet the highest standards of durability and elegance. Kishore’s hands-on approach and commitment to client satisfaction have earned us a trusted reputation in the industry.
+					</p>
+					
+				</div>
+			</div>
 		</div>
-		<div class="col-sm-6 video-w3lsright">	 
-			
-			<h3>Watch our Animated video</h3>
-            <p>Watch How UPVC is Useful and know the hidden features of UPVC Windows and Doors.</p>
-			
+	</div>	
+	<!-- //about -->
+	<hr class="dashed">
+	<!-- features -->
+	<div class="features subscribe-agileinfo jarallax">
+		<div class="container">
+			<div class="agileits-title">
+				<h3>Features</h3> 
+			</div>
+			<div class="features-row">
+				<div class="col-md-4 features-grids">
+					<div class="features-left">
+						<h4>Projects Done</h4>
+						<h5>170+ </h5>
+					</div>
+					<div class="features-right">
+						<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+					</div>
+					<div class="clerfix"> </div>
+				</div>
+				<div class="col-md-4 features-grids features-grids-mdl">
+					<div class="features-left">
+						<h4>Visitors</h4>
+						<h5>700+ </h5>
+					</div>
+					<div class="features-right">
+						<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+					</div>
+					<div class="clerfix"> </div>
+				</div>
+				<div class="col-md-4 features-grids">
+					<div class="features-left">
+						<h4>Happy Clients</h4>
+						<h5>400+ </h5>
+					</div>
+					<div class="features-right">
+						<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+					</div>
+					<div class="clerfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+				
+				
+			</div>
 		</div>
-		<div class="clearfix"></div>
-	</div> 
+	</div>
 
 	
-	
-	<!-- Inline CSS for Animation -->
+	<!-- //features -->
+
+	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
+		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			
+			
+		</div>
+	</div>
 	<style>
 		@keyframes scroll {
 			0% {
@@ -262,273 +349,9 @@ align-items: center;
 			}
 		}
 	</style>
-<br><br>
-	<!-- about -->
-	<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
 
-        <!-- Header Section -->
-        <div style="padding: 30px; background-color: #ffffff;">
-            <h1 style="font-size: 32px; color: #000000; margin-bottom: 10px;">uPVC & Aluminium Door & Window Solutions</h1>
-            <h2 style="font-size: 22px; color: #555555; margin-top: 0;">by AIS Windows</h2>
-            <p style="font-size: 16px; color: #666666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-                AIS Windows delivers exceptional quality with comprehensive services from consulting to frame and glass selection, 
-                right down to hassle-free installation at your convenience. We offer a vast range of 
-                <a href="#" style="color: #007bff; text-decoration: none;">window & door</a> designs and solution windows, 
-                which include <a href="#" style="color: #007bff; text-decoration: none;">noise cancellation windows</a>, privacy solution windows, 
-                energy-efficient windows, and much more for the homes and offices.
-            </p>
-        </div>
-    
-        <!-- Grid Section -->
-        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; background-color: #f1f1f1; padding: 20px 0;">
-            
-            <!-- Card 1 -->
-            <div style="margin: 10px; background-color: white; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <img src="images/windows home.jpg" alt="Windows" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 15px; text-align: center;"><a href="windows.html">
-                    <h3 style="font-size: 18px; color: #333333; margin: 0;">Windows</h3></a>
-                </div>
-            </div>
-    
-            <!-- Card 2 -->
-            <div style="margin: 10px; background-color: white; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"><a href="doors.html">
-                <img src="images/doors home.jpg" alt="Doors" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 15px; text-align: center;">
-                    <h3 style="font-size: 18px; color: #333333; margin: 0;">Doors</h3>
-                </div></a>
-            </div>
-    
-            <!-- Card 3 -->
-            <div style="margin: 10px; background-color: white; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"><a href="frames.html"></a>
-                <img src="images/frames home.jpg" alt="Frames" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 15px; text-align: center;">
-                    <h3 style="font-size: 18px; color: #333333; margin: 0;">Frames</h3>
-                </div></a>
-            </div>
-    
-            <!-- Card 4 -->
-            <div style="margin: 10px; background-color: white; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"><a href="solutions.html"></a>
-                <img src="images/solutions home.jpg" alt="Solutions" style="width: 100%; height: auto; display: block;">
-                <div style="padding: 15px; text-align: center;">
-                    <h3 style="font-size: 18px; color: #333333; margin: 0;">Solutions</h3>
-                </div></a>
-            </div>
-    
-        </div>
-    </div>
+	<!-- team -->
 	
-	
-
-    <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
-
-        <!-- Blog Section Header -->
-        <div style="padding: 30px 20px;">
-            <h2 style="font-size: 28px; color: #000000; margin: 0;">From AIS Blog</h2>
-        </div>
-    
-        <!-- Blog Cards Section -->
-        <div style="display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 20px; padding: 20px;">
-            
-            <!-- Blog Card 1 -->
-            <div style="width: 300px; border: 1px solid #ddd; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <img src="images/blog1.png" alt="Blog 1" style="width: 100%; display: block;">
-                <div style="background-color: #d28a5d; padding: 10px;">
-                    <p style="margin: 0; color: #ffffff; font-size: 16px;">uPVC Windows — A Comprehensive Guide</p>
-                </div>
-            </div>
-    
-            <!-- Blog Card 2 -->
-            <div style="width: 300px; border: 1px solid #ddd; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <img src="images/blog 2.jpg" alt="Blog 2" style="width: 100%; display: block;">
-                <div style="background-color: #d28a5d; padding: 10px;">
-                    <p style="margin: 0; color: #ffffff; font-size: 16px;">Install Different Types of uPVC Doors and Windows for Homes and Offices</p>
-                </div>
-            </div>
-    
-            <!-- Blog Card 3 -->
-            <div style="width: 300px; border: 1px solid #ddd; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <img src="images/blog3.jpg" alt="Blog 3" style="width: 100%; display: block;">
-                <div style="background-color: #d28a5d; padding: 10px;">
-                    <p style="margin: 0; color: #ffffff; font-size: 16px;">uPVC Full Form — Meaning and Benefits</p>
-                </div>
-            </div>
-        </div>
-    
-        <!-- View All Section -->
-        <div style="margin: 20px;">
-            <a href="#" style="text-decoration: none; color: #007bff; font-size: 16px; font-weight: bold; display: flex; align-items: center; justify-content: center;">
-                VIEW ALL
-                <span style="display: inline-block; margin-left: 5px; font-size: 20px;">&#10132;</span>
-            </a>
-        </div>
-    
-    </div>
-
-
-	
-	<!-- //modal -->    
-	<!-- services -->
-	<div class="services">
-		<div class="container"> 
-			<div class="agileits-title">
-				<h3>Our Services</h3> 
-			</div>
-			<div class="services-agileinfo">
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
-					<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-					<h4>New Collections</h4>
-					 
-				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl1">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-					<h4>Online Advisors</h4>
-					 
-				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
-					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-					<h4>New Designers</h4>
-					 
-				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
-					<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-					<h4>Quality</h4>
-					
-				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl2">
-					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-					<h4>Best Performance</h4>
-					
-				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
-					<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-					<h4>Privacy</h4>
-					 
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //services -->
-
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.629); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: transparent;">
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;"><img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-			<!-- Repeat images to create a continuous scrolling effect -->
-			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/ais.png" alt="Image 4" style="height: 50px; width: auto; margin-right: 20px;">
-		</div>
-	</div>
-
 	<!-- subscribe -->
 	<div class="subscribe-agileinfo jarallax">    
 		<div class="wthree-sub">    
@@ -604,20 +427,7 @@ align-items: center;
 			
 		});
 	</script>
-	<!-- //smooth-scrolling-of-move-up --> 
-	<!-- FlexSlider --> 
-	<script defer src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
-	</script>
-	<!-- End-slider-script -->	
+	<!-- //smooth-scrolling-of-move-up -->  
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
