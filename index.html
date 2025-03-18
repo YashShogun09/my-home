@@ -48,7 +48,7 @@
 		height: 15px;
 		background-color: #ffffff; /* White dots */
 		border-radius: 50%; 
-		animation: bounce 1.5s infinite ease-in-out;
+		animation: bounce 1.2s infinite ease-in-out;
 	}
 
 	.dot:nth-child(1) {
@@ -102,7 +102,7 @@
     </div>
 	<!-- banner -->
 
-	<div class="header-agileits" >
+	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
 			<a href="index.html">
@@ -112,6 +112,7 @@
 		<ul class="nav-links">
 			<li><a href="index.html" class="active">Home</a></li>
 			<li><a href="about.html">About</a></li>
+			
 			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
 				<a href="products.html" >Products</a>
@@ -122,7 +123,6 @@
                     <li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
-			
 			<li><a href="gallery.html">Portfolio</a></li>
 		</ul>
 		<div class="clearfix"> </div>
@@ -142,124 +142,128 @@
 
 
 
-	<style>
+<style>
+
+	.nav-links li a:hover {
+		color: rgb(255, 0, 0); /* Change text color on hover */
+		background-color: rgb(240, 240, 240); /* Light background color */
+	}
+	.nav-links .dropdown {
+		position: relative;
+	}
+	
+	/* Style the dropdown menu items */
+	.nav-links .dropdown-menu {
+		display: none; /* Hide the menu by default */
+		position: absolute; /* Position it relative to the parent */
+		top: 100%; /* Place it below the parent item */
+		left: 0; /* Align to the left of the parent */
+		background-color: white; /* Dropdown background color */
+		list-style: none; /* Remove bullet points */
+		padding: 0; /* Remove padding */
+		margin: 0; /* Remove margin */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+		z-index: 1000; /* Ensure it appears above other elements */
+	}
+	
+	/* Style for dropdown links */
+	.nav-links .dropdown-menu li a {
+		display: block;
+		padding: 10px 20px; /* Add some padding */
+		color: black; /* Link color */
+		text-decoration: none; /* Remove underline */
+		font-size: 20px; /* Adjust font size */
+	}
+	
+	/* Add hover effect for dropdown links */
+	.nav-links .dropdown-menu li a:hover {
+		background-color: rgb(240, 240, 240); /* Highlight on hover */
+		color: rgb(255, 0, 0); /* Change text color on hover */
+	}
+	
+	/* Show dropdown menu on hover */
+	.nav-links .dropdown:hover .dropdown-menu {
+		display: block; /* Display the menu */
+	}
+	
+	
 	.header-agileits {
-		display: flex;
-position: fixed;
-align-items: center;
-z-index: 1003;
-
-}
-.nav-links .dropdown {
-    position: relative;
-}
-
-/* Style the dropdown menu items */
-.nav-links .dropdown-menu {
-
-    display: none; /* Hide the menu by default */
-    position: absolute; /* Position it relative to the parent */
-    top: 100%; /* Place it below the parent item */
-    left: 0; /* Align to the left of the parent */
-    background-color: white; /* Dropdown background color */
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    z-index: 1000; /* Ensure it appears above other elements */
-}
-
-/* Style for dropdown links */
-.nav-links .dropdown-menu li a {
-    display: block;
-    padding: 10px 20px; /* Add some padding */
-    color: black; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Adjust font size */
-}
-
-/* Add hover effect for dropdown links */
-.nav-links .dropdown-menu li a:hover {
-    background-color: rgb(240, 240, 240); /* Highlight on hover */
-    color: rgb(255, 0, 0); /* Change text color on hover */
-}
-.nav-links li a:hover {
-    color: rgb(255, 0, 0); /* Change text color on hover */
-    background-color: rgb(240, 240, 240); /* Light background color */
-}
-
-/* Show dropdown menu on hover */
-.nav-links .dropdown:hover .dropdown-menu {
-    display: block; /* Display the menu */
-}
-.nav-links {
-	position: fixed;
-	z-index: 9999;
-    display: flex; /* Use flexbox to align items */
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Vertically center items */
-    list-style: none; /* Remove bullet points */
-    padding-right: 30px;
-    margin: 0; /* Remove default margin */
-    gap: 30px; /* Add spacing between links */
-    width: 100%; /* Ensure the container spans the full width */
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show menu button on mobile */
-        z-index: 1001; /* Ensures the button stays on top */
-        position: relative;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 30px;
-    }
-
-    .nav-links {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        position: fixed; /* Fixed position to cover entire viewport */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; /* Full viewport height */
-        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-        text-align: center;
-        justify-content: center;
-        z-index: 1000; /* High z-index to stay on top of all elements */
-    }
-
-    .nav-links li {
-        padding: 15px 0;
-        margin: 0;
-    }
-
-    .nav-links li a {
-        color: white; /* White text for better visibility */
-        font-size: 22px; /* Adjust font size for visibility */
-        text-decoration: none;
-    }
-
-    .nav-links.show {
-        display: flex; /* Show nav links when menu button is clicked */
-    }
-}
-
+	display: flex;
+	align-items: center;
+	
+	}
+	
+	.nav-links {
+		display: flex; /* Use flexbox to align items */
+		justify-content: flex-end; /* Align items to the right */
+		align-items: center; /* Vertically center items */
+		list-style: none; /* Remove bullet points */
+		padding-right: 30px;
+		margin: 0; /* Remove default margin */
+		gap: 30px; /* Add spacing between links */
+		width: 100%; /* Ensure the container spans the full width */
+	}
+	/* Style for the active menu link */
+	.nav-links .active {
+		color: rgb(255, 0, 0);
+		font-weight: bold;
+	}
+	
+	.nav-links li a {
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	}
+	
+	.menu-toggle {
+	display: none;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	}
+	@media (max-width: 768px) {
+	.menu-toggle {
+	display: block; /* Show menu button on mobile */
+	z-index: 1001; /* Ensures the button stays on top */
+	position: relative;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 30px;
+	}
+	
+	.nav-links {
+	display: none; /* Hidden by default */
+	flex-direction: column;
+	position: fixed; /* Fixed position to cover entire viewport */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh; /* Full viewport height */
+	background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+	text-align: center;
+	justify-content: center;
+	z-index: 1000; /* High z-index to stay on top of all elements */
+	}
+	
+	.nav-links li {
+	padding: 15px 0;
+	margin: 0;
+	}
+	
+	.nav-links li a {
+	color: white; /* White text for better visibility */
+	font-size: 22px; /* Adjust font size for visibility */
+	text-decoration: none;
+	}
+	
+	.nav-links.show {
+	display: flex; /* Show nav links when menu button is clicked */
+	}
+	}
+	
 	</style>
 	<script>
 		function toggleMenu() {
@@ -489,34 +493,35 @@ z-index: 1003;
 				<h2 style="text-align: center;font-weight: bolder;color: #000000;">Our Services</h2> 
 			</div>
 			<div class="services-agileinfo">
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
+				<div class="col-sm-4 col-xs-6 services-agile-grids"><a href="gallery.html">
 					<span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-					<h4>New Collections</h4>
+					<h4>New Collections</h4></a>
 					 
 				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl1">
+				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl1"><a href="gallery.html">
 					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-					<h4>Online Advisors</h4>
+					<h4>Online Advisors</h4></a>
 					 
 				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
+				<div class="col-sm-4 col-xs-6 services-agile-grids"><a href="gallery.html">
 					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-					<h4>New Designers</h4>
+					<h4>New Designers</h4></a>
 					 
 				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids">
+				<div class="col-sm-4 col-xs-6 services-agile-grids"><a href="gallery.html">
 					<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-					<h4>Quality</h4>
+					<h4>Quality</h4></a>
 					
 				</div>
-				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl2">
+				<div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl2"><a href="gallery.html">
 					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-					<h4>Best Performance</h4>
+					<h4>Best Performance</h4></a>
 					
 				</div>
 				<div class="col-sm-4 col-xs-6 services-agile-grids">
+					<a href="products.html"> 
 					<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-					<h4>Privacy</h4>
+					<h4>Privacy</h4></a>
 					 
 				</div>
 				<div class="clearfix"> </div>
@@ -525,8 +530,8 @@ z-index: 1003;
 	</div>
 	<!-- //services -->
 
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
+	<div style=" white-space: nowrap; width: 100%; background-color: rgb(255, 255, 255); padding: 20px;  z-index: 99999; ">
+		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgb(255, 255, 255);">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
@@ -574,35 +579,30 @@ z-index: 1003;
 		</div>
 	</div>
 
-	<!-- subscribe -->
-	<div class="subscribe-agileinfo jarallax">    
-		<div class="wthree-sub">    
-			<div class="container"> 
-				<div class="agileits-title">
-					<h3>Subscribe</h3> 
-				</div> 
-				<form action="#" method="post"> 
-					<input type="email" name="email" placeholder="Enter your Email..." required="">
-					<input type="submit" value="Subscribe">
-					<div class="clearfix"> </div>
-				</form> 
-				<div class="w3social-icons w3sub-agileits-icons">
-					<ul>
-						<li><a href="#" class="fa fa-facebook icon icon-border facebook"> </a></li>
-						<li><a href="#" class="fa fa-twitter icon icon-border twitter"> </a></li>
-						<li><a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a></li>
-						<li><a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a></li>
-						<li><a href="#" class="fa fa-rss icon icon-border rss"> </a></li>
-					</ul>
-				</div> 
-			</div> 
-		</div> 
-	</div>
+	<section style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
+		<div style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
+			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
+			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
+			<form>
+				<input type="email" placeholder="Enter your email" required 
+					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
+				<br>
+				<button type="submit" 
+					style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+					Subscribe
+				</button>
+			</form>
+		</div>
+	</section>
+	
+	
+	
+	
 	<!-- //subscribe --> 
 	<!-- copy rights start here -->
 	<div class="copyw3-agile">
 		<div class="container"> 
-			<p>© 2024 My Home Interiors. All Rights Reserved | azure . Shogun</p>
+			<p>© 2024 My Home Interiors. All Rights Reserved | Digitexis</p>
 		</div>
 		<br><br>
 	</div>
