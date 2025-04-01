@@ -562,8 +562,46 @@ document.querySelector('.nav-links').classList.toggle('show');
 							</div>
 						  </div>
 		<!-- Add more projects as needed -->
+		  <!-- Image Viewer Modal -->
+		  <div id="imageModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="fullImage">
+		</div>
 	  </section>
 	  <style>
+		/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+.close:hover {
+    color: red;
+}
+
+
+
+
 		/* General Reset */
 	* {
 	margin: 0;
@@ -693,7 +731,33 @@ document.querySelector('.nav-links').classList.toggle('show');
 	
 	  </style>
 
+<script>
+	// Get modal elements
+var modal = document.getElementById("imageModal");
+var fullImage = document.getElementById("fullImage");
+var closeBtn = document.querySelector(".close");
 
+// Add event listeners to all images
+document.querySelectorAll(".project-image-container img").forEach(img => {
+    img.addEventListener("click", function () {
+        modal.style.display = "flex";
+        fullImage.src = this.src;
+    });
+});
+
+// Close modal when the close button is clicked
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+	</script>
 
 
 
