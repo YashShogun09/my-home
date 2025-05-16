@@ -1,0 +1,953 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Home Interiors | Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">    
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+<!-- //Custom Theme files -->  
+<!-- web-fonts --> 
+ <link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- //web-fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+<style>
+	/* Fullscreen loading container */
+	#loading {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #f7bc63; /* Background color of the loading screen */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; /* Stack dots and text vertically */
+		z-index: 9999; /* Ensure it stays on top */
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+	}
+
+	/* Spinner container with animation */
+	.spinner-container {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 20px; /* Space between the dots and the text */
+	}
+
+	/* Bouncing dots */
+	.dot {
+		width: 15px;
+		height: 15px;
+		background-color: #ffffff; /* White dots */
+		border-radius: 50%; 
+		animation: bounce 1.5s infinite ease-in-out;
+	}
+
+	.dot:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.dot:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.dot:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	/* Bouncing effect for each dot */
+	@keyframes bounce {
+		0%, 80%, 100% {
+			transform: scale(0);
+		}
+		40% {
+			transform: scale(1);
+		}
+	}
+
+	/* Fade-out effect */
+	.fade-out {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	/* Text under the loading animation */
+	.brand-name {
+		font-size: 24px; 
+		font-weight: bold;
+		color: #ffffff; 
+		font-family: 'Arial', sans-serif;
+		text-align: center;
+	}
+</style>
+
+
+</head>
+<body> 
+
+	<script>
+		// Wait for 2 seconds before hiding the loader
+		window.addEventListener('load', function() {
+			setTimeout(() => {
+				const loading = document.getElementById('loading');
+				loading.classList.add('fade-out'); // Fade out the loading screen
+			}, 1500); // 2000 milliseconds = 2 seconds
+		});
+	</script>
+
+<div id="loading">
+	<div class="spinner-container">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+	<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Portfolio</div>
+</div>
+
+	<div class="header-agileits">
+		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+		<div class="w3ls-logo">
+			<a href="index.html">
+				<img src="images/logo-removebg-preview.png" alt="My Home Interiors" style="max-height: 220px; width: 300px;">
+			</a>
+		</div>
+		<ul class="nav-links">
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="about.html">About</a></li>
+			
+			<li><a href="contact.html">Contact</a></li>
+			<li class="dropdown">
+				<a href="products.html" >Products</a>
+				<ul class="dropdown-menu">
+					<li><a href="windows.html">Windows</a></li>
+					<li><a href="doors.html">Doors</a></li>
+					<li><a href="profile.html">Sleek Profile</a></li>
+					<li><a href="aluminium.html">Aluminium Works</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+				</ul>
+			</li>
+			<li><a href="gallery.html" class="active">Portfolio</a></li>
+		</ul>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+</div>
+<style>
+
+	.nav-links li a:hover {
+		color: rgb(255, 0, 0); /* Change text color on hover */
+		background-color: rgb(240, 240, 240); /* Light background color */
+	}
+	.nav-links .dropdown {
+		position: relative;
+	}
+	
+	/* Style the dropdown menu items */
+	.nav-links .dropdown-menu {
+		display: none; /* Hide the menu by default */
+		position: absolute; /* Position it relative to the parent */
+		top: 100%; /* Place it below the parent item */
+		left: 0; /* Align to the left of the parent */
+		background-color: white; /* Dropdown background color */
+		list-style: none; /* Remove bullet points */
+		padding: 0; /* Remove padding */
+		margin: 0; /* Remove margin */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+		z-index: 1000; /* Ensure it appears above other elements */
+	}
+	
+	/* Style for dropdown links */
+	.nav-links .dropdown-menu li a {
+		display: block;
+		padding: 10px 20px; /* Add some padding */
+		color: black; /* Link color */
+		text-decoration: none; /* Remove underline */
+		font-size: 20px; /* Adjust font size */
+	}
+	
+	/* Add hover effect for dropdown links */
+	.nav-links .dropdown-menu li a:hover {
+		background-color: rgb(240, 240, 240); /* Highlight on hover */
+		color: rgb(255, 0, 0); /* Change text color on hover */
+	}
+	
+	/* Show dropdown menu on hover */
+	.nav-links .dropdown:hover .dropdown-menu {
+		display: block; /* Display the menu */
+	}
+	
+	
+	.header-agileits {
+	display: flex;
+	align-items: center;
+	
+	}
+	
+	.nav-links {
+		display: flex; /* Use flexbox to align items */
+		justify-content: flex-end; /* Align items to the right */
+		align-items: center; /* Vertically center items */
+		list-style: none; /* Remove bullet points */
+		padding-right: 30px;
+		margin: 0; /* Remove default margin */
+		gap: 30px; /* Add spacing between links */
+		width: 100%; /* Ensure the container spans the full width */
+	}
+	/* Style for the active menu link */
+	.nav-links .active {
+		color: rgb(255, 0, 0);
+		font-weight: bold;
+	}
+	
+	.nav-links li a {
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	}
+	
+	.menu-toggle {
+	display: none;
+	font-size: 30px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	}
+	@media (max-width: 768px) {
+	.menu-toggle {
+	display: block; /* Show menu button on mobile */
+	z-index: 1001; /* Ensures the button stays on top */
+	position: relative;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 30px;
+	}
+	
+	.nav-links {
+	display: none; /* Hidden by default */
+	flex-direction: column;
+	position: fixed; /* Fixed position to cover entire viewport */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh; /* Full viewport height */
+	background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+	text-align: center;
+	justify-content: center;
+	z-index: 1000; /* High z-index to stay on top of all elements */
+	}
+	
+	.nav-links li {
+	padding: 15px 0;
+	margin: 0;
+	}
+	
+	.nav-links li a {
+	color: white; /* White text for better visibility */
+	font-size: 22px; /* Adjust font size for visibility */
+	text-decoration: none;
+	}
+	
+	.nav-links.show {
+	display: flex; /* Show nav links when menu button is clicked */
+	}
+	}
+	
+	</style>
+<script>
+function toggleMenu() {
+document.querySelector('.nav-links').classList.toggle('show');
+}
+
+</script>
+	<!-- banner -->
+	
+			<!-- header -->
+			
+			<!-- //header -->
+			<!-- menu js-->
+			<script src="js/jquery-3.1.1.slim.min.js"></script> 
+			<script>
+				$(document).ready(function() {
+					$('.trigger').click(function() {
+					  var $this = $(this),
+					  notThis = $this.hasClass('open'),
+					  thisNav = $this.attr("rel");
+					  //close if you click another menu trigger
+					  if (!notThis) {
+						 $('.triggered-area, .trigger').removeClass('open');
+						 if ( $( '.trigger' ).hasClass( "block-scroll" ) ){
+							$('html').removeClass('disable-scroll');
+							$('#overlay-mobile').removeClass('visible');
+						 }
+					  }
+					  //open the nav
+					  $this.toggleClass('open');
+					  $("#"+thisNav).toggleClass('open');
+					  if ( $( this ).hasClass( "block-scroll" ) ){
+						 $('html').toggleClass('disable-scroll');
+						 $('#overlay-mobile').toggleClass('visible');
+					  }
+					});  
+				});
+			</script>
+			<!-- //menu js-->
+			<!-- banner-text -->
+
+			
+			<div class="banner" >
+				<div class="banner-layer">
+			<div class="banner-text-info">  
+				<div class="banner-w3lstext">
+					<h2 style="padding-right: 40px; color: rgb(185, 11, 11);">
+						My Home Interiors
+					</h2>
+					<hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
+					<h4>Portfolio and Previous Projects</h4>
+				</div>
+			</div>
+			<!-- //banner-text -->
+		</div>
+		
+	</div>
+	<!-- //banner --> 
+	
+	
+	<!-- Inline CSS for Animation -->
+	<style>
+		@keyframes scroll {
+			0% {
+				transform: translateX(0);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	</style>
+	<!-- gallery -->
+
+
+	<!-- //gallery -->    
+<br><br><br>
+	<header>
+		<h1>Our Previous Projects</h1>
+	  </header>
+	
+	  <section class="projects-section">
+		<div class="project-item">
+		  <div class="project-image-container">
+			<img src="images/a1.jpg" alt="Institutional Interiors">
+		  </div>
+		  <div class="project-info">
+			<p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
+			<a href="previous projects.html" class="btn-more">Find Out More</a>
+		  </div>
+		</div>
+	
+		<div class="project-item">
+		  <div class="project-image-container">
+			<img src="images/a2.jpg" alt="Moinabad Villa">
+		  </div>
+		  <div class="project-info">
+			<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
+			<a href="previous projects.html" class="btn-more">Find Out More</a>
+		  </div>
+		</div>
+	
+		<div class="project-item">
+		  <div class="project-image-container">
+			<img src="images/a3.jpg" alt="Moinabad Villa">
+		  </div>
+		  <div class="project-info">
+			<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
+			<a href="previous projects.html" class="btn-more">Find Out More</a>
+		  </div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+			  <img src="images/ad2.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+			  <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
+			  <a href="previous projects.html" class="btn-more">Find Out More</a>
+			</div>
+		  </div>
+	
+		<!-- Add more projects as needed -->
+	  </section>
+	  <style>
+		/* General Reset */
+	* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+	
+	/* Body Styling */
+	
+	
+	/* Header Styling */
+	header {
+	text-align: center;
+	margin-bottom: 50px;
+	}
+	
+	header h1 {
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	}
+	
+	/* Projects Section Styling */
+	.projects-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+	}
+	
+	/* Individual Project Item Styling */
+	.project-item {
+	width: 100%;
+	max-width: 550px;
+	background: #fff;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	
+	.project-item:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	}
+	
+	/* Project Image Styling */
+	.project-image-container {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	}
+	
+	.project-image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+	}
+	
+	.project-item:hover .project-image-container img {
+	transform: scale(1.1);
+	}
+	
+	/* Project Info Styling */
+	.project-info {
+	padding: 20px;
+	text-align: center;
+	}
+	
+	.project-info h2 {
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+	font-weight: bold;
+	color: #222;
+	}
+	
+	.project-info p {
+	font-size: 1.1rem;
+	color: #555;
+	margin-bottom: 20px;
+	}
+	
+	/* Button Styling */
+	.btn-more {
+	padding: 10px 25px;
+	font-size: 1rem;
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	}
+	
+	.btn-more:hover {
+	background: #ff6b6b;
+	color: #fff;
+	transform: scale(1.05);
+	}
+	
+	/* Responsive Styling */
+	@media (max-width: 768px) {
+	.projects-section {
+	flex-direction: column;
+	align-items: center;
+	}
+	
+	.project-item {
+	max-width: 100%;
+	margin-bottom: 30px;
+	}
+	
+	.project-info h2 {
+	font-size: 1.6rem;
+	}
+	}
+	
+	  </style>
+
+
+    
+<section class="imgg">
+	<!-- about -->
+	<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
+<br><br>
+		<!-- Header Section -->
+		<header>
+			<h1>Our Bestsellers</h1>
+		  </header>
+	
+		<!-- Grid Section -->
+		<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; background-color: #f1f1f1; padding: 20px 0;">
+			
+			<!-- Card 1 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Casement Door Single Open PVC Sheet.jpg" alt="Windows" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Casement Door Single Open PVC Sheet</h3></a>
+				</div>
+			</div>
+	
+			<!-- Card 2 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Casement door with fixed.jpeg.jpg" alt="Doors" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Casement door with fixed</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 3 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Casement Door with Half PVC sheet & Half Glass.jpeg.jpg" alt="Frames" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Casement Door with Half PVC sheet & Half Glass</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 4 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Casement Door.jpeg.jpg" alt="Solutions" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Casement Door</h3>
+				</div></a>
+			</div>
+
+
+
+
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Combo Window 2.5T.jpeg.jpg" alt="Windows" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Combo Window 2.5T</h3></a>
+				</div>
+			</div>
+	
+			<!-- Card 2 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Combo Window.jpeg.jpg" alt="Doors" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Combo Window</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 3 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Combo Window.jpg" alt="Frames" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Combo Window</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 4 -->
+			
+
+
+
+
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Fan Provision With Top Hung.jpg" alt="Windows" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Fan Provision With Top Hung</h3></a>
+				</div>
+			</div>
+	
+			<!-- Card 2 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Top Hung.jpeg.jpg" alt="Doors" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Top Hung</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 3 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/Ventilator Fan Provision.jpg" alt="Frames" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">Ventilator Fan Provision</h3>
+				</div></a>
+			</div>
+	
+			<!-- Card 4 -->
+			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+				<img src="assets/products2 in port/With Grill .jpg" alt="Solutions" style="width: 100%; height: 250px; display: block;">
+				<div style="padding: 15px; text-align: center;">
+					<h3 style="font-size: 18px; color: #333333; margin: 0;">With Grill</h3>
+				</div></a>
+			</div>
+	
+		</div>
+	</div>
+	
+	
+
+	
+		
+	
+	</div>
+
+</section>
+<style>
+	section.imgg p {
+		font-weight: bolder;
+	}
+	/* Apply the zoom effect to all images within the section with class "imgg" */
+	section.imgg img {
+		width: 100%; /* Ensure images are responsive */
+		display: block;
+		border: 1px solid #ddd;
+		transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+	}
+
+	/* Zoom-in effect on hover for images within "imgg" class */
+	section.imgg img:hover {
+		transform: scale(1.1); /* Scale the image to 110% */
+	}
+</style>
+
+
+	<style>
+		section.imgg p {
+			font-weight: bolder;
+		}
+		/* Apply the zoom effect to all images within the section with class "imgg" */
+		section.imgg img {
+			width: 100%; /* Ensure images are responsive */
+			display: block;
+			border: 1px solid #ddd;
+			transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+		}
+
+		/* Zoom-in effect on hover for images within "imgg" class */
+		section.imgg img:hover {
+			transform: scale(1.1); /* Scale the image to 110% */
+		}
+	</style>
+
+
+
+<section>
+    <h2>sample glasses</h2>
+	<br><br>
+    <table>
+        <tr><th>Glass Type</th></tr>
+        <tr><td>Clear 5mm</td></tr>
+        <tr><td>Tinted 5mm</td></tr>
+        <tr><td>Blue 5mm</td></tr>
+        <tr><td>Green</td></tr>
+        <tr><td>Dimm Black 5mm</td></tr>
+        <tr><td>Green Toughened 5mm</td></tr>
+        <tr><td>Imperial Blue 5mm</td></tr>
+        <tr><td>Pinhead Clear 4.5mm</td></tr>
+        <tr><td>Pinhead Black 4.5mm</td></tr>
+        <tr><td>Toughened Clear 5mm</td></tr>
+        <tr><td>Toughened Black 5mm</td></tr>
+        <tr><td>Toughened Smoke 5mm</td></tr>
+        <tr><td>Toughened Tinted 5mm</td></tr>
+        <tr><td>Toughened 5mm</td></tr>
+        <tr><td>Frosted 5mm</td></tr>
+        <tr><td>DGU Glass 18mm</td></tr>
+        <tr><td>Tinted Reflected 5mm</td></tr>
+        <tr><td>Reflected Blue 5mm</td></tr>
+    </table>
+    <br><br>
+    <h2>sliding doors</h2>
+	<br><br>
+    <table>
+        <tr><th>Track</th><th>Series</th></tr>
+        <tr><td>2 Track</td><td>62-mm</td></tr>
+        <tr><td>3 Track</td><td>98-mm</td></tr>
+        <tr><td>3 Track</td><td>108-mm</td></tr>
+        <tr><td>3 Track</td><td>112-mm</td></tr>
+    </table>
+    <br><br>
+    <h2>sliding windows</h2>
+	<br><br>
+    <table>
+        <tr><th>Track</th><th>Series</th></tr>
+        <tr><td>2 Track</td><td>55-mm</td></tr>
+        <tr><td>2 Track</td><td>60-mm</td></tr>
+        <tr><td>2 Track</td><td>62-mm</td></tr>
+        <tr><td>2.5 Track</td><td>81-mm</td></tr>
+        <tr><td class="highlight">2.5 Track</td><td class="highlight">89-mm</td></tr>
+        <tr><td>2.5 Track</td><td>97-mm</td></tr>
+        <tr><td>3 Track</td><td>98-mm</td></tr>
+        <tr><td class="highlight">3 Track</td><td class="highlight">108-mm</td></tr>
+        <tr><td>3 Track</td><td>112-mm</td></tr>
+    </table>
+    <br><br>
+    <h2>Providing Meshes</h2>
+	<br><br>
+    <table>
+        <tr><th>Mesh Type</th></tr>
+        <tr><td>Nylon</td></tr>
+        <tr><td>Aluminium</td></tr>
+        <tr><td>Steel</td></tr>
+    </table>
+</section>
+
+<style>
+section {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h2 {
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+table {
+    width: 48%; /* Adjusting table width to fit two per row */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%; /* Stacks tables vertically on smaller screens */
+    }
+}
+
+</style>
+
+
+
+
+
+<div
+		style=" white-space: nowrap; width: 100%; background-color: rgb(255, 255, 255); padding: 20px;  z-index: 99999; ">
+		<div
+			style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgb(255, 255, 255);">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+		</div>
+	</div>
+
+	<!-- subscribe -->
+	<section style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
+    <div style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
+        <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
+        <p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required 
+                style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
+            <br>
+            <button type="submit" 
+                style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+
+	<!-- //subscribe --> 
+	<!-- copy rights start here -->
+	<div class="copyw3-agile">
+		<div class="container"> 
+			<p>© 2024 My Home Interiors. All Rights Reserved | Digitexis</p>
+		</div>
+		<br><br>
+	</div>
+	<!-- //copy right end here --> 	
+	<!-- js -->
+	<script src="js/jquery-2.2.3.min.js"></script>  
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script> 
+	<!-- //js --> 
+	<!-- start-smooth-scrolling --> 
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	 
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- gallery light-case -->
+		<script src="js/lightcase.js"></script>
+		<script src="js/jquery.events.touch.js"></script>
+		<script>
+			$('.showcase').lightcase();
+		</script>
+		<!-- //gallery light-case -->	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</div>
+</html>
