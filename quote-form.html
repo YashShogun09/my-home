@@ -118,7 +118,6 @@ h1, h2, h3 {
     margin-top: 0.5rem;
     font-size: 0.875rem;
 }
-
     </style>
 </head>
 <body>
@@ -135,7 +134,7 @@ h1, h2, h3 {
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="form-container">
-                    <form id="quoteForm" enctype="multipart/form-data" autocomplete="off">
+                    <form id="quoteForm" action="https://formspree.io/f/mvgalvjn" method="POST" enctype="multipart/form-data" autocomplete="off">
                         
                         <!-- Personal Details Section -->
                         <h3 class="section-title mb-4">Personal Details</h3>
@@ -278,16 +277,16 @@ h1, h2, h3 {
                         </div>
                         
                         <!-- File Upload Section -->
-                        <div class="mb-4">
+                        <!-- <div class="mb-4">
                             <label for="file" class="form-label">Upload Floor Plan / Measurements / Photos</label>
                             <div class="custom-file-input">
-                                <input type="file" class="form-control" id="file" name="file" style="display: none;">
+                                <input type="file" class="form-control" id="file" name="attachment" style="display: none;">
                                 <label for="file" class="file-upload-label">
                                     <i class="fas fa-cloud-upload-alt me-2"></i>Choose File
                                 </label>
                                 <div id="fileUploadText">No file chosen</div>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <!-- Other Preferences Section -->
                         <h3 class="section-title mb-4">Contact Preferences</h3>
@@ -358,16 +357,21 @@ h1, h2, h3 {
             const formMessage = document.getElementById('formMessage');
             
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
                 // Check if at least one window type is selected
                 const windowTypes = document.querySelectorAll('input[name="windowType"]:checked');
                 if (windowTypes.length === 0) {
+                    e.preventDefault();
                     formMessage.innerHTML = '<div class="alert alert-danger">Please select at least one window type.</div>';
                     return;
                 }
                 
-                // Display success message (in a real application, you would send data to server here)
+                // Formspree will handle the form submission
+                // We'll add an additional success handler for when the form returns
+                formMessage.innerHTML = '<div class="alert alert-info"><i class="fas fa-spinner fa-spin me-2"></i>Submitting your enquiry...</div>';
+            });
+            
+            // Handle Formspree success/error responses
+            form.addEventListener('formspree:submit', function() {
                 formMessage.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Thank you! Your enquiry has been submitted successfully. We will contact you shortly.</div>';
                 form.reset();
                 fileUploadText.textContent = 'No file chosen';
