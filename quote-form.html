@@ -1,381 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Home Interiors | Quote Form</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Redressed&display=swap" rel="stylesheet">
-    <style>
-       :root {
-    --primary-color: #ff7f00;      /* Orange */
-    --secondary-color: #f0f0f0;    /* Ash */
-    --accent-color: #e67300;       /* Darker orange for accents */
-    --text-color: #333;
-    --light-gray: #dcdcdc;         /* Lighter ash */
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discover Timeless Luxury – Request a Personalized Consultation or Quote</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bs-primary: #ff6600; /* Orange */
+      --bs-secondary: #6c757d; /* Grey */
+    }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+    body {
+      background-color: #f8f9fa;
+    }
 
-.page-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 5px solid var(--accent-color);
-}
+    h1, h3 {
+      color: var(--bs-primary);
+    }
 
-.form-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    padding: 2rem;
-    margin-bottom: 3rem;
-}
+    label.form-label {
+      color: var(--bs-secondary);
+      font-weight: 600;
+    }
 
-h1, h2, h3 {
-    font-family: 'Redressed', cursive;
-    color: var(--primary-color);
-}
+    .required-field::after {
+      content: "*";
+      color: var(--bs-primary);
+      margin-left: 3px;
+    }
 
-.section-title {
-    border-bottom: 2px solid var(--light-gray);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-}
+    .btn-primary {
+      background-color: var(--bs-primary);
+      border-color: var(--bs-primary);
+    }
 
-.form-label {
-    font-weight: 500;
-}
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #e65c00;
+      border-color: #e65c00;
+    }
 
-.required-field::after {
-    content: "*";
-    color: red;
-    margin-left: 3px;
-}
+    select.form-select,
+    input.form-control,
+    textarea.form-control {
+      border: 1.5px solid var(--bs-secondary);
+    }
 
-.form-control:focus, .form-select:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 0.25rem rgba(230, 115, 0, 0.25);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    padding: 0.5rem 2rem;
-    font-weight: 600;
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.form-check-input:checked {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.custom-file-input {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.file-upload-label {
-    display: block;
-    background-color: var(--light-gray);
-    color: var(--text-color);
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.file-upload-label:hover {
-    background-color: #cfcfcf;
-}
-
-#fileUploadText {
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
-}
-
-    </style>
+    select.form-select:focus,
+    input.form-control:focus,
+    textarea.form-control:focus {
+      border-color: var(--bs-primary);
+      box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25);
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="page-header">
-        <div class="container text-center">
-            <h1>My Home Interiors</h1>
-            <p class="lead">Request a Free Consultation or Quote</p>
+  <div class="container my-5">
+    <h1 class="mb-4 text-primary">Request a Free Consultation or Quote for UPVC Windows</h1>
+
+    <form
+      id="quoteForm"
+      action="https://node-mailer-mb8o.onrender.com/submit-quote-form"
+      method="POST"
+      enctype="multipart/form-data"
+      autocomplete="off"
+    >
+      <!-- Personal Details -->
+      <h3 class="mb-3">Personal Details</h3>
+      <div class="mb-3">
+        <label for="name" class="form-label required-field">Full Name</label>
+        <input type="text" class="form-control" id="name" name="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label required-field">Phone Number</label>
+        <input type="text" class="form-control" id="phone" name="phone" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label required-field">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="city" class="form-label required-field">City / Location</label>
+        <input type="text" class="form-control" id="city" name="city" required />
+      </div>
+      <div class="mb-4">
+        <label for="address" class="form-label">Address (Optional)</label>
+        <textarea class="form-control" id="address" name="address" rows="2"></textarea>
+      </div>
+
+      <!-- Project Details -->
+      <h3 class="mb-3">Project Details</h3>
+      <div class="mb-3">
+        <label for="propertyType" class="form-label required-field">Type of Property</label>
+        <select class="form-select" id="propertyType" name="propertyType" required>
+          <option value="">Select</option>
+          <option>Residential</option>
+          <option>Commercial</option>
+          <option>Apartment</option>
+          <option>Villa</option>
+          <option>Office</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label required-field">Are you renovating or building new?</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="projectType"
+              id="renovation"
+              value="Renovation"
+              required
+            />
+            <label class="form-check-label" for="renovation">Renovation</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="projectType"
+              id="newConstruction"
+              value="New Construction"
+            />
+            <label class="form-check-label" for="newConstruction">New Construction</label>
+          </div>
         </div>
-    </header>
-    
-    <!-- Main Form Section -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="form-container">
-                    <form id="quoteForm" enctype="multipart/form-data" autocomplete="off">
-                        
-                        <!-- Personal Details Section -->
-                        <h3 class="section-title mb-4">Personal Details</h3>
-                        <div class="row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <label for="name" class="form-label required-field">Full Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="phone" class="form-label required-field">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label required-field">Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="city" class="form-label required-field">City / Location</label>
-                                <input type="text" class="form-control" id="city" name="city" required>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <label for="address" class="form-label">Address (Optional)</label>
-                            <textarea class="form-control" id="address" name="address" rows="2"></textarea>
-                        </div>
-                        
-                        <!-- Project Details Section -->
-                        <h3 class="section-title mb-4">Project Details</h3>
-                        <div class="row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <label for="propertyType" class="form-label required-field">Type of Property</label>
-                                <select class="form-select" id="propertyType" name="propertyType" required>
-                                    <option value="">Select</option>
-                                    <option>Residential</option>
-                                    <option>Commercial</option>
-                                    <option>Apartment</option>
-                                    <option>Villa</option>
-                                    <option>Office</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label required-field">Are you renovating or building new?</label>
-                                <div class="mt-2">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="renovation" name="projectType" value="Renovation" required>
-                                        <label class="form-check-label" for="renovation">Renovation</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="new" name="projectType" value="New Construction">
-                                        <label class="form-check-label" for="new">New Construction</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label required-field">Window Type Required</label>
-                            <div class="row mt-2">
-                                <div class="col-md-6">
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Sliding Windows" id="sliding">
-                                        <label class="form-check-label" for="sliding">Sliding Windows</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Casement Windows" id="casement">
-                                        <label class="form-check-label" for="casement">Casement Windows</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Fixed Windows" id="fixed">
-                                        <label class="form-check-label" for="fixed">Fixed Windows</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Tilt & Turn Windows" id="tilt">
-                                        <label class="form-check-label" for="tilt">Tilt & Turn Windows</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Combination Windows" id="combination">
-                                        <label class="form-check-label" for="combination">Combination Windows</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="French Windows" id="french">
-                                        <label class="form-check-label" for="french">French Windows</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="windowType" value="Other" id="otherWindow">
-                                        <label class="form-check-label" for="otherWindow">Other</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label">Glazing Options Preferred</label>
-                            <div class="row mt-2">
-                                <div class="col-md-6">
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Single Glazing" id="single">
-                                        <label class="form-check-label" for="single">Single Glazing</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Double Glazing" id="double">
-                                        <label class="form-check-label" for="double">Double Glazing</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Triple Glazing" id="triple">
-                                        <label class="form-check-label" for="triple">Triple Glazing</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Soundproof Glass" id="soundproof">
-                                        <label class="form-check-label" for="soundproof">Soundproof Glass</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Frosted/Privacy Glass" id="frosted">
-                                        <label class="form-check-label" for="frosted">Frosted/Privacy Glass</label>
-                                    </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" name="glazing" value="Don't Know / Need Guidance" id="dontknow">
-                                        <label class="form-check-label" for="dontknow">Don't Know / Need Guidance</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-3">
-                                <label for="numWindows" class="form-label required-field">Approximate Number of Windows Needed</label>
-                                <input type="number" class="form-control" id="numWindows" name="numWindows" min="1" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="budget" class="form-label">Estimated Budget (Optional)</label>
-                                <input type="text" class="form-control" id="budget" name="budget">
-                            </div>
-                        </div>
-                        
-                        <!-- File Upload Section -->
-                        <div class="mb-4">
-                            <label for="file" class="form-label">Upload Floor Plan / Measurements / Photos</label>
-                            <div class="custom-file-input">
-                                <input type="file" class="form-control" id="file" name="file" style="display: none;">
-                                <label for="file" class="file-upload-label">
-                                    <i class="fas fa-cloud-upload-alt me-2"></i>Choose File
-                                </label>
-                                <div id="fileUploadText">No file chosen</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Other Preferences Section -->
-                        <h3 class="section-title mb-4">Contact Preferences</h3>
-                        <div class="mb-4">
-                            <label class="form-label required-field">Preferred Contact Method</label>
-                            <div class="mt-2">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
-                                    <label class="form-check-label" for="contactPhone">Phone</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
-                                    <label class="form-check-label" for="contactWhatsApp">WhatsApp</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="contactEmail" name="contactMethod" value="Email">
-                                    <label class="form-check-label" for="contactEmail">Email</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="comments" class="form-label">Additional Comments or Requirements</label>
-                            <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                <i class="fas fa-paper-plane me-2"></i>Submit Enquiry
-                            </button>
-                        </div>
-                    </form>
-                    <!-- Form submission message container -->
-                    <div id="formMessage" class="mt-4 text-center"></div>
-                </div>
-            </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="serviceType" class="form-label required-field">Type of Service Required</label>
+        <select class="form-select" id="serviceType" name="serviceType" required onchange="toggleServiceDetails()">
+          <option value="">Select</option>
+          <option value="Windows">Windows</option>
+          <option value="Doors">Doors</option>
+          <option value="Patio works">Patio works</option>
+          <option value="Glass work">Glass work</option>
+          <option value="Railing work">Railing work</option>
+        </select>
+      </div>
+
+      <!-- Conditionally shown: Windows -->
+      <div class="mb-3 d-none" id="windowsTypeDiv">
+        <label for="windowsType" class="form-label required-field">Type of Windows Required</label>
+        <select class="form-select" id="windowsType" name="windowsType">
+          <option value="">Select</option>
+          <option>uPVC</option>
+          <option>System aluminum</option>
+          <option>Tata Steel</option>
+          <option>Need guidance</option>
+        </select>
+      </div>
+
+      <!-- Conditionally shown: Doors -->
+      <div class="mb-3 d-none" id="doorsTypeDiv">
+        <label for="doorsType" class="form-label required-field">Type of Doors Required</label>
+        <select class="form-select" id="doorsType" name="doorsType">
+          <option value="">Select</option>
+          <option>uPVC</option>
+          <option>Luxury Aluminum</option>
+          <option>System /Profile Aluminum</option>
+          <option>Sleek aluminium</option>
+          <option>Need guidance</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="colorPreference" class="form-label required-field">Color Preference for Frames</label>
+        <select class="form-select" id="colorPreference" name="colorPreference" required>
+          <option value="">Select</option>
+          <option>White</option>
+          <option>Grey</option>
+          <option>Mahogany</option>
+          <option>Oak</option>
+          <option>Custom</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="numWindows" class="form-label">Approximate Number of Windows Needed</label>
+        <input type="number" class="form-control" id="numWindows" name="numWindows" min="0" />
+      </div>
+
+      <div class="mb-4">
+        <label for="estimatedBudget" class="form-label">Estimated Budget (Optional)</label>
+        <input type="text" class="form-control" id="estimatedBudget" name="estimatedBudget" />
+      </div>
+
+      <div class="mb-4">
+        <label for="fileUpload" class="form-label">Upload Floor Plan / Measurements / Photos (optional)</label>
+        <input
+          type="file"
+          class="form-control"
+          id="fileUpload"
+          name="fileUpload"
+          accept="image/*,.pdf"
+          multiple
+        />
+      </div>
+
+      <!-- Other Preferences -->
+      <h3 class="mb-3">Other Preferences</h3>
+
+      <div class="mb-3">
+        <label class="form-label required-field">Preferred Contact Method</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone" value="Phone" required />
+            <label class="form-check-label" for="contactPhone">Phone</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="contactMethod" id="contactWhatsApp" value="WhatsApp" />
+            <label class="form-check-label" for="contactWhatsApp">WhatsApp</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="Email" />
+            <label class="form-check-label" for="contactEmail">Email</label>
+          </div>
         </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="footer mt-5">
-        <div class="container">
-            <p class="m-0">&copy; 2025 My Home Interiors. All Rights Reserved.</p>
-        </div>
-    </footer>
-    
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // File upload display
-            const fileInput = document.getElementById('file');
-            const fileUploadText = document.getElementById('fileUploadText');
-            
-            fileInput.addEventListener('change', function() {
-                if (fileInput.files.length > 0) {
-                    fileUploadText.textContent = fileInput.files[0].name;
-                } else {
-                    fileUploadText.textContent = 'No file chosen';
-                }
-            });
-            
-            // Form submission handling
-            const form = document.getElementById('quoteForm');
-            const formMessage = document.getElementById('formMessage');
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Check if at least one window type is selected
-                const windowTypes = document.querySelectorAll('input[name="windowType"]:checked');
-                if (windowTypes.length === 0) {
-                    formMessage.innerHTML = '<div class="alert alert-danger">Please select at least one window type.</div>';
-                    return;
-                }
-                
-                // Display success message (in a real application, you would send data to server here)
-                formMessage.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Thank you! Your enquiry has been submitted successfully. We will contact you shortly.</div>';
-                form.reset();
-                fileUploadText.textContent = 'No file chosen';
-                
-                // Scroll to message
-                formMessage.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+      </div>
+
+      <div class="mb-4">
+        <label for="bestTime" class="form-label">Best Time to Reach You</label>
+        <select class="form-select" id="bestTime" name="bestTime">
+          <option value="">Select</option>
+          <option>Morning (9 AM – 12 PM)</option>
+          <option>Afternoon (12 PM – 4 PM)</option>
+          <option>Evening (4 PM – 7 PM)</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="additionalComments" class="form-label">Additional Comments or Requirements</label>
+        <textarea
+          class="form-control"
+          id="additionalComments"
+          name="additionalComments"
+          rows="3"
+          placeholder="Please provide any other details or questions here..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Submit Enquiry</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleServiceDetails() {
+      const serviceType = document.getElementById('serviceType').value;
+      const windowsDiv = document.getElementById('windowsTypeDiv');
+      const doorsDiv = document.getElementById('doorsTypeDiv');
+
+      if (serviceType === 'Windows') {
+        windowsDiv.classList.remove('d-none');
+        windowsDiv.querySelector('select').setAttribute('required', 'required');
+      } else {
+        windowsDiv.classList.add('d-none');
+        windowsDiv.querySelector('select').removeAttribute('required');
+        windowsDiv.querySelector('select').value = "";
+      }
+
+      if (serviceType === 'Doors') {
+        doorsDiv.classList.remove('d-none');
+        doorsDiv.querySelector('select').setAttribute('required', 'required');
+      } else {
+        doorsDiv.classList.add('d-none');
+        doorsDiv.querySelector('select').removeAttribute('required');
+        doorsDiv.querySelector('select').value = "";
+      }
+    }
+
+    document.getElementById('quoteForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Remove this if you want actual form submission to server
+      alert('Enquiry submitted successfully');
+      this.reset();
+      toggleServiceDetails(); // Reset conditional fields visibility
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

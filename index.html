@@ -141,10 +141,9 @@
 			<li><a href="gallery.html">Portfolio</a></li>
 			<li><a href="quote-form.html">
 					<!-- Updated button without inline styles -->
-<button id="openQuoteModal" class="btn-modern">
-    Plan Now
-</button>
-
+					<button id="openQuoteModal" class="btn-modern">
+						Plan Now
+					</button>
 				</a></li>
 		</ul>
 		<div class="clearfix"> </div>
@@ -163,27 +162,28 @@
 
 
 	<style>
-.btn-modern {
-    margin: 10px;
-    padding: 12px 28px;
-    background: linear-gradient(135deg, #ff7f00, #e67300); /* orange gradient */
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
+		.btn-modern {
+			margin: 10px;
+			padding: 12px 28px;
+			background: linear-gradient(135deg, #ff7f00, #e67300);
+			/* orange gradient */
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
+			transition: all 0.3s ease;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
 
-.btn-modern:hover {
-    background: linear-gradient(135deg, #e67300, #ff7f00);
-    box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
-    transform: translateY(-2px);
-}
+		.btn-modern:hover {
+			background: linear-gradient(135deg, #e67300, #ff7f00);
+			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
+			transform: translateY(-2px);
+		}
 
 
 
@@ -736,7 +736,7 @@
 			style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
 			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
 			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-			<form>
+			<form action="https://node-mailer-mb8o.onrender.com/subscribe" method="POST">
 				<input type="email" placeholder="Enter your email" required
 					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
 				<br>
@@ -847,12 +847,12 @@
 
 
 
-<div id="quoteModal" class="modal">
+	<div id="quoteModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2>Request a Free Consultation or Quote for Windows and Doors</h2>
+    <h2>Discover Timeless Luxury – Request a Personalized Consultation or Quote</h2>
 
-    <form>
+    <form action="https://node-mailer-mb8o.onrender.com/submit-quote-form" method="POST" enctype="multipart/form-data">
       <h3>Personal Details</h3>
 
       <label for="name">Full Name:</label>
@@ -884,22 +884,48 @@
       </select>
 
       <label>Are you renovating or building new?</label><br>
-      <input type="radio" id="renovation" name="constructionType" value="Renovation" required>
+      <input type="radio" id="renovation" name="projectType" value="Renovation" required>
       <label for="renovation">Renovation</label><br>
-      <input type="radio" id="new" name="constructionType" value="New Construction">
+      <input type="radio" id="new" name="projectType" value="New Construction">
       <label for="new">New Construction</label><br><br>
 
-      <label>Window Type Required:</label><br>
-      <input type="checkbox" name="windowType" value="Sliding Windows"> Sliding Windows<br>
-      <input type="checkbox" name="windowType" value="Casement Windows"> Casement Windows<br>
-      <input type="checkbox" name="windowType" value="Fixed Windows"> Fixed Windows<br>
-      <input type="checkbox" name="windowType" value="Tilt & Turn Windows"> Tilt & Turn Windows<br>
-      <input type="checkbox" name="windowType" value="Combination Windows"> Combination Windows<br>
-      <input type="checkbox" name="windowType" value="French Windows"> French Windows<br>
-      <input type="checkbox" name="windowType" value="Other"> Don’t Know / Need guidence<br><br>
+      <label for="serviceType">Type of Service Required:</label>
+      <select id="serviceType" name="serviceType" required>
+        <option value="">-- Select --</option>
+        <option value="Windows">Windows</option>
+        <option value="Doors">Doors</option>
+        <option value="Patio Works">Patio works</option>
+        <option value="Glass Work">Glass work</option>
+        <option value="Railing Work">Railing work</option>
+      </select>
 
-      <label for="frameColor">Color Preference for Frames:</label>
-      <select id="frameColor" name="frameColor">
+      <!-- Conditional windows dropdown -->
+      <div id="windowsTypeContainer" style="display:none; margin-top: 10px;">
+        <label for="windowsType">Type of Windows Required:</label>
+        <select id="windowsType" name="windowsType">
+          <option value="">-- Select --</option>
+          <option>uPVC</option>
+          <option>System aluminum</option>
+          <option>Tata Steel</option>
+		  <option>Need guidance</option>
+        </select>
+      </div>
+
+      <!-- Conditional doors dropdown -->
+      <div id="doorsTypeContainer" style="display:none; margin-top: 10px;">
+        <label for="doorsType">Type of Doors Required:</label>
+        <select id="doorsType" name="doorsType">
+          <option value="">-- Select --</option>
+          <option>uPVC</option>
+          <option>Luxury Aluminum</option>
+          <option>System /Profile Aluminum</option>
+          <option>Sleak aluminium</option>
+          <option>Need guidance</option>
+        </select>
+      </div>
+
+      <label for="colorPreference">Color Preference for Frames:</label>
+      <select id="colorPreference" name="colorPreference" required>
         <option value="">-- Select --</option>
         <option>White</option>
         <option>Grey</option>
@@ -908,23 +934,24 @@
         <option>Custom</option>
       </select>
 
-    
-
       <label for="windowCount">Approximate Number of Windows Needed:</label>
-      <input type="number" id="windowCount" name="windowCount">
+      <input type="number" id="windowCount" name="windowCount" min="0">
 
       <label for="budget">Estimated Budget (Optional):</label>
       <input type="text" id="budget" name="budget">
 
       <label for="upload">Upload Floor Plan / Measurements / Photos:</label>
-      <input type="file" id="upload" name="upload">
+      <input type="file" id="upload" name="attachment">
 
       <h3>Other Preferences</h3>
 
       <label>Preferred Contact Method:</label><br>
-      <input type="radio" id="contactPhone" name="contactMethod" value="Phone"> Phone<br>
-      <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp"> WhatsApp<br>
-      <input type="radio" id="contactEmail" name="contactMethod" value="Email"> Email<br><br>
+      <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+      <label for="contactPhone">Phone</label><br>
+      <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
+      <label for="contactWhatsApp">WhatsApp</label><br>
+      <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+      <label for="contactEmail">Email</label><br><br>
 
       <label for="bestTime">Best Time to Reach You:</label>
       <select id="bestTime" name="bestTime">
@@ -944,114 +971,140 @@
 </div>
 
 <style>
+  /* Reuse your previous styles or tweak as needed */
+  body.modal-open {
+    overflow: hidden;
+  }
 
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
-body.modal-open {
-  overflow: hidden;
-}
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease;
+    border-top: 5px solid #f6a225;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f6f6f6;
+  }
 
+  .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
 
-	.modal {
-  display: block; /* Show on page load */
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 25px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.4s ease;
-  border-top: 5px solid #f6a225;
+  h2 {
+    color: #f6a225;
+    margin-top: 0;
+    text-align: center;
+  }
 
-  /* Scroll handling */
-  max-height: 90vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ccc #f6f6f6;
-}
+  label {
+    font-weight: bold;
+    color: #444;
+  }
 
-.close-btn {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 24px;
-  color: #333;
-  cursor: pointer;
-}
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #f6a225;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
 
-h2 {
-  color: #f6a225;
-  margin-top: 0;
-  text-align: center;
-}
+  button[type="submit"] {
+    background-color: #f6a225;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
 
-label {
-  font-weight: bold;
-  color: #444;
-}
+  button[type="submit"]:hover {
+    background-color: #d88700;
+  }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 2px solid #f6a225;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
 
-button[type="submit"] {
-  background-color: #f6a225;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #d88700;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-30px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
-
 
 <script>
   function closeModal() {
     document.getElementById("quoteModal").style.display = "none";
+    document.body.classList.remove('modal-open');
   }
 
-  function closeModal() {
-  document.getElementById("quoteModal").style.display = "none";
-  document.body.classList.remove('modal-open');
-}
+  window.onload = function () {
+    document.getElementById("quoteModal").style.display = "block";
+    document.body.classList.add('modal-open');
+  };
 
-window.onload = function () {
-  document.getElementById("quoteModal").style.display = "block";
-  document.body.classList.add('modal-open');
-};
+  // Show/hide conditional dropdowns based on serviceType selection
+  const serviceTypeSelect = document.getElementById('serviceType');
+  const windowsTypeContainer = document.getElementById('windowsTypeContainer');
+  const doorsTypeContainer = document.getElementById('doorsTypeContainer');
 
+  serviceTypeSelect.addEventListener('change', function () {
+    const val = this.value;
+
+    if (val === 'Windows') {
+      windowsTypeContainer.style.display = 'block';
+      doorsTypeContainer.style.display = 'none';
+      // Clear doors selection if hidden
+      document.getElementById('doorsType').value = '';
+    } else if (val === 'Doors') {
+      doorsTypeContainer.style.display = 'block';
+      windowsTypeContainer.style.display = 'none';
+      // Clear windows selection if hidden
+      document.getElementById('windowsType').value = '';
+    } else {
+      windowsTypeContainer.style.display = 'none';
+      doorsTypeContainer.style.display = 'none';
+      // Clear both selections if hidden
+      document.getElementById('windowsType').value = '';
+      document.getElementById('doorsType').value = '';
+    }
+  });
 </script>
+
 
 
 
