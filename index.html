@@ -736,7 +736,7 @@
 			style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
 			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
 			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-			<form action="https://formspree.io/f/xkgrykok" method="POST">
+			<form action="https://node-mailer-mb8o.onrender.com/subscribe" method="POST">
 				<input type="email" placeholder="Enter your email" required
 					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
 				<br>
@@ -852,7 +852,7 @@
 			<span class="close-btn" onclick="closeModal()">&times;</span>
 			<h2>Request a Free Consultation or Quote for UPVC Windows</h2>
 
-			<form action="https://formspree.io/f/mvgalvjn" method="POST" enctype="multipart/form-data">
+			<form action="https://node-mailer-mb8o.onrender.com/submit-quote-form" method="POST" enctype="multipart/form-data">
 				<h3>Personal Details</h3>
 
 				<label for="name">Full Name:</label>
@@ -884,9 +884,9 @@
 				</select>
 
 				<label>Are you renovating or building new?</label><br>
-				<input type="radio" id="renovation" name="constructionType" value="Renovation" required>
+				<input type="radio" id="renovation" name="projectType" value="Renovation" required>
 				<label for="renovation">Renovation</label><br>
-				<input type="radio" id="new" name="constructionType" value="New Construction">
+				<input type="radio" id="new" name="projectType" value="New Construction">
 				<label for="new">New Construction</label><br><br>
 
 				<label>Window Type Required:</label><br>
@@ -898,15 +898,6 @@
 				<input type="checkbox" name="windowType" value="French Windows"> French Windows<br>
 				<input type="checkbox" name="windowType" value="Other"> Other<br><br>
 
-				<label for="frameColor">Color Preference for Frames:</label>
-				<select id="frameColor" name="frameColor">
-					<option value="">-- Select --</option>
-					<option>White</option>
-					<option>Grey</option>
-					<option>Mahogany</option>
-					<option>Oak</option>
-					<option>Custom</option>
-				</select>
 
 				<label>Glazing Options Preferred:</label><br>
 				<input type="checkbox" name="glazing" value="Single Glazing"> Single Glazing<br>
@@ -918,13 +909,13 @@
 				Guidance<br><br>
 
 				<label for="windowCount">Approximate Number of Windows Needed:</label>
-				<input type="number" id="windowCount" name="windowCount">
+				<input type="number" id="windowCount" name="numWindows">
 
 				<label for="budget">Estimated Budget (Optional):</label>
 				<input type="text" id="budget" name="budget">
 
-				<!-- <label for="upload">Upload Floor Plan / Measurements / Photos:</label>
-				<input type="file" id="upload" name="upload"> -->
+				<label for="upload">Upload Floor Plan / Measurements / Photos:</label>
+				<input type="file" id="upload" name="attachment">
 
 				<h3>Other Preferences</h3>
 
