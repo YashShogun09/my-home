@@ -883,14 +883,16 @@
         <option>Other</option>
       </select>
 
-      <label>Are you renovating or building new?</label><br>
-      <div class="radio-option">
-        <input type="radio" id="renovation" name="projectType" value="Renovation" required>
-        <label for="renovation">Renovation</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="new" name="projectType" value="New Construction">
-        <label for="new">New Construction</label>
+      <label>Are you renovating or building new?</label>
+      <div class="radio-option-group">
+        <div class="radio-option">
+          <input type="radio" id="renovation" name="projectType" value="Renovation" required>
+          <label for="renovation">Renovation</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="new" name="projectType" value="New Construction">
+          <label for="new">New Construction</label>
+        </div>
       </div>
 
       <label for="serviceType">Type of Product Required:</label>
@@ -901,7 +903,7 @@
         <option value="Patio Works">Patio works</option>
         <option value="Glass Work">Glass work</option>
         <option value="Railing Work">Railing work</option>
-		<option value="Need guidance">Need guidance</option>
+        <option value="Need guidance">Need guidance</option>
       </select>
 
       <div id="windowsTypeContainer" style="display:none; margin-top: 10px;">
@@ -949,17 +951,19 @@
       <h3>Other Preferences</h3>
 
       <label>Preferred Contact Method:</label>
-      <div class="radio-option">
-        <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
-        <label for="contactPhone">Phone</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
-        <label for="contactWhatsApp">WhatsApp</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="contactEmail" name="contactMethod" value="Email">
-        <label for="contactEmail">Email</label>
+      <div class="radio-option-group">
+        <div class="radio-option">
+          <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+          <label for="contactPhone">Phone</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
+          <label for="contactWhatsApp">WhatsApp</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+          <label for="contactEmail">Email</label>
+        </div>
       </div>
 
       <label for="bestTime">Best Time to Reach You:</label>
@@ -1045,16 +1049,21 @@
     font-size: 14px;
   }
 
+  .radio-option-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
   .radio-option {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
   }
 
   .radio-option input[type="radio"] {
-    margin: 0;
-    transform: translateY(1px);
+    margin-bottom: 5px;
   }
 
   button[type="submit"] {
@@ -1086,7 +1095,6 @@
   }
 </style>
 
-
 <script>
   function closeModal() {
     document.getElementById("quoteModal").style.display = "none";
@@ -1098,28 +1106,23 @@
     document.body.classList.add('modal-open');
   };
 
-  // Show/hide conditional dropdowns based on serviceType selection
   const serviceTypeSelect = document.getElementById('serviceType');
   const windowsTypeContainer = document.getElementById('windowsTypeContainer');
   const doorsTypeContainer = document.getElementById('doorsTypeContainer');
 
   serviceTypeSelect.addEventListener('change', function () {
     const val = this.value;
-
     if (val === 'Windows') {
       windowsTypeContainer.style.display = 'block';
       doorsTypeContainer.style.display = 'none';
-      // Clear doors selection if hidden
       document.getElementById('doorsType').value = '';
     } else if (val === 'Doors') {
       doorsTypeContainer.style.display = 'block';
       windowsTypeContainer.style.display = 'none';
-      // Clear windows selection if hidden
       document.getElementById('windowsType').value = '';
     } else {
       windowsTypeContainer.style.display = 'none';
       doorsTypeContainer.style.display = 'none';
-      // Clear both selections if hidden
       document.getElementById('windowsType').value = '';
       document.getElementById('doorsType').value = '';
     }
