@@ -140,13 +140,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
 			</li>
 			<li><a href="gallery.html" class="active">Portfolio</a></li>
+			<li><a href="quote-form.html">
+					<!-- Updated button without inline styles -->
+					<button id="openQuoteModal" class="btn-modern">
+						Plan Now
+					</button>
+				</a></li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 </div>
 <style>
+.btn-modern {
+			margin: 10px;
+			padding: 12px 28px;
+			background: linear-gradient(135deg, #ff7f00, #e67300);
+			/* orange gradient */
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
+			transition: all 0.3s ease;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
 
+		.btn-modern:hover {
+			background: linear-gradient(135deg, #e67300, #ff7f00);
+			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
+			transform: translateY(-2px);
+		}
 	.nav-links li a:hover {
 		color: rgb(255, 0, 0); /* Change text color on hover */
 		background-color: rgb(240, 240, 240); /* Light background color */
@@ -874,7 +901,7 @@ tr:nth-child(even) {
     <div style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
         <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
         <p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-        <form action="https://node-mailer-mb8o.onrender.com/subscribe" method="POST">
+        <form action="https://node-mailer-flax.vercel.app/subscribe" method="POST">
             <input type="email" id="email" name="email" placeholder="Enter your email" required 
                 style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
             <br>

@@ -736,8 +736,8 @@
 			style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
 			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
 			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-			<form action="https://node-mailer-mb8o.onrender.com/subscribe" method="POST">
-				<input type="email" placeholder="Enter your email" required
+			<form action="https://node-mailer-flax.vercel.app/subscribe" method="POST">
+				<input type="email" name="email" id="email" placeholder="Enter your email" required
 					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
 				<br>
 				<button type="submit"
@@ -850,9 +850,9 @@
 	<div id="quoteModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2>Discover Timeless Luxury – Request a Personalized Consultation or Quote</h2>
+    <h2>Discover Timeless Luxury – Get Instant Quote for your Windows and Doors</h2>
 
-    <form action="https://node-mailer-mb8o.onrender.com/submit-quote-form" method="POST" enctype="multipart/form-data">
+    <form action="https://node-mailer-flax.vercel.app/submit-quote-form" method="POST" enctype="multipart/form-data">
       <h3>Personal Details</h3>
 
       <label for="name">Full Name:</label>
@@ -884,12 +884,16 @@
       </select>
 
       <label>Are you renovating or building new?</label><br>
-      <input type="radio" id="renovation" name="projectType" value="Renovation" required>
-      <label for="renovation">Renovation</label><br>
-      <input type="radio" id="new" name="projectType" value="New Construction">
-      <label for="new">New Construction</label><br><br>
+      <div class="radio-option">
+        <input type="radio" id="renovation" name="projectType" value="Renovation" required>
+        <label for="renovation">Renovation</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="new" name="projectType" value="New Construction">
+        <label for="new">New Construction</label>
+      </div>
 
-      <label for="serviceType">Type of Service Required:</label>
+      <label for="serviceType">Type of Product Required:</label>
       <select id="serviceType" name="serviceType" required>
         <option value="">-- Select --</option>
         <option value="Windows">Windows</option>
@@ -897,9 +901,9 @@
         <option value="Patio Works">Patio works</option>
         <option value="Glass Work">Glass work</option>
         <option value="Railing Work">Railing work</option>
+		<option value="Need guidance">Need guidance</option>
       </select>
 
-      <!-- Conditional windows dropdown -->
       <div id="windowsTypeContainer" style="display:none; margin-top: 10px;">
         <label for="windowsType">Type of Windows Required:</label>
         <select id="windowsType" name="windowsType">
@@ -907,11 +911,10 @@
           <option>uPVC</option>
           <option>System aluminum</option>
           <option>Tata Steel</option>
-		  <option>Need guidance</option>
+          <option>Need guidance</option>
         </select>
       </div>
 
-      <!-- Conditional doors dropdown -->
       <div id="doorsTypeContainer" style="display:none; margin-top: 10px;">
         <label for="doorsType">Type of Doors Required:</label>
         <select id="doorsType" name="doorsType">
@@ -934,24 +937,30 @@
         <option>Custom</option>
       </select>
 
-      <label for="windowCount">Approximate Number of Windows Needed:</label>
-      <input type="number" id="windowCount" name="windowCount" min="0">
+      <label for="numWindows">Approximate Number of Windows Needed:</label>
+      <input type="number" id="numWindows" name="numWindows" min="0">
 
-      <label for="budget">Estimated Budget (Optional):</label>
-      <input type="text" id="budget" name="budget">
+      <label for="estimatedBudget">Estimated Budget (Optional):</label>
+      <input type="text" id="estimatedBudget" name="estimatedBudget">
 
-      <label for="upload">Upload Floor Plan / Measurements / Photos:</label>
-      <input type="file" id="upload" name="attachment">
+      <label for="fileUpload">Upload Floor Plan / Measurements / Photos:</label>
+      <input type="file" id="fileUpload" name="fileUpload">
 
       <h3>Other Preferences</h3>
 
-      <label>Preferred Contact Method:</label><br>
-      <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
-      <label for="contactPhone">Phone</label><br>
-      <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
-      <label for="contactWhatsApp">WhatsApp</label><br>
-      <input type="radio" id="contactEmail" name="contactMethod" value="Email">
-      <label for="contactEmail">Email</label><br><br>
+      <label>Preferred Contact Method:</label>
+      <div class="radio-option">
+        <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+        <label for="contactPhone">Phone</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
+        <label for="contactWhatsApp">WhatsApp</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+        <label for="contactEmail">Email</label>
+      </div>
 
       <label for="bestTime">Best Time to Reach You:</label>
       <select id="bestTime" name="bestTime">
@@ -961,8 +970,8 @@
         <option>Evening (4 PM – 7 PM)</option>
       </select>
 
-      <label for="comments">Additional Comments or Requirements:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea>
+      <label for="additionalComments">Additional Comments or Requirements:</label>
+      <textarea id="additionalComments" name="additionalComments" rows="4"></textarea>
 
       <br><br>
       <button type="submit">Submit Enquiry</button>
@@ -971,7 +980,6 @@
 </div>
 
 <style>
-  /* Reuse your previous styles or tweak as needed */
   body.modal-open {
     overflow: hidden;
   }
@@ -1037,6 +1045,18 @@
     font-size: 14px;
   }
 
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .radio-option input[type="radio"] {
+    margin: 0;
+    transform: translateY(1px);
+  }
+
   button[type="submit"] {
     background-color: #f6a225;
     color: white;
@@ -1065,6 +1085,7 @@
     }
   }
 </style>
+
 
 <script>
   function closeModal() {
