@@ -6,104 +6,118 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>My Home Interiors | Products</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<title>My Home Interiors | Products</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">    
-<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
-<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
-<!-- //Custom Theme files -->  
-<!-- web-fonts --> 
- <link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- //web-fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+	<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+	<!-- //Custom Theme files -->
+	<!-- web-fonts -->
+	<link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
+	<link
+		href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+		rel='stylesheet' type='text/css'>
+	<!-- //web-fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
-<style>
-	/* Fullscreen loading container */
-	#loading {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: #f7bc63; /* Background color of the loading screen */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column; /* Stack dots and text vertically */
-		z-index: 9999; /* Ensure it stays on top */
-		transition: opacity 0.5s ease, visibility 0.5s ease;
-	}
-
-	/* Spinner container with animation */
-	.spinner-container {
-		display: flex;
-		gap: 10px;
-		margin-bottom: 20px; /* Space between the dots and the text */
-	}
-
-	/* Bouncing dots */
-	.dot {
-		width: 15px;
-		height: 15px;
-		background-color: #ffffff; /* White dots */
-		border-radius: 50%; 
-		animation: bounce 1.5s infinite ease-in-out;
-	}
-
-	.dot:nth-child(1) {
-		animation-delay: 0s;
-	}
-
-	.dot:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-
-	.dot:nth-child(3) {
-		animation-delay: 0.4s;
-	}
-
-	/* Bouncing effect for each dot */
-	@keyframes bounce {
-		0%, 80%, 100% {
-			transform: scale(0);
+	<style>
+		/* Fullscreen loading container */
+		#loading {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: #f7bc63;
+			/* Background color of the loading screen */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			/* Stack dots and text vertically */
+			z-index: 9999;
+			/* Ensure it stays on top */
+			transition: opacity 0.5s ease, visibility 0.5s ease;
 		}
-		40% {
-			transform: scale(1);
+
+		/* Spinner container with animation */
+		.spinner-container {
+			display: flex;
+			gap: 10px;
+			margin-bottom: 20px;
+			/* Space between the dots and the text */
 		}
-	}
 
-	/* Fade-out effect */
-	.fade-out {
-		opacity: 0;
-		visibility: hidden;
-	}
+		/* Bouncing dots */
+		.dot {
+			width: 15px;
+			height: 15px;
+			background-color: #ffffff;
+			/* White dots */
+			border-radius: 50%;
+			animation: bounce 1.5s infinite ease-in-out;
+		}
 
-	/* Text under the loading animation */
-	.brand-name {
-		font-size: 24px; 
-		font-weight: bold;
-		color: #ffffff; 
-		font-family: 'Arial', sans-serif;
-		text-align: center;
-	}
-</style>
+		.dot:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		.dot:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+
+		.dot:nth-child(3) {
+			animation-delay: 0.4s;
+		}
+
+		/* Bouncing effect for each dot */
+		@keyframes bounce {
+
+			0%,
+			80%,
+			100% {
+				transform: scale(0);
+			}
+
+			40% {
+				transform: scale(1);
+			}
+		}
+
+		/* Fade-out effect */
+		.fade-out {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		/* Text under the loading animation */
+		.brand-name {
+			font-size: 24px;
+			font-weight: bold;
+			color: #ffffff;
+			font-family: 'Arial', sans-serif;
+			text-align: center;
+		}
+	</style>
 
 
 
 
 
 </head>
-<body> 
+
+<body>
 
 	<script>
 		// Wait for 2 seconds before hiding the loader
-		window.addEventListener('load', function() {
+		window.addEventListener('load', function () {
 			setTimeout(() => {
 				const loading = document.getElementById('loading');
 				loading.classList.add('fade-out'); // Fade out the loading screen
@@ -111,211 +125,278 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	</script>
 
-<div id="loading">
-	<div class="spinner-container">
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
+	<div id="loading">
+		<div class="spinner-container">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+		<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Products - Windows</div>
 	</div>
-	<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Products - Windows</div>
-</div>
 
 	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
 			<a href="index.html">
-				<img src="images/logo-removebg-preview.png" alt="My Home Interiors" style="max-height: 220px; width: 300px;">
+				<img src="images/logo-removebg-preview.png" alt="My Home Interiors"
+					style="max-height: 220px; width: 300px;">
 			</a>
 		</div>
 		<ul class="nav-links">
-			<li><a href="index.html" >Home</a></li>
+			<li><a href="index.html">Home</a></li>
 			<li><a href="about.html">About</a></li>
-			
+
 			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
 				<a href="products.html" class="active">Products</a>
 				<ul class="dropdown-menu">
 					<li><a href="windows.html">Windows</a></li>
 					<li><a href="doors.html">Doors</a></li>
-					<li><a href="frames.html">Frames</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
+					<li><a href="profile.html">Sleek Profile</a></li>
+					<li><a href="aluminium.html">Aluminium Works</a></li>
+					<li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
 			<li><a href="gallery.html">Portfolio</a></li>
+			<li><a href="quote-form.html">
+					<!-- Updated button without inline styles -->
+					<button id="openQuoteModal" class="btn-modern">
+						Plan Now
+					</button>
+				</a></li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
-</div>
-</div>
-<style>
+	</div>
+	</div>
+	<style>
+		.btn-modern {
+			margin: 10px;
+			padding: 12px 28px;
+			background: linear-gradient(135deg, #ff7f00, #e67300);
+			/* orange gradient */
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
+			transition: all 0.3s ease;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
 
-.nav-links li a:hover {
-    color: rgb(255, 0, 0); /* Change text color on hover */
-    background-color: rgb(240, 240, 240); /* Light background color */
-}
-.nav-links .dropdown {
-    position: relative;
-}
+		.btn-modern:hover {
+			background: linear-gradient(135deg, #e67300, #ff7f00);
+			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
+			transform: translateY(-2px);
+		}
+		.nav-links li a:hover {
+			color: rgb(255, 0, 0);
+			/* Change text color on hover */
+			background-color: rgb(240, 240, 240);
+			/* Light background color */
+		}
 
-/* Style the dropdown menu items */
-.nav-links .dropdown-menu {
-    display: none; /* Hide the menu by default */
-    position: absolute; /* Position it relative to the parent */
-    top: 100%; /* Place it below the parent item */
-    left: 0; /* Align to the left of the parent */
-    background-color: white; /* Dropdown background color */
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    z-index: 1000; /* Ensure it appears above other elements */
-}
+		.nav-links .dropdown {
+			position: relative;
+		}
 
-/* Style for dropdown links */
-.nav-links .dropdown-menu li a {
-    display: block;
-    padding: 10px 20px; /* Add some padding */
-    color: black; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Adjust font size */
-}
+		/* Style the dropdown menu items */
+		.nav-links .dropdown-menu {
+			display: none;
+			/* Hide the menu by default */
+			position: absolute;
+			/* Position it relative to the parent */
+			top: 100%;
+			/* Place it below the parent item */
+			left: 0;
+			/* Align to the left of the parent */
+			background-color: white;
+			/* Dropdown background color */
+			list-style: none;
+			/* Remove bullet points */
+			padding: 0;
+			/* Remove padding */
+			margin: 0;
+			/* Remove margin */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			/* Add a subtle shadow */
+			z-index: 1000;
+			/* Ensure it appears above other elements */
+		}
 
-/* Add hover effect for dropdown links */
-.nav-links .dropdown-menu li a:hover {
-    background-color: rgb(240, 240, 240); /* Highlight on hover */
-    color: rgb(255, 0, 0); /* Change text color on hover */
-}
+		/* Style for dropdown links */
+		.nav-links .dropdown-menu li a {
+			display: block;
+			padding: 10px 20px;
+			/* Add some padding */
+			color: black;
+			/* Link color */
+			text-decoration: none;
+			/* Remove underline */
+			font-size: 20px;
+			/* Adjust font size */
+		}
 
-/* Show dropdown menu on hover */
-.nav-links .dropdown:hover .dropdown-menu {
-    display: block; /* Display the menu */
-}
+		/* Add hover effect for dropdown links */
+		.nav-links .dropdown-menu li a:hover {
+			background-color: rgb(240, 240, 240);
+			/* Highlight on hover */
+			color: rgb(255, 0, 0);
+			/* Change text color on hover */
+		}
+
+		/* Show dropdown menu on hover */
+		.nav-links .dropdown:hover .dropdown-menu {
+			display: block;
+			/* Display the menu */
+		}
 
 
-.header-agileits {
-display: flex;
-align-items: center;
+		.header-agileits {
+			display: flex;
+			align-items: center;
 
-}
+		}
 
-.nav-links {
-    display: flex; /* Use flexbox to align items */
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Vertically center items */
-    list-style: none; /* Remove bullet points */
-    padding-right: 30px;
-    margin: 0; /* Remove default margin */
-    gap: 30px; /* Add spacing between links */
-    width: 100%; /* Ensure the container spans the full width */
-}
-/* Style for the active menu link */
-.nav-links .active {
-    color: rgb(255, 0, 0);
-    font-weight: bold;
-}
+		.nav-links {
+			display: flex;
+			/* Use flexbox to align items */
+			justify-content: flex-end;
+			/* Align items to the right */
+			align-items: center;
+			/* Vertically center items */
+			list-style: none;
+			/* Remove bullet points */
+			padding-right: 30px;
+			margin: 0;
+			/* Remove default margin */
+			gap: 30px;
+			/* Add spacing between links */
+			width: 100%;
+			/* Ensure the container spans the full width */
+		}
 
-.nav-links li a {
-text-decoration: none;
-color: black;
-font-size: 25px;
-font-weight: bold;
-}
+		/* Style for the active menu link */
+		.nav-links .active {
+			color: rgb(255, 0, 0);
+			font-weight: bold;
+		}
 
-.menu-toggle {
-display: none;
-font-size: 30px;
-background: none;
-border: none;
-cursor: pointer;
-}
-@media (max-width: 768px) {
-.menu-toggle {
-display: block; /* Show menu button on mobile */
-z-index: 1001; /* Ensures the button stays on top */
-position: relative;
-background: none;
-border: none;
-cursor: pointer;
-font-size: 30px;
-}
+		.nav-links li a {
+			text-decoration: none;
+			color: black;
+			font-size: 25px;
+			font-weight: bold;
+		}
 
-.nav-links {
-display: none; /* Hidden by default */
-flex-direction: column;
-position: fixed; /* Fixed position to cover entire viewport */
-top: 0;
-left: 0;
-width: 100%;
-height: 100vh; /* Full viewport height */
-background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-text-align: center;
-justify-content: center;
-z-index: 1000; /* High z-index to stay on top of all elements */
-}
+		.menu-toggle {
+			display: none;
+			font-size: 30px;
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
 
-.nav-links li {
-padding: 15px 0;
-margin: 0;
-}
+		@media (max-width: 768px) {
+			.menu-toggle {
+				display: block;
+				/* Show menu button on mobile */
+				z-index: 1001;
+				/* Ensures the button stays on top */
+				position: relative;
+				background: none;
+				border: none;
+				cursor: pointer;
+				font-size: 30px;
+			}
 
-.nav-links li a {
-color: white; /* White text for better visibility */
-font-size: 22px; /* Adjust font size for visibility */
-text-decoration: none;
-}
+			.nav-links {
+				display: none;
+				/* Hidden by default */
+				flex-direction: column;
+				position: fixed;
+				/* Fixed position to cover entire viewport */
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				/* Full viewport height */
+				background-color: rgba(0, 0, 0, 0.9);
+				/* Semi-transparent black background */
+				text-align: center;
+				justify-content: center;
+				z-index: 1000;
+				/* High z-index to stay on top of all elements */
+			}
 
-.nav-links.show {
-display: flex; /* Show nav links when menu button is clicked */
-}
-}
+			.nav-links li {
+				padding: 15px 0;
+				margin: 0;
+			}
 
-</style>
-<script>
-function toggleMenu() {
-document.querySelector('.nav-links').classList.toggle('show');
-}
+			.nav-links li a {
+				color: white;
+				/* White text for better visibility */
+				font-size: 22px;
+				/* Adjust font size for visibility */
+				text-decoration: none;
+			}
 
-</script>
+			.nav-links.show {
+				display: flex;
+				/* Show nav links when menu button is clicked */
+			}
+		}
+	</style>
+	<script>
+		function toggleMenu() {
+			document.querySelector('.nav-links').classList.toggle('show');
+		}
+
+	</script>
 	<!-- banner -->
-	
-			<!-- header -->
-			
-			<!-- //header -->
-			<!-- menu js-->
-			<script src="js/jquery-3.1.1.slim.min.js"></script> 
-			<script>
-				$(document).ready(function() {
-					$('.trigger').click(function() {
-					  var $this = $(this),
-					  notThis = $this.hasClass('open'),
-					  thisNav = $this.attr("rel");
-					  //close if you click another menu trigger
-					  if (!notThis) {
-						 $('.triggered-area, .trigger').removeClass('open');
-						 if ( $( '.trigger' ).hasClass( "block-scroll" ) ){
-							$('html').removeClass('disable-scroll');
-							$('#overlay-mobile').removeClass('visible');
-						 }
-					  }
-					  //open the nav
-					  $this.toggleClass('open');
-					  $("#"+thisNav).toggleClass('open');
-					  if ( $( this ).hasClass( "block-scroll" ) ){
-						 $('html').toggleClass('disable-scroll');
-						 $('#overlay-mobile').toggleClass('visible');
-					  }
-					});  
-				});
-			</script>
-			<!-- //menu js-->
-			<!-- banner-text -->
 
-			
-			<div class="banner" >
-				<div class="banner-layer">
-			<div class="banner-text-info">  
+	<!-- header -->
+
+	<!-- //header -->
+	<!-- menu js-->
+	<script src="js/jquery-3.1.1.slim.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.trigger').click(function () {
+				var $this = $(this),
+					notThis = $this.hasClass('open'),
+					thisNav = $this.attr("rel");
+				//close if you click another menu trigger
+				if (!notThis) {
+					$('.triggered-area, .trigger').removeClass('open');
+					if ($('.trigger').hasClass("block-scroll")) {
+						$('html').removeClass('disable-scroll');
+						$('#overlay-mobile').removeClass('visible');
+					}
+				}
+				//open the nav
+				$this.toggleClass('open');
+				$("#" + thisNav).toggleClass('open');
+				if ($(this).hasClass("block-scroll")) {
+					$('html').toggleClass('disable-scroll');
+					$('#overlay-mobile').toggleClass('visible');
+				}
+			});
+		});
+	</script>
+	<!-- //menu js-->
+	<!-- banner-text -->
+
+
+	<div class="banner">
+		<div class="banner-layer">
+			<div class="banner-text-info">
 				<div class="banner-w3lstext">
-					<h2 style="padding-right: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+					<h2 style="padding-right: 40px; color: rgb(185, 11, 11);">
 						My Home Interiors
 					</h2>
 					<hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
@@ -324,17 +405,18 @@ document.querySelector('.nav-links').classList.toggle('show');
 			</div>
 			<!-- //banner-text -->
 		</div>
-		
+
 	</div>
-	<!-- //banner --> 
-	
-	
+	<!-- //banner -->
+
+
 	<!-- Inline CSS for Animation -->
 	<style>
 		@keyframes scroll {
 			0% {
 				transform: translateX(0);
 			}
+
 			100% {
 				transform: translateX(-100%);
 			}
@@ -342,328 +424,399 @@ document.querySelector('.nav-links').classList.toggle('show');
 	</style>
 	<!-- gallery -->
 
-<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
-<h1 style="font-weight: bolder;">Windows</h1><br><br>
-    <h3>Residential and Commercial Windows Glass</h3><br>
-    
-</div>
-<p style="margin: 30px;">AIS Windows is the Strategic Business Unit of Asahi India Glass. Ltd, manufacturing a range of high-quality uPVC and Aluminium Windows. We are one of the most trusted manufacturers, serving customers in the construction industry, residential Villas, flats, and commercial buildings.
+	<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
+		<h1 style="font-weight: bolder;">Windows</h1><br><br>
+		<h3>Residential and Commercial Windows</h3><br>
 
-	Our proficient team has expertise and knowledge to create customized window profiles that exceed in performance and quality. We offer windows that perfectly complement any commercial or residential property they’re installed into.
-	
-	At AIS Windows, we offer a myriad of appealing window designs, styles and colours for home & offices that can ultimately enhance the aesthetics of the space. Our highly trained and experienced engineers design these fixtures to provide complete insulation from dust, rain, pollution, and noise.
-	
-	
-	We pride ourselves on our customer-first approach, from ordering through to delivery with the service & support tools to make your life easier. AIS Windows combines decades of delivering excellent quality with extensive services ranging from consultation to glass and frame selection, all the way down to simple, hassle-free installation at your convenience. As far as glass windows pricing in India is concerned, we offer the most competitive prices in the market.</p>
+	</div>
+	<p style="margin: 30px;">AIS Windows is the Strategic Business Unit of Asahi India Glass. Ltd, manufacturing a range
+		of high-quality uPVC and Aluminium Windows. We are one of the most trusted manufacturers, serving customers in
+		the construction industry, residential Villas, flats, and commercial buildings.
 
-<section class="imgg">
+		Our proficient team has expertise and knowledge to create customized window profiles that exceed in performance
+		and quality. We offer windows that perfectly complement any commercial or residential property they’re installed
+		into.
 
-<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
-
-    <!-- Section Header -->
-    <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
-        <h2 style="font-size: 24px; color: #444; margin: 0;">
-            
-            <span style="vertical-align: middle;">uPVC Windows</span>
-        </h2>
-        
-    </div>
-
-    <!-- Grid Container -->
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
-        
-        <!-- Window Card 1 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up1.png" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Twin Sash Window</p>
-        </div>
-
-        <!-- Window Card 2 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Sliding Windows</p>
-        </div>
-
-        <!-- Window Card 3 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Side Hung Window</p>
-        </div>
-
-        <!-- Window Card 4 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Top Hung Window</p>
-        </div>
-
-        <!-- Window Card 5 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up5.jpg" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC French Window</p>
-        </div>
-
-        <!-- Window Card 6 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up6.jpg" alt="uPVC Tilt & Turn Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Tilt & Turn Window</p>
-        </div>
-
-        <!-- Window Card 7 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up7.jpg" alt="uPVC Glass to Glass Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Glass to Glass Window</p>
-        </div>
-
-        <!-- Window Card 8 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up8.jpg" alt="uPVC Fixed Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Fixed Window</p>
-        </div>
-
-        <!-- Window Card 9 -->
-        <div style="width: 300px; text-align: center;">
-            <img src="images/up9.jpg" alt="Casement Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-            <p style="margin-top: 8px; font-size: 14px; color: #444;">Casement Window</p>
-        </div>
-    </div>
+		At AIS Windows, we offer a myriad of appealing window designs, styles and colours for home & offices that can
+		ultimately enhance the aesthetics of the space. Our highly trained and experienced engineers design these
+		fixtures to provide complete insulation from dust, rain, pollution, and noise.
 
 
-    <div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+		We pride ourselves on our customer-first approach, from ordering through to delivery with the service & support
+		tools to make your life easier. AIS Windows combines decades of delivering excellent quality with extensive
+		services ranging from consultation to glass and frame selection, all the way down to simple, hassle-free
+		installation at your convenience. As far as glass windows pricing in India is concerned, we offer the most
+		competitive prices in the market.</p>
 
-        <!-- Section Header -->
-        <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
-            <h2 style="font-size: 24px; color: #444; margin: 0;">
-                
-                <span style="vertical-align: middle;">Aluminium windows</span>
-            </h2>
-            
-        </div>
-    
-        <!-- Grid Container -->
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
-            
-            <!-- Window Card 1 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al1.jpg" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Glass to Glass Windows</p>
-            </div>
-    
-            <!-- Window Card 2 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Tilt and Turn Windows</p>
-            </div>
-    
-            <!-- Window Card 3 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium French Window</p>
-            </div>
-    
-            <!-- Window Card 4 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Top Hung Window</p>
-            </div>
-    
-            <!-- Window Card 5 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al5.jpg" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Sliding Windows</p>
-            </div>
-    
-            <!-- Window Card 6 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al6.jpg" alt="uPVC Tilt & Turn Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Side Hung Window</p>
-            </div>
-    
-            <!-- Window Card 7 -->
-            <div style="width: 300px; text-align: center;">
-                <img src="images/al7.jpg" alt="uPVC Glass to Glass Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Fixed Window</p>
-            </div>
-    
-            
-        </div>
+	<section class="imgg">
+
+		<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+			<!-- Section Header -->
+			<div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+				<h2 style="font-size: 24px; color: #444; margin: 0;">
+
+					<span style="vertical-align: middle;">uPVC Windows</span>
+				</h2>
+
+			</div>
+
+			<!-- Grid Container -->
+			<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+
+				<!-- Window Card 1 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up1.png" alt="uPVC Twin Sash Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Twin Sash Window</p>
+				</div>
+
+				<!-- Window Card 2 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up2.jpg" alt="uPVC Sliding Windows"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Sliding Windows</p>
+				</div>
+
+				<!-- Window Card 3 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up3.jpg" alt="uPVC Side Hung Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Side Hung Window</p>
+				</div>
+
+				<!-- Window Card 4 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up4.jpg" alt="uPVC Top Hung Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Top Hung Window</p>
+				</div>
+
+				<!-- Window Card 5 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up5.jpg" alt="uPVC French Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC French Window</p>
+				</div>
+
+				<!-- Window Card 6 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up6.jpg" alt="uPVC Tilt & Turn Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Tilt & Turn Window</p>
+				</div>
+
+				<!-- Window Card 7 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up7.jpg" alt="uPVC Glass to Glass Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Glass to Glass Window</p>
+				</div>
+
+				<!-- Window Card 8 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up8.jpg" alt="uPVC Fixed Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Fixed Window</p>
+				</div>
+
+				<!-- Window Card 9 -->
+				<div style="width: 300px; text-align: center;">
+					<img src="images/up9.jpg" alt="Casement Window"
+						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+					<p style="margin-top: 8px; font-size: 14px; color: #444;">Casement Window</p>
+				</div>
+			</div>
 
 
-        <div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+			<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
 
-            <!-- Section Header -->
-            <div style="padding: 20px; text-align: left; display: flex; align-items: center;">
-                <h2 style="font-size: 24px; color: #444; margin: 0;">
-                    
-                    <span style="vertical-align: middle;">Solution windows</span>
-                </h2>
-                
-            </div>
-        
-            <!-- Grid Container -->
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
-                
-                <!-- Window Card 1 -->
-                <div style="width: 300px; text-align: center;">
-                    <img src="images/s.jpg" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Safety and Security Windows & Solutions</p>
-                </div>
-        
-                <!-- Window Card 2 -->
-                <div style="width: 300px; text-align: center;">
-                    <img src="images/s2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Windows and Solution</p>
-                </div>
-        
-                <!-- Window Card 3 -->
-                <div style="width: 300px; text-align: center;">
-                    <img src="images/s3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Windows Solution</p>
-                </div>
-        
-                <!-- Window Card 4 -->
-                <div style="width: 300px; text-align: center;">
-                    <img src="images/s4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof Windows</p>
-                </div>
-        
-                <!-- Window Card 5 -->
-                <div style="width: 300px; text-align: center;">
-                    <img src="images/s5.png" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-                    <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti Pollution Windows & Solutions</p>
-                </div>
-                
-            </div>
+				<!-- Section Header -->
+				<div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+					<h2 style="font-size: 24px; color: #444; margin: 0;">
 
-			
-		</section>
+						<span style="vertical-align: middle;">Aluminium windows</span>
+					</h2>
 
-		<!-- Image Viewer Modal -->
-<div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);">
-    <span id="closeModal" style="position: absolute; top: 10px; right: 20px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
-    <img id="modalImage" style="display: block; max-width: 90%; max-height: 90%; margin: auto; margin-top: 5%;" />
-</div>
+				</div>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-    let modal = document.getElementById("imageModal");
-    let modalImg = document.getElementById("modalImage");
-    let closeModal = document.getElementById("closeModal");
+				<!-- Grid Container -->
+				<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
-    document.querySelectorAll(".imgg img").forEach(img => {
-        img.addEventListener("click", function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        });
-    });
+					<!-- Window Card 1 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al1.jpg" alt="uPVC Twin Sash Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Glass to Glass Windows</p>
+					</div>
 
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+					<!-- Window Card 2 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al2.jpg" alt="uPVC Sliding Windows"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Tilt and Turn Windows</p>
+					</div>
 
-    modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
+					<!-- Window Card 3 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al3.jpg" alt="uPVC Side Hung Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Top fixed with French Window</p>
+					</div>
 
-</script>
-		<style>
-			section.imgg p {
-				font-weight: bolder;
-			}
-			/* Apply the zoom effect to all images within the section with class "imgg" */
-			section.imgg img {
-				width: 100%; /* Ensure images are responsive */
-				display: block;
-				border: 1px solid #ddd;
-				transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-			}
-	
-			/* Zoom-in effect on hover for images within "imgg" class */
-			section.imgg img:hover {
-				transform: scale(1.1); /* Scale the image to 110% */
-			}
-		</style>
-	<!-- //gallery -->    
+					<!-- Window Card 4 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al4.jpg" alt="uPVC Top Hung Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium bottom and center fixed Window</p>
+					</div>
 
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
+					<!-- Window Card 5 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al5.jpg" alt="uPVC French Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Sliding Windows</p>
+					</div>
+
+					<!-- Window Card 6 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al6.jpg" alt="uPVC Tilt & Turn Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Side Hung Window</p>
+					</div>
+
+					<!-- Window Card 7 -->
+					<div style="width: 300px; text-align: center;">
+						<img src="images/al7.jpg" alt="uPVC Glass to Glass Window"
+							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Fixed Window</p>
+					</div>
+
+
+				</div>
+
+
+				<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+					<!-- Section Header -->
+					<div style="padding: 20px; text-align: left; display: flex; align-items: center;">
+						<h2 style="font-size: 24px; color: #444; margin: 0;">
+
+							<span style="vertical-align: middle;">Solution windows</span>
+						</h2>
+
+					</div>
+
+					<!-- Grid Container -->
+					<div
+						style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+
+						<!-- Window Card 1 -->
+						<div style="width: 300px; text-align: center;">
+							<img src="images/s.jpg" alt="uPVC Twin Sash Window"
+								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+							<p style="margin-top: 8px; font-size: 14px; color: #444;">Safety and Security Windows &
+								Solutions</p>
+						</div>
+
+						<!-- Window Card 2 -->
+						<div style="width: 300px; text-align: center;">
+							<img src="images/s2.jpg" alt="uPVC Sliding Windows"
+								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+							<p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Windows and
+								Solution</p>
+						</div>
+
+						<!-- Window Card 3 -->
+						<div style="width: 300px; text-align: center;">
+							<img src="images/s3.jpg" alt="uPVC Side Hung Window"
+								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+							<p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Windows Solution</p>
+						</div>
+
+						<!-- Window Card 4 -->
+						<div style="width: 300px; text-align: center;">
+							<img src="images/s4.jpg" alt="uPVC Top Hung Window"
+								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+							<p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof Windows</p>
+						</div>
+
+						<!-- Window Card 5 -->
+						<div style="width: 300px; text-align: center;">
+							<img src="images/s5.png" alt="uPVC French Window"
+								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+							<p style="margin-top: 8px; font-size: 14px; color: #444;">Anti Pollution Windows & Solutions
+							</p>
+						</div>
+
+					</div>
+
+
+	</section>
+
+	<!-- Image Viewer Modal -->
+	<div id="imageModal"
+		style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);">
+		<span id="closeModal"
+			style="position: absolute; top: 10px; right: 20px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
+		<img id="modalImage" style="display: block; max-width: 90%; max-height: 90%; margin: auto; margin-top: 5%;" />
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let modal = document.getElementById("imageModal");
+			let modalImg = document.getElementById("modalImage");
+			let closeModal = document.getElementById("closeModal");
+
+			document.querySelectorAll(".imgg img").forEach(img => {
+				img.addEventListener("click", function () {
+					modal.style.display = "block";
+					modalImg.src = this.src;
+				});
+			});
+
+			closeModal.addEventListener("click", function () {
+				modal.style.display = "none";
+			});
+
+			modal.addEventListener("click", function (event) {
+				if (event.target === modal) {
+					modal.style.display = "none";
+				}
+			});
+		});
+
+	</script>
+	<style>
+		section.imgg p {
+			font-weight: bolder;
+		}
+
+		/* Apply the zoom effect to all images within the section with class "imgg" */
+		section.imgg img {
+			width: 100%;
+			/* Ensure images are responsive */
+			display: block;
+			border: 1px solid #ddd;
+			transition: transform 0.3s ease;
+			/* Smooth transition for zoom effect */
+		}
+
+		/* Zoom-in effect on hover for images within "imgg" class */
+		section.imgg img:hover {
+			transform: scale(1.1);
+			/* Scale the image to 110% */
+		}
+	</style>
+	<!-- //gallery -->
+
+	<div
+		style=" white-space: nowrap; width: 100%; background-color: rgb(255, 255, 255); padding: 20px;  z-index: 99999; ">
+		<div
+			style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgb(255, 255, 255);">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			
-			
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 		</div>
 	</div>
 
 	<!-- subscribe -->
-	<section style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
-    <div style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
-        <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
-        <p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required 
-                style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
-            <br>
-            <button type="submit" 
-                style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
-                Subscribe
-            </button>
-        </form>
-    </div>
-</section>
+	<section
+		style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
+		<div
+			style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
+			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
+			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
+			<form action="https://node-mailer-flax.vercel.app/subscribe" method="POST">
+				<input type="email" id="email" name="email" placeholder="Enter your email" required
+					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
+				<br>
+				<button type="submit"
+					style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+					Subscribe
+				</button>
+			</form>
+		</div>
+	</section>
 
-	<!-- //subscribe --> 
+	<!-- //subscribe -->
 	<!-- copy rights start here -->
 	<div class="copyw3-agile">
-		<div class="container"> 
+		<div class="container">
 			<p>© 2024 My Home Interiors. All Rights Reserved | Digitexis</p>
 		</div>
 		<br><br>
 	</div>
-	<!-- //copy right end here --> 	
+	<!-- //copy right end here -->
 	<!-- js -->
-	<script src="js/jquery-2.2.3.min.js"></script>  
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/jarallax.js"></script>
 	<script src="js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
@@ -673,24 +826,24 @@ document.querySelector('.nav-links').classList.toggle('show');
 			imgWidth: 1366,
 			imgHeight: 768
 		})
-	</script> 
-	<!-- //js --> 
-	<!-- start-smooth-scrolling --> 
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>	
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-			
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
 	</script>
-	<!-- //end-smooth-scrolling -->	 
+	<!-- //js -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
@@ -699,22 +852,23 @@ document.querySelector('.nav-links').classList.toggle('show');
 				easingType: 'linear' 
 			};
 			*/
-			
+
 			$().UItoTop({ easingType: 'easeOutQuart' });
-			
+
 		});
 	</script>
-	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- //smooth-scrolling-of-move-up -->
 	<!-- gallery light-case -->
-		<script src="js/lightcase.js"></script>
-		<script src="js/jquery.events.touch.js"></script>
-		<script>
-			$('.showcase').lightcase();
-		</script>
-		<!-- //gallery light-case -->	
+	<script src="js/lightcase.js"></script>
+	<script src="js/jquery.events.touch.js"></script>
+	<script>
+		$('.showcase').lightcase();
+	</script>
+	<!-- //gallery light-case -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
-</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.js"></script>
+	</div>
+
 </html>

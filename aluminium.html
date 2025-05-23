@@ -1,0 +1,868 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Home Interiors | Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+    <link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+    <!-- //Custom Theme files -->
+    <!-- web-fonts -->
+    <link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
+    <link
+        href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Fullscreen loading container */
+        #loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #f7bc63;
+            /* Background color of the loading screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Stack dots and text vertically */
+            z-index: 9999;
+            /* Ensure it stays on top */
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        /* Spinner container with animation */
+        .spinner-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            /* Space between the dots and the text */
+        }
+
+        /* Bouncing dots */
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #ffffff;
+            /* White dots */
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Bouncing effect for each dot */
+        @keyframes bounce {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+        }
+
+        /* Fade-out effect */
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Text under the loading animation */
+        .brand-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+    </style>
+
+
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #f8f8f8;
+            margin: 0;
+        }
+
+        .header-agileits {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+        }
+
+        .w3ls-logo img {
+            max-height: 80px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            padding-right: 30px;
+            margin: 0;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .nav-links .active {
+            color: #df1c1c;
+            font-weight: bold;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #222;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .nav-links li a:hover {
+            color: #df1c1c;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.95);
+                text-align: center;
+                justify-content: center;
+                z-index: 1000;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li a {
+                color: #fff;
+                font-size: 22px;
+            }
+        }
+
+        header {
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #222;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #df1c1c;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        .gallery-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            width: 220px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.13);
+        }
+
+        .gallery-image-container {
+            width: 100%;
+            height: 160px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .gallery-info {
+            padding: 12px 10px 15px 10px;
+            text-align: center;
+        }
+
+        .gallery-info h3 {
+            font-size: 1rem;
+            color: #222;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-section {
+                gap: 18px;
+            }
+
+            .gallery-card {
+                max-width: 95vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .gallery-card {
+                max-width: 100%;
+            }
+
+            .gallery-image-container {
+                height: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        // Wait for 2 seconds before hiding the loader
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                loading.classList.add('fade-out'); // Fade out the loading screen
+            }, 1500); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+
+    <div id="loading">
+        <div class="spinner-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="brand-name" style="color: #df1c1c;">My Home Interiors - Aluminium & Railing</div>
+    </div>
+
+    <div class="header-agileits">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="w3ls-logo">
+            <a href="index.html">
+                <img src="images/logo-removebg-preview.png" alt="My Home Interiors"
+                    style="max-height: 220px; width: 300px;">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="products.html">Products</a>
+                <ul class="dropdown-menu">
+                    <li><a href="windows.html">Windows</a></li>
+                    <li><a href="doors.html">Doors</a></li>
+                    <li><a href="profile.html">Sleek Profile</a></li>
+                    <li><a href="aluminium.html">Aluminium Works</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html" class="active">Portfolio</a></li>
+            <li><a href="quote-form.html">
+					<!-- Updated button without inline styles -->
+					<button id="openQuoteModal" class="btn-modern">
+						Plan Now
+					</button>
+				</a></li>
+        </ul>
+        <div class="clearfix"> </div>
+    </div>
+    </div>
+    </div>
+    <style>
+
+        .btn-modern {
+			margin: 10px;
+			padding: 12px 28px;
+			background: linear-gradient(135deg, #ff7f00, #e67300);
+			/* orange gradient */
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
+			transition: all 0.3s ease;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
+
+		.btn-modern:hover {
+			background: linear-gradient(135deg, #e67300, #ff7f00);
+			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
+			transform: translateY(-2px);
+		}
+        .nav-links li a:hover {
+            color: rgb(255, 0, 0);
+            /* Change text color on hover */
+            background-color: rgb(240, 240, 240);
+            /* Light background color */
+        }
+
+        .nav-links .dropdown {
+            position: relative;
+        }
+
+        /* Style the dropdown menu items */
+        .nav-links .dropdown-menu {
+            display: none;
+            /* Hide the menu by default */
+            position: absolute;
+            /* Position it relative to the parent */
+            top: 100%;
+            /* Place it below the parent item */
+            left: 0;
+            /* Align to the left of the parent */
+            background-color: white;
+            /* Dropdown background color */
+            list-style: none;
+            /* Remove bullet points */
+            padding: 0;
+            /* Remove padding */
+            margin: 0;
+            /* Remove margin */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+            z-index: 1000;
+            /* Ensure it appears above other elements */
+        }
+
+        /* Style for dropdown links */
+        .nav-links .dropdown-menu li a {
+            display: block;
+            padding: 10px 20px;
+            /* Add some padding */
+            color: black;
+            /* Link color */
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 20px;
+            /* Adjust font size */
+        }
+
+        /* Add hover effect for dropdown links */
+        .nav-links .dropdown-menu li a:hover {
+            background-color: rgb(240, 240, 240);
+            /* Highlight on hover */
+            color: rgb(255, 0, 0);
+            /* Change text color on hover */
+        }
+
+        /* Show dropdown menu on hover */
+        .nav-links .dropdown:hover .dropdown-menu {
+            display: block;
+            /* Display the menu */
+        }
+
+
+        .header-agileits {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .nav-links {
+            display: flex;
+            /* Use flexbox to align items */
+            justify-content: flex-end;
+            /* Align items to the right */
+            align-items: center;
+            /* Vertically center items */
+            list-style: none;
+            /* Remove bullet points */
+            padding-right: 30px;
+            margin: 0;
+            /* Remove default margin */
+            gap: 30px;
+            /* Add spacing between links */
+            width: 100%;
+            /* Ensure the container spans the full width */
+        }
+
+        /* Style for the active menu link */
+        .nav-links .active {
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                /* Show menu button on mobile */
+                z-index: 1001;
+                /* Ensures the button stays on top */
+                position: relative;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 30px;
+            }
+
+            .nav-links {
+                display: none;
+                /* Hidden by default */
+                flex-direction: column;
+                position: fixed;
+                /* Fixed position to cover entire viewport */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                /* Full viewport height */
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Semi-transparent black background */
+                text-align: center;
+                justify-content: center;
+                z-index: 1000;
+                /* High z-index to stay on top of all elements */
+            }
+
+            .nav-links li {
+                padding: 15px 0;
+                margin: 0;
+            }
+
+            .nav-links li a {
+                color: white;
+                /* White text for better visibility */
+                font-size: 22px;
+                /* Adjust font size for visibility */
+                text-decoration: none;
+            }
+
+            .nav-links.show {
+                display: flex;
+                /* Show nav links when menu button is clicked */
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+
+    </script>
+    <!-- banner -->
+
+    <!-- header -->
+
+    <!-- //header -->
+    <!-- menu js-->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.trigger').click(function () {
+                var $this = $(this),
+                    notThis = $this.hasClass('open'),
+                    thisNav = $this.attr("rel");
+                //close if you click another menu trigger
+                if (!notThis) {
+                    $('.triggered-area, .trigger').removeClass('open');
+                    if ($('.trigger').hasClass("block-scroll")) {
+                        $('html').removeClass('disable-scroll');
+                        $('#overlay-mobile').removeClass('visible');
+                    }
+                }
+                //open the nav
+                $this.toggleClass('open');
+                $("#" + thisNav).toggleClass('open');
+                if ($(this).hasClass("block-scroll")) {
+                    $('html').toggleClass('disable-scroll');
+                    $('#overlay-mobile').toggleClass('visible');
+                }
+            });
+        });
+    </script>
+    <!-- //menu js-->
+    <!-- banner-text -->
+
+
+    <div class="banner">
+        <div class="banner-layer">
+            <div class="banner-text-info">
+                <div class="banner-w3lstext">
+                    <h2 style="padding-right: 40px; color: rgb(185, 11, 11);">
+                        My Home Interiors
+                    </h2>
+                    <hr style="border: 1px solid #000; width: 80%; margin: 10px auto;">
+                    <h4>Portfolio and Previous Projects</h4>
+                </div>
+            </div>
+            <!-- //banner-text -->
+        </div>
+
+    </div>
+    <!-- //banner -->
+
+
+    <!-- Inline CSS for Animation -->
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <!-- gallery -->
+
+
+    <!-- //gallery -->
+
+    <header>
+        <h1>Aluminium & Railing Works</h1>
+    </header>
+
+    <div>
+        <div class="section-title">Aluminium Works</div>
+        <section class="gallery-section">
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/AL1.png" alt="Aluminium Work 1">
+                </div>
+                <div class="gallery-info">
+                    <h3>Aluminium Partition</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/AL2.png" alt="Aluminium Work 2">
+                </div>
+                <div class="gallery-info">
+                    <h3>Aluminium Door</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/AL3.png" alt="Aluminium Work 3">
+                </div>
+                <div class="gallery-info">
+                    <h3>Aluminium Frame</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/AL4.png" alt="Aluminium Work 4">
+                </div>
+                <div class="gallery-info">
+                    <h3>Office Partition</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/AL5.png" alt="Aluminium Work 5">
+                </div>
+                <div class="gallery-info">
+                    <h3>Glass Aluminium Work</h3>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-title">Railing Works (Bathroom Glass Cabins)</div>
+        <section class="gallery-section">
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/gr1.png" alt="Railing Work 1">
+                </div>
+                <div class="gallery-info">
+                    <h3>Glass Railing</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/gr2.png" alt="Railing Work 2">
+                </div>
+                <div class="gallery-info">
+                    <h3>Bathroom Glass Cabin</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/gr3.png" alt="Railing Work 3">
+                </div>
+                <div class="gallery-info">
+                    <h3>Shower Partition</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/gr4.png" alt="Railing Work 4">
+                </div>
+                <div class="gallery-info">
+                    <h3>Glass Partition</h3>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="gallery-image-container">
+                    <img src="images/gr5.png" alt="Railing Work 5">
+                </div>
+                <div class="gallery-info">
+                    <h3>Modern Glass Cabin</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div
+		style=" white-space: nowrap; width: 100%; background-color: rgb(255, 255, 255); padding: 20px;  z-index: 99999; ">
+		<div
+			style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgb(255, 255, 255);">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+		</div>
+	</div>
+
+    <!-- subscribe -->
+    <section
+        style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
+        <div
+            style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
+            <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
+            <p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
+            <form action="https://node-mailer-flax.vercel.app/subscribe" method="POST">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required
+                    style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
+                <br>
+                <button type="submit"
+                    style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- //subscribe -->
+    <!-- copy rights start here -->
+    <div class="copyw3-agile">
+        <div class="container">
+            <p>© 2024 My Home Interiors. All Rights Reserved | Digitexis</p>
+        </div>
+        <br><br>
+    </div>
+    <!-- //copy right end here -->
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+    <!-- //js -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- gallery light-case -->
+    <script src="js/lightcase.js"></script>
+    <script src="js/jquery.events.touch.js"></script>
+    <script>
+        $('.showcase').lightcase();
+    </script>
+    <!-- //gallery light-case -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+    </div>
+
+</html>

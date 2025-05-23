@@ -6,101 +6,115 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>My Home Interiors | Previous projects</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<title>My Home Interiors | Previous projects</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Decor Interior Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">    
-<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
-<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
-<!-- //Custom Theme files -->  
-<!-- web-fonts --> 
- <link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- //web-fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+	<link href="css/lightcase.css" rel="stylesheet" type="text/css" />
+	<!-- //Custom Theme files -->
+	<!-- web-fonts -->
+	<link href='//fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
+	<link
+		href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+		rel='stylesheet' type='text/css'>
+	<!-- //web-fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
-<style>
-	/* Fullscreen loading container */
-	#loading {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: #f7bc63; /* Background color of the loading screen */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column; /* Stack dots and text vertically */
-		z-index: 9999; /* Ensure it stays on top */
-		transition: opacity 0.5s ease, visibility 0.5s ease;
-	}
-
-	/* Spinner container with animation */
-	.spinner-container {
-		display: flex;
-		gap: 10px;
-		margin-bottom: 20px; /* Space between the dots and the text */
-	}
-
-	/* Bouncing dots */
-	.dot {
-		width: 15px;
-		height: 15px;
-		background-color: #ffffff; /* White dots */
-		border-radius: 50%; 
-		animation: bounce 1.5s infinite ease-in-out;
-	}
-
-	.dot:nth-child(1) {
-		animation-delay: 0s;
-	}
-
-	.dot:nth-child(2) {
-		animation-delay: 0.2s;
-	}
-
-	.dot:nth-child(3) {
-		animation-delay: 0.4s;
-	}
-
-	/* Bouncing effect for each dot */
-	@keyframes bounce {
-		0%, 80%, 100% {
-			transform: scale(0);
+	<style>
+		/* Fullscreen loading container */
+		#loading {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: #f7bc63;
+			/* Background color of the loading screen */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			/* Stack dots and text vertically */
+			z-index: 9999;
+			/* Ensure it stays on top */
+			transition: opacity 0.5s ease, visibility 0.5s ease;
 		}
-		40% {
-			transform: scale(1);
+
+		/* Spinner container with animation */
+		.spinner-container {
+			display: flex;
+			gap: 10px;
+			margin-bottom: 20px;
+			/* Space between the dots and the text */
 		}
-	}
 
-	/* Fade-out effect */
-	.fade-out {
-		opacity: 0;
-		visibility: hidden;
-	}
+		/* Bouncing dots */
+		.dot {
+			width: 15px;
+			height: 15px;
+			background-color: #ffffff;
+			/* White dots */
+			border-radius: 50%;
+			animation: bounce 1.5s infinite ease-in-out;
+		}
 
-	/* Text under the loading animation */
-	.brand-name {
-		font-size: 24px; 
-		font-weight: bold;
-		color: #ffffff; 
-		font-family: 'Arial', sans-serif;
-		text-align: center;
-	}
-</style>
+		.dot:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		.dot:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+
+		.dot:nth-child(3) {
+			animation-delay: 0.4s;
+		}
+
+		/* Bouncing effect for each dot */
+		@keyframes bounce {
+
+			0%,
+			80%,
+			100% {
+				transform: scale(0);
+			}
+
+			40% {
+				transform: scale(1);
+			}
+		}
+
+		/* Fade-out effect */
+		.fade-out {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		/* Text under the loading animation */
+		.brand-name {
+			font-size: 24px;
+			font-weight: bold;
+			color: #ffffff;
+			font-family: 'Arial', sans-serif;
+			text-align: center;
+		}
+	</style>
 
 
 </head>
-<body> 
+
+<body>
 
 	<script>
 		// Wait for 2 seconds before hiding the loader
-		window.addEventListener('load', function() {
+		window.addEventListener('load', function () {
 			setTimeout(() => {
 				const loading = document.getElementById('loading');
 				loading.classList.add('fade-out'); // Fade out the loading screen
@@ -108,213 +122,279 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	</script>
 
-<div id="loading">
-	<div class="spinner-container">
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
+	<div id="loading">
+		<div class="spinner-container">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+		<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Previous projects</div>
 	</div>
-	<div class="brand-name" style="color: #df1c1c;">My Home Interiors - Previous projects</div>
-</div>
 
 	<div class="header-agileits">
 		<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 		<div class="w3ls-logo">
 			<a href="index.html">
-				<img src="images/logo-removebg-preview.png" alt="My Home Interiors" style="max-height: 220px; width: 300px;">
+				<img src="images/logo-removebg-preview.png" alt="My Home Interiors"
+					style="max-height: 220px; width: 300px;">
 			</a>
 		</div>
 		<ul class="nav-links">
-			<li><a href="index.html" >Home</a></li>
+			<li><a href="index.html">Home</a></li>
 			<li><a href="about.html">About</a></li>
-			
+
 			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
-				<a href="products.html" >Products</a>
+				<a href="products.html">Products</a>
 				<ul class="dropdown-menu">
 					<li><a href="windows.html">Windows</a></li>
 					<li><a href="doors.html">Doors</a></li>
 					<li><a href="frames.html">Frames</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
+					<li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
 			<li><a href="gallery.html" class="active">Portfolio</a></li>
+			<li><a href="quote-form.html">
+					<!-- Updated button without inline styles -->
+					<button id="openQuoteModal" class="btn-modern">
+						Plan Now
+					</button>
+				</a></li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
-</div>
-</div>
-<style>
+	</div>
+	</div>
+	<style>
+		.btn-modern {
+			margin: 10px;
+			padding: 12px 28px;
+			background: linear-gradient(135deg, #ff7f00, #e67300);
+			/* orange gradient */
+			color: white;
+			border: none;
+			border-radius: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 10px rgba(230, 115, 0, 0.4);
+			transition: all 0.3s ease;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
 
-.nav-links li a:hover {
-    color: rgb(255, 0, 0); /* Change text color on hover */
-    background-color: rgb(240, 240, 240); /* Light background color */
-}
-.nav-links .dropdown {
-    position: relative;
-}
+		.btn-modern:hover {
+			background: linear-gradient(135deg, #e67300, #ff7f00);
+			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
+			transform: translateY(-2px);
+		}
+		.nav-links li a:hover {
+			color: rgb(255, 0, 0);
+			/* Change text color on hover */
+			background-color: rgb(240, 240, 240);
+			/* Light background color */
+		}
 
-/* Style the dropdown menu items */
-.nav-links .dropdown-menu {
-    display: none; /* Hide the menu by default */
-    position: absolute; /* Position it relative to the parent */
-    top: 100%; /* Place it below the parent item */
-    left: 0; /* Align to the left of the parent */
-    background-color: white; /* Dropdown background color */
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    z-index: 1000; /* Ensure it appears above other elements */
-}
+		.nav-links .dropdown {
+			position: relative;
+		}
 
-/* Style for dropdown links */
-.nav-links .dropdown-menu li a {
-    display: block;
-    padding: 10px 20px; /* Add some padding */
-    color: black; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Adjust font size */
-}
+		/* Style the dropdown menu items */
+		.nav-links .dropdown-menu {
+			display: none;
+			/* Hide the menu by default */
+			position: absolute;
+			/* Position it relative to the parent */
+			top: 100%;
+			/* Place it below the parent item */
+			left: 0;
+			/* Align to the left of the parent */
+			background-color: white;
+			/* Dropdown background color */
+			list-style: none;
+			/* Remove bullet points */
+			padding: 0;
+			/* Remove padding */
+			margin: 0;
+			/* Remove margin */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			/* Add a subtle shadow */
+			z-index: 1000;
+			/* Ensure it appears above other elements */
+		}
 
-/* Add hover effect for dropdown links */
-.nav-links .dropdown-menu li a:hover {
-    background-color: rgb(240, 240, 240); /* Highlight on hover */
-    color: rgb(255, 0, 0); /* Change text color on hover */
-}
+		/* Style for dropdown links */
+		.nav-links .dropdown-menu li a {
+			display: block;
+			padding: 10px 20px;
+			/* Add some padding */
+			color: black;
+			/* Link color */
+			text-decoration: none;
+			/* Remove underline */
+			font-size: 20px;
+			/* Adjust font size */
+		}
 
-/* Show dropdown menu on hover */
-.nav-links .dropdown:hover .dropdown-menu {
-    display: block; /* Display the menu */
-}
+		/* Add hover effect for dropdown links */
+		.nav-links .dropdown-menu li a:hover {
+			background-color: rgb(240, 240, 240);
+			/* Highlight on hover */
+			color: rgb(255, 0, 0);
+			/* Change text color on hover */
+		}
+
+		/* Show dropdown menu on hover */
+		.nav-links .dropdown:hover .dropdown-menu {
+			display: block;
+			/* Display the menu */
+		}
 
 
-.header-agileits {
-	z-index: 1002;
-	position: fixed;
-display: flex;
-align-items: center;
+		.header-agileits {
+			z-index: 1002;
+			position: fixed;
+			display: flex;
+			align-items: center;
 
-}
+		}
 
-.nav-links {
-	position: fixed;
-	z-index: 9999;
-    display: flex; /* Use flexbox to align items */
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Vertically center items */
-    list-style: none; /* Remove bullet points */
-    padding-right: 30px;
-    margin: 0; /* Remove default margin */
-    gap: 30px; /* Add spacing between links */
-    width: 100%; /* Ensure the container spans the full width */
-}
-/* Style for the active menu link */
-.nav-links .active {
-    color: rgb(255, 0, 0);
-    font-weight: bold;
-}
+		.nav-links {
+			position: fixed;
+			z-index: 9999;
+			display: flex;
+			/* Use flexbox to align items */
+			justify-content: flex-end;
+			/* Align items to the right */
+			align-items: center;
+			/* Vertically center items */
+			list-style: none;
+			/* Remove bullet points */
+			padding-right: 30px;
+			margin: 0;
+			/* Remove default margin */
+			gap: 30px;
+			/* Add spacing between links */
+			width: 100%;
+			/* Ensure the container spans the full width */
+		}
 
-.nav-links li a {
-text-decoration: none;
-color: black;
-font-size: 25px;
-font-weight: bold;
-}
+		/* Style for the active menu link */
+		.nav-links .active {
+			color: rgb(255, 0, 0);
+			font-weight: bold;
+		}
 
-.menu-toggle {
-display: none;
-font-size: 30px;
-background: none;
-border: none;
-cursor: pointer;
-}
-@media (max-width: 768px) {
-.menu-toggle {
-display: block; /* Show menu button on mobile */
-z-index: 1001; /* Ensures the button stays on top */
-position: relative;
-background: none;
-border: none;
-cursor: pointer;
-font-size: 30px;
-}
+		.nav-links li a {
+			text-decoration: none;
+			color: black;
+			font-size: 25px;
+			font-weight: bold;
+		}
 
-.nav-links {
-display: none; /* Hidden by default */
-flex-direction: column;
-position: fixed; /* Fixed position to cover entire viewport */
-top: 0;
-left: 0;
-width: 100%;
-height: 100vh; /* Full viewport height */
-background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-text-align: center;
-justify-content: center;
-z-index: 1000; /* High z-index to stay on top of all elements */
-}
+		.menu-toggle {
+			display: none;
+			font-size: 30px;
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
 
-.nav-links li {
-padding: 15px 0;
-margin: 0;
-}
+		@media (max-width: 768px) {
+			.menu-toggle {
+				display: block;
+				/* Show menu button on mobile */
+				z-index: 1001;
+				/* Ensures the button stays on top */
+				position: relative;
+				background: none;
+				border: none;
+				cursor: pointer;
+				font-size: 30px;
+			}
 
-.nav-links li a {
-color: white; /* White text for better visibility */
-font-size: 22px; /* Adjust font size for visibility */
-text-decoration: none;
-}
+			.nav-links {
+				display: none;
+				/* Hidden by default */
+				flex-direction: column;
+				position: fixed;
+				/* Fixed position to cover entire viewport */
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				/* Full viewport height */
+				background-color: rgba(0, 0, 0, 0.9);
+				/* Semi-transparent black background */
+				text-align: center;
+				justify-content: center;
+				z-index: 1000;
+				/* High z-index to stay on top of all elements */
+			}
 
-.nav-links.show {
-display: flex; /* Show nav links when menu button is clicked */
-}
-}
+			.nav-links li {
+				padding: 15px 0;
+				margin: 0;
+			}
 
-</style>
-<script>
-function toggleMenu() {
-document.querySelector('.nav-links').classList.toggle('show');
-}
+			.nav-links li a {
+				color: white;
+				/* White text for better visibility */
+				font-size: 22px;
+				/* Adjust font size for visibility */
+				text-decoration: none;
+			}
 
-</script>
+			.nav-links.show {
+				display: flex;
+				/* Show nav links when menu button is clicked */
+			}
+		}
+	</style>
+	<script>
+		function toggleMenu() {
+			document.querySelector('.nav-links').classList.toggle('show');
+		}
+
+	</script>
 	<!-- banner -->
-	
-			<!-- header -->
-			
-			<!-- //header -->
-			<!-- menu js-->
-			<script src="js/jquery-3.1.1.slim.min.js"></script> 
-			<script>
-				$(document).ready(function() {
-					$('.trigger').click(function() {
-					  var $this = $(this),
-					  notThis = $this.hasClass('open'),
-					  thisNav = $this.attr("rel");
-					  //close if you click another menu trigger
-					  if (!notThis) {
-						 $('.triggered-area, .trigger').removeClass('open');
-						 if ( $( '.trigger' ).hasClass( "block-scroll" ) ){
-							$('html').removeClass('disable-scroll');
-							$('#overlay-mobile').removeClass('visible');
-						 }
-					  }
-					  //open the nav
-					  $this.toggleClass('open');
-					  $("#"+thisNav).toggleClass('open');
-					  if ( $( this ).hasClass( "block-scroll" ) ){
-						 $('html').toggleClass('disable-scroll');
-						 $('#overlay-mobile').toggleClass('visible');
-					  }
-					});  
-				});
-			</script>
-			<!-- //menu js-->
-			<!-- banner-text -->
 
-			
-			<div class="banner" >
-				<div class="banner-layer">
-			<div class="banner-text-info">  
+	<!-- header -->
+
+	<!-- //header -->
+	<!-- menu js-->
+	<script src="js/jquery-3.1.1.slim.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.trigger').click(function () {
+				var $this = $(this),
+					notThis = $this.hasClass('open'),
+					thisNav = $this.attr("rel");
+				//close if you click another menu trigger
+				if (!notThis) {
+					$('.triggered-area, .trigger').removeClass('open');
+					if ($('.trigger').hasClass("block-scroll")) {
+						$('html').removeClass('disable-scroll');
+						$('#overlay-mobile').removeClass('visible');
+					}
+				}
+				//open the nav
+				$this.toggleClass('open');
+				$("#" + thisNav).toggleClass('open');
+				if ($(this).hasClass("block-scroll")) {
+					$('html').toggleClass('disable-scroll');
+					$('#overlay-mobile').toggleClass('visible');
+				}
+			});
+		});
+	</script>
+	<!-- //menu js-->
+	<!-- banner-text -->
+
+
+	<div class="banner">
+		<div class="banner-layer">
+			<div class="banner-text-info">
 				<div class="banner-w3lstext">
 					<h2 style="padding-right: 40px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
 						My Home Interiors
@@ -325,522 +405,580 @@ document.querySelector('.nav-links').classList.toggle('show');
 			</div>
 			<!-- //banner-text -->
 		</div>
-		
+
 	</div>
-	<!-- //banner --> 
-	
-	
+	<!-- //banner -->
+
+
 	<!-- Inline CSS for Animation -->
 	<style>
 		@keyframes scroll {
 			0% {
 				transform: translateX(0);
 			}
+
 			100% {
 				transform: translateX(-100%);
 			}
 		}
 	</style>
-	
 
-		<style>
-			section.imgg p {
-				font-weight: bolder;
-			}
-			/* Apply the zoom effect to all images within the section with class "imgg" */
-			section.imgg img {
-				width: 100%; /* Ensure images are responsive */
-				display: block;
-				border: 1px solid #ddd;
-				transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-			}
-	
-			/* Zoom-in effect on hover for images within "imgg" class */
-			section.imgg img:hover {
-				transform: scale(1.1); /* Scale the image to 110% */
-			}
-		</style>
-	<!-- //gallery -->    
-<br><br><br>
+
+	<style>
+		section.imgg p {
+			font-weight: bolder;
+		}
+
+		/* Apply the zoom effect to all images within the section with class "imgg" */
+		section.imgg img {
+			width: 100%;
+			/* Ensure images are responsive */
+			display: block;
+			border: 1px solid #ddd;
+			transition: transform 0.3s ease;
+			/* Smooth transition for zoom effect */
+		}
+
+		/* Zoom-in effect on hover for images within "imgg" class */
+		section.imgg img:hover {
+			transform: scale(1.1);
+			/* Scale the image to 110% */
+		}
+	</style>
+	<!-- //gallery -->
+	<br><br><br>
 	<header>
 		<h1>Our Previous Projects</h1>
-	  </header>
-	
-	  <section class="projects-section">
+	</header>
+
+	<section class="projects-section">
 		<div class="project-item">
-		  <div class="project-image-container">
-			<img src="assets/previous projects/ALMW5748 Tagarpuvalasa.jpg" alt="Institutional Interiors">
-		  </div>
-		  <div class="project-info">
-			<p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-		  </div>
-		</div>
-	
-		<div class="project-item">
-		  <div class="project-image-container">
-			<img src="assets/previous projects/Bhoomatha.jpg" alt="Moinabad Villa">
-		  </div>
-		  <div class="project-info">
-			<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-		  </div>
-		</div>
-	
-		<div class="project-item">
-		  <div class="project-image-container">
-			<img src="assets/previous projects/Prasad Garu Allipuram.jpg" alt="Moinabad Villa">
-		  </div>
-		  <div class="project-info">
-			<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-		  </div>
+			<div class="project-image-container">
+				<img src="assets/previous projects/ALMW5748 Tagarpuvalasa.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+			</div>
 		</div>
 
 		<div class="project-item">
 			<div class="project-image-container">
-			  <img src="assets/previous projects/Project 1.jpg" alt="Institutional Interiors">
+				<img src="assets/previous projects/Bhoomatha.jpg" alt="Moinabad Villa">
 			</div>
 			<div class="project-info">
-			  
-			  <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-			  
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
 			</div>
-		  </div>
-          <div class="project-item">
-            <div class="project-image-container">
-              <img src="assets/previous projects/Project 10.jpg" alt="Institutional Interiors">
-            </div>
-            <div class="project-info">
-              <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-            </div>
-          </div>
-      
-          <div class="project-item">
-            <div class="project-image-container">
-              <img src="assets/previous projects/Project 11.jpg" alt="Moinabad Villa">
-            </div>
-            <div class="project-info">
-              <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-            </div>
-          </div>
-      
-          <div class="project-item">
-            <div class="project-image-container">
-              <img src="assets/previous projects/Project 12.jpg" alt="Moinabad Villa">
-            </div>
-            <div class="project-info">
-              <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-            </div>
-          </div>
-  
-          <div class="project-item">
-              <div class="project-image-container">
-                <img src="assets/previous projects/Project 3 .jpg" alt="Institutional Interiors">
-              </div>
-              <div class="project-info">
-                
-                <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-                
-              </div>
-            </div>
-            <div class="project-item">
-                <div class="project-image-container">
-                  <img src="assets/previous projects/project 3.jpg" alt="Institutional Interiors">
-                </div>
-                <div class="project-info">
-                  <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-                </div>
-              </div>
-          
-              <div class="project-item">
-                <div class="project-image-container">
-                  <img src="assets/previous projects/project 4.jpg" alt="Moinabad Villa">
-                </div>
-                <div class="project-info">
-                  <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-                </div>
-              </div>
-          
-              <div class="project-item">
-                <div class="project-image-container">
-                  <img src="assets/previous projects/Project 6.jpg" alt="Moinabad Villa">
-                </div>
-                <div class="project-info">
-                  <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-                </div>
-              </div>
-      
-              <div class="project-item">
-                  <div class="project-image-container">
-                    <img src="assets/previous projects/Pydi Purushotam Garu Sujathanagar.jpeg.jpg" alt="Institutional Interiors">
-                  </div>
-                  <div class="project-info">
-                    
-                    <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-                    
-                  </div>
-                </div>
+		</div>
 
-                <div class="project-item">
-                    <div class="project-image-container">
-                      <img src="assets/previous projects/Project 7.2.jpg" alt="Institutional Interiors">
-                    </div>
-                    <div class="project-info">
-                      <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-                    </div>
-                  </div>
-              
-                  <div class="project-item">
-                    <div class="project-image-container">
-                      <img src="assets/previous projects/Project 7.jpg" alt="Moinabad Villa">
-                    </div>
-                    <div class="project-info">
-                      <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-                    </div>
-                  </div>
-              
-                  <div class="project-item">
-                    <div class="project-image-container">
-                      <img src="assets/previous projects/Project 8.jpg" alt="Moinabad Villa">
-                    </div>
-                    <div class="project-info">
-                      <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-                    </div>
-                  </div>
-          
-                  <div class="project-item">
-                      <div class="project-image-container">
-                        <img src="assets/previous projects/Project 9.jpg" alt="Institutional Interiors">
-                      </div>
-                      <div class="project-info">
-                        
-                        <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-                        
-                      </div>
-                    </div>
-					<div class="project-item">
-						<div class="project-image-container">
-						  <img src="assets/previous projects/Img 1.jpeg.jpg" alt="Institutional Interiors">
-						</div>
-						<div class="project-info">
-						  <p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-						</div>
-					  </div>
-				  
-					  <div class="project-item">
-						<div class="project-image-container">
-						  <img src="assets/previous projects/Img 2.jpeg.jpg" alt="Moinabad Villa">
-						</div>
-						<div class="project-info">
-						  <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-						</div>
-					  </div>
-				  
-					  <div class="project-item">
-						<div class="project-image-container">
-						  <img src="assets/previous projects/Img 3.jpeg.jpg" alt="Moinabad Villa">
-						</div>
-						<div class="project-info">
-						  <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-						</div>
-					  </div>
-			  
-					  <div class="project-item">
-						  <div class="project-image-container">
-							<img src="assets/previous projects/Ramakrishna Garu Kakani Nagar ALMW5939.jpeg.jpg" alt="Institutional Interiors">
-						  </div>
-						  <div class="project-info">
-							
-							<p>Created to enhance user experience, assist institution operations, and reflect institution values and culture.</p>
-							
-						  </div>
-						</div>
-						<div class="project-item">
-							<div class="project-image-container">
-							  <img src="assets/previous projects/Sri Venkateswara Construction & Developers.jpeg.jpg" alt="Moinabad Villa">
-							</div>
-							<div class="project-info">
-							  <p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect for entertaining.</p>
-							</div>
-						  </div>
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Prasad Garu Allipuram.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 1.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+
+			</div>
+		</div>
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 10.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 11.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 12.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 3 .jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+
+			</div>
+		</div>
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/project 3.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/project 4.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 6.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Pydi Purushotam Garu Sujathanagar.jpeg.jpg"
+					alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 7.2.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 7.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 8.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Project 9.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+
+			</div>
+		</div>
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Img 1.jpeg.jpg" alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Img 2.jpeg.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Img 3.jpeg.jpg" alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
+
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Ramakrishna Garu Kakani Nagar ALMW5939.jpeg.jpg"
+					alt="Institutional Interiors">
+			</div>
+			<div class="project-info">
+
+				<p>Created to enhance user experience, assist institution operations, and reflect institution values and
+					culture.</p>
+
+			</div>
+		</div>
+		<div class="project-item">
+			<div class="project-image-container">
+				<img src="assets/previous projects/Sri Venkateswara Construction & Developers.jpeg.jpg"
+					alt="Moinabad Villa">
+			</div>
+			<div class="project-info">
+				<p>Outdoor Living Spaces with warm climates in mind. Villas often feature outdoor living spaces perfect
+					for entertaining.</p>
+			</div>
+		</div>
 		<!-- Add more projects as needed -->
-		  <!-- Image Viewer Modal -->
-		  <div id="imageModal" class="modal">
+		<!-- Image Viewer Modal -->
+		<div id="imageModal" class="modal">
 			<span class="close">&times;</span>
 			<img class="modal-content" id="fullImage">
 		</div>
-	  </section>
-	  <style>
+	</section>
+	<style>
 		/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-.close:hover {
-    color: red;
-}
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			justify-content: center;
+			align-items: center;
+		}
+
+		.modal-content {
+			max-width: 90%;
+			max-height: 90%;
+			border-radius: 10px;
+		}
+
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 40px;
+			color: white;
+			font-size: 40px;
+			cursor: pointer;
+		}
+
+		.close:hover {
+			color: red;
+		}
 
 
 
 
 		/* General Reset */
-	* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	}
-	
-	/* Body Styling */
-	
-	
-	/* Header Styling */
-	header {
-	text-align: center;
-	margin-bottom: 50px;
-	}
-	
-	header h1 {
-	font-size: 3.5rem;
-	font-weight: bold;
-	color: #333;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	margin-bottom: 20px;
-	}
-	
-	/* Projects Section Styling */
-	.projects-section {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 30px;
-	max-width: 1200px;
-	margin: 0 auto;
-	}
-	
-	/* Individual Project Item Styling */
-	.project-item {
-	width: 100%;
-	max-width: 550px;
-	background: #fff;
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-	
-	.project-item:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-	}
-	
-	/* Project Image Styling */
-	.project-image-container {
-	position: relative;
-	width: auto;
-	height: 300px;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #f0f0f0; /* Optional: Set a background color */
-}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-.project-image-container img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-}
+		/* Body Styling */
 
-	
-	.project-item:hover .project-image-container img {
-	transform: scale(1.1);
-	}
-	
-	/* Project Info Styling */
-	.project-info {
-	padding: 20px;
-	text-align: center;
-	}
-	
-	.project-info h2 {
-	font-size: 1.8rem;
-	margin-bottom: 15px;
-	font-weight: bold;
-	color: #222;
-	}
-	
-	.project-info p {
-	font-size: 1.1rem;
-	color: #555;
-	margin-bottom: 20px;
-	}
-	
-	/* Button Styling */
-	.btn-more {
-	padding: 10px 25px;
-	font-size: 1rem;
-	background: #333;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 30px;
-	transition: all 0.3s ease;
-	}
-	
-	.btn-more:hover {
-	background: #ff6b6b;
-	color: #fff;
-	transform: scale(1.05);
-	}
-	
-	/* Responsive Styling */
-	@media (max-width: 768px) {
-	.projects-section {
-	flex-direction: column;
-	align-items: center;
-	}
-	
-	.project-item {
-	max-width: 100%;
-	margin-bottom: 30px;
-	}
-	
-	.project-info h2 {
-	font-size: 1.6rem;
-	}
-	}
-	
-	  </style>
 
-<script>
-	// Get modal elements
-var modal = document.getElementById("imageModal");
-var fullImage = document.getElementById("fullImage");
-var closeBtn = document.querySelector(".close");
+		/* Header Styling */
+		header {
+			text-align: center;
+			margin-bottom: 50px;
+		}
 
-// Add event listeners to all images
-document.querySelectorAll(".project-image-container img").forEach(img => {
-    img.addEventListener("click", function () {
-        modal.style.display = "flex";
-        fullImage.src = this.src;
-    });
-});
+		header h1 {
+			font-size: 3.5rem;
+			font-weight: bold;
+			color: #333;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
 
-// Close modal when the close button is clicked
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
+		/* Projects Section Styling */
+		.projects-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 30px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
 
-// Close modal when clicking outside the image
-modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-});
+		/* Individual Project Item Styling */
+		.project-item {
+			width: 100%;
+			max-width: 550px;
+			background: #fff;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.project-item:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+		}
+
+		/* Project Image Styling */
+		.project-image-container {
+			position: relative;
+			width: auto;
+			height: 300px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f0f0f0;
+			/* Optional: Set a background color */
+		}
+
+		.project-image-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+
+		.project-item:hover .project-image-container img {
+			transform: scale(1.1);
+		}
+
+		/* Project Info Styling */
+		.project-info {
+			padding: 20px;
+			text-align: center;
+		}
+
+		.project-info h2 {
+			font-size: 1.8rem;
+			margin-bottom: 15px;
+			font-weight: bold;
+			color: #222;
+		}
+
+		.project-info p {
+			font-size: 1.1rem;
+			color: #555;
+			margin-bottom: 20px;
+		}
+
+		/* Button Styling */
+		.btn-more {
+			padding: 10px 25px;
+			font-size: 1rem;
+			background: #333;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 30px;
+			transition: all 0.3s ease;
+		}
+
+		.btn-more:hover {
+			background: #ff6b6b;
+			color: #fff;
+			transform: scale(1.05);
+		}
+
+		/* Responsive Styling */
+		@media (max-width: 768px) {
+			.projects-section {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.project-item {
+				max-width: 100%;
+				margin-bottom: 30px;
+			}
+
+			.project-info h2 {
+				font-size: 1.6rem;
+			}
+		}
+	</style>
+
+	<script>
+		// Get modal elements
+		var modal = document.getElementById("imageModal");
+		var fullImage = document.getElementById("fullImage");
+		var closeBtn = document.querySelector(".close");
+
+		// Add event listeners to all images
+		document.querySelectorAll(".project-image-container img").forEach(img => {
+			img.addEventListener("click", function () {
+				modal.style.display = "flex";
+				fullImage.src = this.src;
+			});
+		});
+
+		// Close modal when the close button is clicked
+		closeBtn.addEventListener("click", function () {
+			modal.style.display = "none";
+		});
+
+		// Close modal when clicking outside the image
+		modal.addEventListener("click", function (e) {
+			if (e.target === modal) {
+				modal.style.display = "none";
+			}
+		});
 
 	</script>
 
 
-
-
-
-
-	<div style=" white-space: nowrap; width: 100%; background-color: rgba(255, 255, 255, 0.777); padding: 20px;  z-index: 99999; ">
-		<div style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgba(255, 255, 255, 0.677);">
+<div
+		style=" white-space: nowrap; width: 100%; background-color: rgb(255, 255, 255); padding: 20px;  z-index: 99999; ">
+		<div
+			style="display: inline-block; position: fixed; bottom: 10px; animation: scroll 230s linear infinite; background-color: rgb(255, 255, 255);">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 			<img src="images/ais.png" alt="Image 1" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/logo-removebg-preview.png" alt="Image 2" style="height: 50px; width: auto; margin-right: 20px;">
-			<img src="images/lego.jpg" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
-			
-			
+			<img src="images/logo-removebg-preview.png" alt="Image 2"
+				style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/lego2 - Copy.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
+			<img src="images/tata_pravesh.png" alt="Image 3" style="height: 50px; width: auto; margin-right: 20px;">
 		</div>
 	</div>
 
 	<!-- subscribe -->
-	<section style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
-    <div style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
-        <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
-        <p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required 
-                style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
-            <br>
-            <button type="submit" 
-                style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
-                Subscribe
-            </button>
-        </form>
-    </div>
-</section>
+	<section
+		style="width: 100vw; padding: 40px 0; background: url('https://www.toptal.com/designers/subtlepatterns/uploads/cubes.png') repeat;">
+		<div
+			style="max-width: 400px; margin: auto; background: linear-gradient(135deg, #1e3a8a, #64748b); padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); text-align: center; color: white;">
+			<h2 style="margin-bottom: 10px; font-family: Arial, sans-serif;">Subscribe to Our Newsletter</h2>
+			<p style="font-size: 14px; margin-bottom: 15px;">Get the latest updates right in your inbox.</p>
+			<form action="https://node-mailer-flax.vercel.app/subscribe" method="POST">
+				<input type="email" id="email" name="email" placeholder="Enter your email" required
+					style="width: 90%; padding: 10px; border: none; border-radius: 5px; margin-bottom: 10px; font-size: 16px; text-align: center; background: white; color: #1e3a8a;">
+				<br>
+				<button type="submit"
+					style="background: #f97316; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+					Subscribe
+				</button>
+			</form>
+		</div>
+	</section>
 
-	<!-- //subscribe --> 
+	<!-- //subscribe -->
 	<!-- copy rights start here -->
 	<div class="copyw3-agile">
-		<div class="container"> 
+		<div class="container">
 			<p>© 2024 My Home Interiors. All Rights Reserved | Digitexis</p>
 		</div>
 		<br><br>
 	</div>
-	<!-- //copy right end here --> 	
+	<!-- //copy right end here -->
 	<!-- js -->
-	<script src="js/jquery-2.2.3.min.js"></script>  
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/jarallax.js"></script>
 	<script src="js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
@@ -850,24 +988,24 @@ modal.addEventListener("click", function (e) {
 			imgWidth: 1366,
 			imgHeight: 768
 		})
-	</script> 
-	<!-- //js --> 
-	<!-- start-smooth-scrolling --> 
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>	
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-			
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
 	</script>
-	<!-- //end-smooth-scrolling -->	 
+	<!-- //js -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
-		$(document).ready(function() {
+		$(document).ready(function () {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
@@ -876,22 +1014,23 @@ modal.addEventListener("click", function (e) {
 				easingType: 'linear' 
 			};
 			*/
-			
+
 			$().UItoTop({ easingType: 'easeOutQuart' });
-			
+
 		});
 	</script>
-	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- //smooth-scrolling-of-move-up -->
 	<!-- gallery light-case -->
-		<script src="js/lightcase.js"></script>
-		<script src="js/jquery.events.touch.js"></script>
-		<script>
-			$('.showcase').lightcase();
-		</script>
-		<!-- //gallery light-case -->	
+	<script src="js/lightcase.js"></script>
+	<script src="js/jquery.events.touch.js"></script>
+	<script>
+		$('.showcase').lightcase();
+	</script>
+	<!-- //gallery light-case -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
-</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.js"></script>
+	</div>
+
 </html>
