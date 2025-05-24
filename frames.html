@@ -426,7 +426,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		}
 	</style>
 	<!-- gallery -->
-
+<script>
+      function openWhatsApp(productName) {
+        const message = encodeURIComponent(`Hello, I'm interested in your services and products. I am looking for: ${productName}`);
+        window.open(`https://wa.me/919393443333?text=${message}`, '_blank');
+      }
+    </script>
 	<section class="imgg">
 		<div class="neww">
 			<div
@@ -459,21 +464,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
 					<!-- Window Card 1 -->
-					<div style="width: 300px; text-align: center; ">
+					<div style="width: 300px; text-align: center; " onclick="openWhatsApp('uPVC Frames')">
 						<img src="images/f1.jpg" alt="uPVC Twin Sash Window"
 							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
 						<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Frames</p>
 					</div>
 
 					<!-- Window Card 2 -->
-					<div style="width: 300px; text-align: center;">
+					<div style="width: 300px; text-align: center;"onclick="openWhatsApp('Aluminium Window and Door Frames')">
 						<img src="images/f2.png" alt="uPVC Sliding Windows"
 							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
 						<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Window and Door Frames</p>
 					</div>
 
 					<!-- Window Card 3 -->
-					<div style="width: 300px; text-align: center;">
+					<div style="width: 300px; text-align: center;"onclick="openWhatsApp('AIS Regal Select')">
 						<img src="images/f3.jpg" alt="uPVC Side Hung Window"
 							style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
 						<p style="margin-top: 8px; font-size: 14px; color: #444;">AIS Regal Select</p>

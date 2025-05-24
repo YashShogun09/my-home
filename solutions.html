@@ -371,7 +371,12 @@ document.querySelector('.nav-links').classList.toggle('show');
 		}
 	</style>
 	<!-- gallery -->
-
+<script>
+      function openWhatsApp(productName) {
+        const message = encodeURIComponent(`Hello, I'm interested in your services and products. I am looking for: ${productName}`);
+        window.open(`https://wa.me/919393443333?text=${message}`, '_blank');
+      }
+    </script>
 <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; margin-left: 60px; margin-right: 60px; background-color: #ffffff;">
 <h1 style="font-weight: bolder;">Solutions</h1><br><br>
     <h3>Windows and Doors Solutions</h3><br>
@@ -398,30 +403,30 @@ document.querySelector('.nav-links').classList.toggle('show');
     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
         
         <!-- Window Card 1 -->
-        <div style="width: 300px; text-align: center;">
+        <div style="width: 300px; text-align: center;"onclick="openWhatsApp('Anti-Pollution Doors and Windows Solution')">
             <img src="images/ss1.png" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
             <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti-Pollution Doors and Windows Solution</p>
         </div>
 
         <!-- Window Card 2 -->
-        <div style="width: 300px; text-align: center;">
+        <div style="width: 300px; text-align: center;"onclick="openWhatsApp('Soundproof Doors and Windows')">
             <img src="images/ss2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
             <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof Doors and Windows</p>
         </div>
 
         <!-- Window Card 3 -->
-        <div style="width: 300px; text-align: center;">
+        <div style="width: 300px; text-align: center;"onclick="openWhatsApp('Privacy Solution')">
             <img src="images/ss3.png" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
             <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Solution</p>
         </div>
          <!-- Window Card 4 -->
-         <div style="width: 300px; text-align: center;">
+         <div style="width: 300px; text-align: center;"onclick="openWhatsApp('Energy Efficient Solution – Doors And Windows')">
             <img src="images/ss4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
             <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Solution – Doors And Windows</p>
         </div>
 
         <!-- Window Card 5 -->
-        <div style="width: 300px; text-align: center;">
+        <div style="width: 300px; text-align: center;"onclick="openWhatsApp('Security and Safety Door and Window Solutions')">
             <img src="images/ss5.png" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
             <p style="margin-top: 8px; font-size: 14px; color: #444;">Security and Safety Door and Window Solutions</p>
         </div>
