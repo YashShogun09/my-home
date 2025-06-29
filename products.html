@@ -718,5 +718,44 @@ document.querySelector('.nav-links').classList.toggle('show');
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
+
+
+<button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v2h2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V9h-2v1H7V5h-2zm7 4h4v2h-4v-2zm-4 0h2v2H8v-2zm-2 4h8v2H6v-2z"/>
+  </svg>
+</button>
+<style>
+  #formIconButton {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #formIconButton:hover {
+    background-color: #0056b3;
+  }
+  #formIconButton svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
 </body>
 </html>
