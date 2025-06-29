@@ -128,7 +128,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a href="index.html" >Home</a></li>
 			<li><a href="about.html">About</a></li>
 			
-			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
 				<a href="products.html" >Products</a>
 				<ul class="dropdown-menu">
@@ -140,12 +139,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
 			</li>
 			<li><a href="gallery.html" class="active">Portfolio</a></li>
-			<li><a href="quote-form.html">
-					<!-- Updated button without inline styles -->
-					<button id="openQuoteModal" class="btn-modern">
-						Plan Now
-					</button>
-				</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20Products%20and%20Services!" target="_blank"
+		>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
+			style="width:35px; height:35px;">
+	</a>
+</li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
@@ -947,7 +947,42 @@ tr:nth-child(even) {
 				});
 			});
 	</script>
-	<!-- //end-smooth-scrolling -->	 
+	
+	<button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v2h2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V9h-2v1H7V5h-2zm7 4h4v2h-4v-2zm-4 0h2v2H8v-2zm-2 4h8v2H6v-2z"/>
+  </svg>
+</button>
+<style>
+  #formIconButton {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #formIconButton:hover {
+    background-color: #0056b3;
+  }
+  #formIconButton svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
 		$(document).ready(function() {

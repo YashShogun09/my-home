@@ -153,7 +153,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a href="index.html">Home</a></li>
 			<li><a href="about.html">About</a></li>
 
-			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
 				<a href="products.html" class="active">Products</a>
 				<ul class="dropdown-menu">
@@ -165,12 +164,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</ul>
 			</li>
 			<li><a href="gallery.html">Portfolio</a></li>
-			<li><a href="quote-form.html">
-					<!-- Updated button without inline styles -->
-					<button id="openQuoteModal" class="btn-modern">
-						Plan Now
-					</button>
-				</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20Products%20and%20Services!" target="_blank"
+		>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
+			style="width:35px; height:35px;">
+	</a>
+</li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
@@ -429,6 +429,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			}
 		}
 	</style>
+
+		<script>
+  function openWhatsApp(productName) {
+    const message = encodeURIComponent(`Hello, I'm interested in your services and products. I am looking for: ${productName}`);
+    window.open(`https://wa.me/919393443333?text=${message}`, '_blank');
+  }
+
+  function showImageModal(imgSrc, productName) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const interestedBtn = document.getElementById("interestedButton");
+
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+    interestedBtn.onclick = function () {
+      openWhatsApp(productName);
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const closeModal = document.getElementById("closeModal");
+
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
 	<!-- gallery -->
 
 	<div style="font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #ffffff;">
@@ -468,40 +502,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- Grid Container -->
 			<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
-				<!-- Window Card 1 -->
-				<div style="width: 300px; text-align: center;">
-					<img src="images/du1.jpg" alt="uPVC Twin Sash Window"
-						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Slide Doors and Fold Doors</p>
-				</div>
+  <!-- Window Card 1 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/du1.jpg', 'uPVC Slide and Fold Doors')">
+    <img src="images/du1.jpg" alt="uPVC Twin Sash Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Slide and Fold Doors</p>
+  </div>
 
-				<!-- Window Card 2 -->
-				<div style="width: 300px; text-align: center;">
-					<img src="images/du2.jpg" alt="uPVC Sliding Windows"
-						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Casement Door</p>
-				</div>
+  <!-- Window Card 2 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/du2.jpg', 'uPVC Casement Door')">
+    <img src="images/du2.jpg" alt="uPVC Sliding Windows" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Casement Door</p>
+  </div>
 
-				<!-- Window Card 3 -->
-				<div style="width: 300px; text-align: center;">
-					<img src="images/du3.jpg" alt="uPVC Side Hung Window"
-						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Lift & Sliding Door</p>
-				</div>
+  <!-- Window Card 3 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/du3.jpg', 'uPVC Lift & Sliding Door')">
+    <img src="images/du3.jpg" alt="uPVC Side Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Lift & Sliding Door</p>
+  </div>
 
-				<!-- Window Card 4 -->
-				<div style="width: 300px; text-align: center;">
-					<img src="images/du4.jpg" alt="uPVC Top Hung Window"
-						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Sliding Doors</p>
-				</div>
+  <!-- Window Card 4 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/du4.jpg', 'uPVC Sliding Doors')">
+    <img src="images/du4.jpg" alt="uPVC Top Hung Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC Sliding Doors</p>
+  </div>
 
-				<!-- Window Card 5 -->
-				<div style="width: 300px; text-align: center;">
-					<img src="images/du5.jpg" alt="uPVC French Window"
-						style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-					<p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC French Door</p>
-				</div>
+  <!-- Window Card 5 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/du5.jpg', 'uPVC French Door')">
+    <img src="images/du5.jpg" alt="uPVC French Window" style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">uPVC French Door</p>
+  </div>
+</div>
+
 
 
 
@@ -520,47 +551,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
 						<!-- Window Card 1 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad1.jpg" alt="uPVC Twin Sash Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Slide Fold Doors</p>
-						</div>
+						<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
-						<!-- Window Card 2 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad2.jpg" alt="uPVC Sliding Windows"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Casement Door</p>
-						</div>
+  <!-- Aluminium Slide Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad1.jpg', 'Aluminium Slide Fold Doors')">
+    <img src="images/ad1.jpg" alt="Aluminium Slide Fold Doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Slide Doors</p>
+  </div>
 
-						<!-- Window Card 3 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad3.jpg" alt="uPVC Side Hung Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Lift and Sliding Doors
-							</p>
-						</div>
+  <!-- Aluminium Casement Door -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad2.jpg', 'Aluminium Casement Door')">
+    <img src="images/ad2.jpg" alt="Aluminium Casement Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Casement Door</p>
+  </div>
 
-						<!-- Window Card 4 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad4.jpg" alt="uPVC Top Hung Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Sliding Doors</p>
-						</div>
+  <!-- Aluminium Lift and Sliding Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad3.jpg', 'Aluminium Lift and Sliding Doors')">
+    <img src="images/ad3.jpg" alt="Aluminium Lift and Sliding Doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Lift and Sliding Doors</p>
+  </div>
 
-						<!-- Window Card 5 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad5.jpg" alt="uPVC French Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium French Door</p>
-						</div>
+  <!-- Aluminium Sliding Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad4.jpg', 'Aluminium Sliding Doors')">
+    <img src="images/ad4.jpg" alt="Aluminium Sliding Doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Sliding Doors</p>
+  </div>
 
-						<!-- Window Card 6 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/ad6.png" alt="uPVC Tilt & Turn Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Tilt and Slide Doors</p>
-						</div>
+  <!-- Aluminium French Door -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad5.jpg', 'Aluminium French Door')">
+    <img src="images/ad5.jpg" alt="Aluminium French Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium French Door</p>
+  </div>
+
+  <!-- Aluminium Tilt and Slide Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/ad6.png', 'Aluminium Tilt and Slide Doors')">
+    <img src="images/ad6.png" alt="Aluminium Tilt and Slide Doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Aluminium Tilt and Slide Doors</p>
+  </div>
+</div>
+
 
 
 					</div>
@@ -575,41 +610,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div
 						style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 						<!-- Steel Door Card 1 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d1.png" alt="Steel Door 1"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Modern Steel Entry Door</p>
-						</div>
-						<!-- Steel Door Card 2 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d2.png" alt="Steel Door 2"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Steel Security Door</p>
-						</div>
-						<!-- Steel Door Card 3 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d3.png" alt="Steel Door 3"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Industrial Steel Door</p>
-						</div>
-						<!-- Steel Door Card 4 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d4.png" alt="Steel Door 4"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Fire Rated Steel Door</p>
-						</div>
-						<!-- Steel Door Card 5 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d5.png" alt="Steel Door 5"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Steel Panel Door</p>
-						</div>
-						<!-- Steel Door Card 6 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/d6.png" alt="Steel Door 6"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Steel Flush Door</p>
-						</div>
+						<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
+
+  <!-- Steel Door Card 1 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/d1.png', 'Modern Steel Entry Door')">
+    <img src="images/d1.png" alt="Modern Steel Entry Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Modern Steel Entry Door</p>
+  </div>
+
+  <!-- Steel Door Card 2 -->
+  <!-- (Missing in your code. If you have one, you can add it here.) -->
+
+  <!-- Steel Door Card 3 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/d3.png', 'Industrial Steel Door')">
+    <img src="images/d3.png" alt="Industrial Steel Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Industrial Steel Door</p>
+  </div>
+
+  <!-- Steel Door Card 4 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/d4.png', 'Fire Rated Steel Door')">
+    <img src="images/d4.png" alt="Fire Rated Steel Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Fire Rated Steel Door</p>
+  </div>
+
+  <!-- Steel Door Card 5 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/d5.png', 'Steel Panel Door')">
+    <img src="images/d5.png" alt="Steel Panel Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Steel Panel Door</p>
+  </div>
+
+  <!-- Steel Door Card 6 -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/d6.png', 'Steel Flush Door')">
+    <img src="images/d6.png" alt="Steel Flush Door"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Steel Flush Door</p>
+  </div>
+</div>
+
 					</div>
 				</div>
 
@@ -630,42 +671,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
 						<!-- Window Card 1 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/sd1.png" alt="uPVC Twin Sash Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Safety and Security doors &
-								Solutions</p>
-						</div>
+						<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
 
-						<!-- Window Card 2 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/sd2.jpg" alt="uPVC Sliding Windows"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Doors and
-								Solution</p>
-						</div>
+  <!-- Safety and Security Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/sd1.png', 'Safety and Security doors')">
+    <img src="images/sd1.png" alt="Safety and Security doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Safety and Security doors & Solutions</p>
+  </div>
 
-						<!-- Window Card 3 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/sd3.png" alt="uPVC Side Hung Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Doors Solution</p>
-						</div>
+  <!-- Energy Efficient Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/sd2.jpg', 'Energy Efficient Doors and Solution')">
+    <img src="images/sd2.jpg" alt="Energy Efficient Doors and Solution"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Doors and Solution</p>
+  </div>
 
-						<!-- Window Card 4 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/sd4.jpg" alt="uPVC Top Hung Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof doors</p>
-						</div>
+  <!-- Privacy Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/sd3.png', 'Privacy Doors Solution')">
+    <img src="images/sd3.png" alt="Privacy Doors Solution"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Doors Solution</p>
+  </div>
 
-						<!-- Window Card 5 -->
-						<div style="width: 300px; text-align: center;">
-							<img src="images/sd5.png" alt="uPVC French Window"
-								style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-							<p style="margin-top: 8px; font-size: 14px; color: #444;">Anti Pollution Doors &
-								Solutions</p>
-						</div>
+  <!-- Soundproof Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/sd4.jpg', 'Soundproof doors')">
+    <img src="images/sd4.jpg" alt="Soundproof doors"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof doors</p>
+  </div>
+
+  <!-- Anti Pollution Doors -->
+  <div style="width: 300px; text-align: center;" onclick="showImageModal('images/sd5.png', 'Anti Pollution Doors & Solutions')">
+    <img src="images/sd5.png" alt="Anti Pollution Doors & Solutions"
+      style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+    <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti Pollution Doors & Solutions</p>
+  </div>
+
+</div>
 
 					</div>
 	</section>
@@ -788,6 +831,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</form>
 		</div>
 	</section>
+<!-- Modal Structure -->
+<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+  <span id="closeModal" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;">&times;</span>
+  <div style="margin:auto; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+    <img id="modalImage" style="max-width:90%; max-height:70vh; border-radius:10px;">
+    <button id="interestedButton" style="margin-top:20px; padding:10px 20px; font-size:16px; background-color:#25D366; color:white; border:none; border-radius:5px; cursor:pointer;">I'm Interested</button>
+  </div>
+</div>
 
 	<!-- //subscribe -->
 	<!-- copy rights start here -->
@@ -840,6 +891,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		});
 	</script>
+<button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v2h2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V9h-2v1H7V5h-2zm7 4h4v2h-4v-2zm-4 0h2v2H8v-2zm-2 4h8v2H6v-2z"/>
+  </svg>
+</button>
+<style>
+  #formIconButton {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #formIconButton:hover {
+    background-color: #0056b3;
+  }
+  #formIconButton svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+
+
 	<!-- //smooth-scrolling-of-move-up -->
 	<!-- gallery light-case -->
 	<script src="js/lightcase.js"></script>

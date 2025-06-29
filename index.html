@@ -127,7 +127,6 @@
 		<ul class="nav-links">
 			<li><a href="index.html" class="active">Home</a></li>
 			<li><a href="about.html">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
 			<li class="dropdown">
 				<a href="products.html">Products</a>
 				<ul class="dropdown-menu">
@@ -138,13 +137,15 @@
 					<li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
+			
 			<li><a href="gallery.html">Portfolio</a></li>
-			<li><a href="quote-form.html">
-					<!-- Updated button without inline styles -->
-					<button id="openQuoteModal" class="btn-modern">
-						Plan Now
-					</button>
-				</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20Products%20and%20Services!" target="_blank"
+		>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
+			style="width:35px; height:35px;">
+	</a>
+</li>
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
@@ -443,6 +444,29 @@
 
 			<h3>Watch our Animated video</h3>
 			<p>Watch How uPVC is Useful and know the hidden features of uPVC Windows and Doors.</p>
+			<br><br>
+<a href="contact.html" class="lolllbtn">Contact us</a>
+<h3>Know more about the AIS windows</h3>
+<a href="assets/Brochure_Final[1].pdf" target="_blank" class="lolllbtn">Know more</a>
+
+<style>
+  .lolllbtn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .lolllbtn:hover {
+    background-color: darkorange;
+  }
+</style>
 
 		</div>
 		<div class="clearfix"></div>
@@ -513,10 +537,10 @@
 
 			<!-- Card 3 -->
 			<div style="margin: 10px; background-color: white; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-				<a href="frames.html">
+				<a href="aluminium.html">
 					<img src="images/frames home.jpg" alt="Frames" style="width: 100%; height: auto; display: block;">
 					<div style="padding: 15px; text-align: center;">
-						<h3 style="font-size: 18px; color: #333333; margin: 0;">Frames</h3>
+						<h3 style="font-size: 18px; color: #333333; margin: 0;">System Alluminium</h3>
 					</div>
 				</a>
 			</div>
@@ -760,11 +784,44 @@
 		<br><br>
 	</div>
 
-	<a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20services!" target="_blank"
-		id="whatsapp-button">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
-			style="width:40px; height:40px;">
-	</a>
+	
+<style>
+  #formIconButton {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #formIconButton:hover {
+    background-color: #0056b3;
+  }
+  #formIconButton svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+<button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v2h2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V9h-2v1H7V5h-2zm7 4h4v2h-4v-2zm-4 0h2v2H8v-2zm-2 4h8v2H6v-2z"/>
+  </svg>
+</button>
 
 	<style>
 		#whatsapp-button {
@@ -850,7 +907,7 @@
 	<div id="quoteModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2>Discover Timeless Luxury – Get Instant Quote for your Windows and Doors</h2>
+    <h2>Experience the Art of Living – Elevate Your Space with Elegant Doors and Windows.</h2>
 
     <form action="https://node-mailer-flax.vercel.app/submit-quote-form" method="POST" enctype="multipart/form-data">
       <h3>Personal Details</h3>
@@ -883,14 +940,16 @@
         <option>Other</option>
       </select>
 
-      <label>Are you renovating or building new?</label><br>
-      <div class="radio-option">
-        <input type="radio" id="renovation" name="projectType" value="Renovation" required>
-        <label for="renovation">Renovation</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="new" name="projectType" value="New Construction">
-        <label for="new">New Construction</label>
+      <label>Are you renovating or building new?</label>
+      <div class="radio-option-group">
+        <div class="radio-option">
+          <input type="radio" id="renovation" name="projectType" value="Renovation" required>
+          <label for="renovation">Renovation</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="new" name="projectType" value="New Construction">
+          <label for="new">New Construction</label>
+        </div>
       </div>
 
       <label for="serviceType">Type of Product Required:</label>
@@ -901,7 +960,7 @@
         <option value="Patio Works">Patio works</option>
         <option value="Glass Work">Glass work</option>
         <option value="Railing Work">Railing work</option>
-		<option value="Need guidance">Need guidance</option>
+        <option value="Need guidance">Need guidance</option>
       </select>
 
       <div id="windowsTypeContainer" style="display:none; margin-top: 10px;">
@@ -949,17 +1008,19 @@
       <h3>Other Preferences</h3>
 
       <label>Preferred Contact Method:</label>
-      <div class="radio-option">
-        <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
-        <label for="contactPhone">Phone</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
-        <label for="contactWhatsApp">WhatsApp</label>
-      </div>
-      <div class="radio-option">
-        <input type="radio" id="contactEmail" name="contactMethod" value="Email">
-        <label for="contactEmail">Email</label>
+      <div class="radio-option-group">
+        <div class="radio-option">
+          <input type="radio" id="contactPhone" name="contactMethod" value="Phone" required>
+          <label for="contactPhone">Phone</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="contactWhatsApp" name="contactMethod" value="WhatsApp">
+          <label for="contactWhatsApp">WhatsApp</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+          <label for="contactEmail">Email</label>
+        </div>
       </div>
 
       <label for="bestTime">Best Time to Reach You:</label>
@@ -1045,16 +1106,21 @@
     font-size: 14px;
   }
 
+  .radio-option-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
   .radio-option {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
   }
 
   .radio-option input[type="radio"] {
-    margin: 0;
-    transform: translateY(1px);
+    margin-bottom: 5px;
   }
 
   button[type="submit"] {
@@ -1086,7 +1152,6 @@
   }
 </style>
 
-
 <script>
   function closeModal() {
     document.getElementById("quoteModal").style.display = "none";
@@ -1098,28 +1163,23 @@
     document.body.classList.add('modal-open');
   };
 
-  // Show/hide conditional dropdowns based on serviceType selection
   const serviceTypeSelect = document.getElementById('serviceType');
   const windowsTypeContainer = document.getElementById('windowsTypeContainer');
   const doorsTypeContainer = document.getElementById('doorsTypeContainer');
 
   serviceTypeSelect.addEventListener('change', function () {
     const val = this.value;
-
     if (val === 'Windows') {
       windowsTypeContainer.style.display = 'block';
       doorsTypeContainer.style.display = 'none';
-      // Clear doors selection if hidden
       document.getElementById('doorsType').value = '';
     } else if (val === 'Doors') {
       doorsTypeContainer.style.display = 'block';
       windowsTypeContainer.style.display = 'none';
-      // Clear windows selection if hidden
       document.getElementById('windowsType').value = '';
     } else {
       windowsTypeContainer.style.display = 'none';
       doorsTypeContainer.style.display = 'none';
-      // Clear both selections if hidden
       document.getElementById('windowsType').value = '';
       document.getElementById('doorsType').value = '';
     }

@@ -328,7 +328,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
             <li class="dropdown">
                 <a href="products.html">Products</a>
                 <ul class="dropdown-menu">
@@ -340,12 +339,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
             </li>
             <li><a href="gallery.html" class="active">Portfolio</a></li>
-            <li><a href="quote-form.html">
-					<!-- Updated button without inline styles -->
-					<button id="openQuoteModal" class="btn-modern">
-						Plan Now
-					</button>
-				</a></li>
+           <li><a href="contact.html">Contact</a></li>
+			<li><a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20Products%20and%20Services!" target="_blank"
+		>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp"
+			style="width:35px; height:35px;">
+	</a>
+</li>
         </ul>
         <div class="clearfix"> </div>
     </div>
@@ -605,6 +605,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             }
         }
     </style>
+
+    <!-- Image Modal -->
+<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color: rgba(0,0,0,0.8);">
+  <span onclick="closeImageModal()" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;">&times;</span>
+  <img id="modalImage" style="margin:auto; display:block; max-width:90%; max-height:80%; margin-top:5%;">
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="whatsappOrder()" style="padding:10px 20px; font-size:16px; cursor:pointer;">Enquire on WhatsApp</button>
+  </div>
+</div>
+
+<script>
+  let currentProduct = '';
+
+  function showImageModal(imageUrl, productName) {
+    document.getElementById('modalImage').src = imageUrl;
+    document.getElementById('imageModal').style.display = 'block';
+    currentProduct = productName;
+  }
+
+  function closeImageModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  function whatsappOrder() {
+    const message = encodeURIComponent('Hi, I am interested in ' + currentProduct);
+    window.open('https://wa.me/919393443333?text=' + message, '_blank'); // Replace with your WhatsApp number
+  }
+</script>
+
     <!-- gallery -->
 
 
@@ -617,90 +646,110 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div>
         <div class="section-title">Aluminium Works</div>
         <section class="gallery-section">
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/AL1.png" alt="Aluminium Work 1">
-                </div>
-                <div class="gallery-info">
-                    <h3>Aluminium Partition</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/AL2.png" alt="Aluminium Work 2">
-                </div>
-                <div class="gallery-info">
-                    <h3>Aluminium Door</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/AL3.png" alt="Aluminium Work 3">
-                </div>
-                <div class="gallery-info">
-                    <h3>Aluminium Frame</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/AL4.png" alt="Aluminium Work 4">
-                </div>
-                <div class="gallery-info">
-                    <h3>Office Partition</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/AL5.png" alt="Aluminium Work 5">
-                </div>
-                <div class="gallery-info">
-                    <h3>Glass Aluminium Work</h3>
-                </div>
-            </div>
+            <!-- Aluminium Work Card 1 -->
+<div class="gallery-card" onclick="showImageModal('images/AL1.png', 'Aluminium Partition')">
+  <div class="gallery-image-container">
+    <img src="images/AL1.png" alt="Aluminium Partition">
+  </div>
+  <div class="gallery-info">
+    <h3>Aluminium Partition</h3>
+  </div>
+</div>
+
+<!-- Aluminium Work Card 2 -->
+<div class="gallery-card" onclick="showImageModal('images/AL2.png', 'Aluminium Door')">
+  <div class="gallery-image-container">
+    <img src="images/AL2.png" alt="Aluminium Door">
+  </div>
+  <div class="gallery-info">
+    <h3>Aluminium Door</h3>
+  </div>
+</div>
+
+<!-- Aluminium Work Card 3 -->
+<div class="gallery-card" onclick="showImageModal('images/AL3.png', 'Aluminium Frame')">
+  <div class="gallery-image-container">
+    <img src="images/AL3.png" alt="Aluminium Frame">
+  </div>
+  <div class="gallery-info">
+    <h3>Aluminium Frame</h3>
+  </div>
+</div>
+
+<!-- Aluminium Work Card 4 -->
+<div class="gallery-card" onclick="showImageModal('images/AL4.png', 'Office Partition')">
+  <div class="gallery-image-container">
+    <img src="images/AL4.png" alt="Office Partition">
+  </div>
+  <div class="gallery-info">
+    <h3>Office Partition</h3>
+  </div>
+</div>
+
+<!-- Aluminium Work Card 5 -->
+<div class="gallery-card" onclick="showImageModal('images/AL5.png', 'Glass Aluminium Work')">
+  <div class="gallery-image-container">
+    <img src="images/AL5.png" alt="Glass Aluminium Work">
+  </div>
+  <div class="gallery-info">
+    <h3>Glass Aluminium Work</h3>
+  </div>
+</div>
+
         </section>
 
         <div class="section-title">Railing Works (Bathroom Glass Cabins)</div>
         <section class="gallery-section">
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/gr1.png" alt="Railing Work 1">
-                </div>
-                <div class="gallery-info">
-                    <h3>Glass Railing</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/gr2.png" alt="Railing Work 2">
-                </div>
-                <div class="gallery-info">
-                    <h3>Bathroom Glass Cabin</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/gr3.png" alt="Railing Work 3">
-                </div>
-                <div class="gallery-info">
-                    <h3>Shower Partition</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/gr4.png" alt="Railing Work 4">
-                </div>
-                <div class="gallery-info">
-                    <h3>Glass Partition</h3>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <div class="gallery-image-container">
-                    <img src="images/gr5.png" alt="Railing Work 5">
-                </div>
-                <div class="gallery-info">
-                    <h3>Modern Glass Cabin</h3>
-                </div>
-            </div>
+            <!-- Glass Railing Card 1 -->
+<div class="gallery-card" onclick="showImageModal('images/gr1.png', 'Glass Railing')">
+  <div class="gallery-image-container">
+    <img src="images/gr1.png" alt="Glass Railing">
+  </div>
+  <div class="gallery-info">
+    <h3>Glass Railing</h3>
+  </div>
+</div>
+
+<!-- Glass Railing Card 2 -->
+<div class="gallery-card" onclick="showImageModal('images/gr2.png', 'Bathroom Glass Cabin')">
+  <div class="gallery-image-container">
+    <img src="images/gr2.png" alt="Bathroom Glass Cabin">
+  </div>
+  <div class="gallery-info">
+    <h3>Bathroom Glass Cabin</h3>
+  </div>
+</div>
+
+<!-- Glass Railing Card 3 -->
+<div class="gallery-card" onclick="showImageModal('images/gr3.png', 'Shower Partition')">
+  <div class="gallery-image-container">
+    <img src="images/gr3.png" alt="Shower Partition">
+  </div>
+  <div class="gallery-info">
+    <h3>Shower Partition</h3>
+  </div>
+</div>
+
+<!-- Glass Railing Card 4 -->
+<div class="gallery-card" onclick="showImageModal('images/gr4.png', 'Glass Partition')">
+  <div class="gallery-image-container">
+    <img src="images/gr4.png" alt="Glass Partition">
+  </div>
+  <div class="gallery-info">
+    <h3>Glass Partition</h3>
+  </div>
+</div>
+
+<!-- Glass Railing Card 5 -->
+<div class="gallery-card" onclick="showImageModal('images/gr5.png', 'Modern Glass Cabin')">
+  <div class="gallery-image-container">
+    <img src="images/gr5.png" alt="Modern Glass Cabin">
+  </div>
+  <div class="gallery-info">
+    <h3>Modern Glass Cabin</h3>
+  </div>
+</div>
+
         </section>
     </div>
 
@@ -858,6 +907,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script>
         $('.showcase').lightcase();
     </script>
+
+    <button id="formIconButton" onclick="window.location.href='quote-form.html'" aria-label="Open Quote Form">
+  <!-- Form icon SVG (clipboard with pencil) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v2h2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V9h-2v1H7V5h-2zm7 4h4v2h-4v-2zm-4 0h2v2H8v-2zm-2 4h8v2H6v-2z"/>
+  </svg>
+</button>
+<style>
+  #formIconButton {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  #formIconButton:hover {
+    background-color: #0056b3;
+  }
+  #formIconButton svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+</style>
     <!-- //gallery light-case -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
