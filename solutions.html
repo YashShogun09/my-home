@@ -371,12 +371,7 @@ document.querySelector('.nav-links').classList.toggle('show');
 		}
 	</style>
 	<!-- gallery -->
-<script>
-      function openWhatsApp(productName) {
-        const message = encodeURIComponent(`Hello, I'm interested in your services and products. I am looking for: ${productName}`);
-        window.open(`https://wa.me/919393443333?text=${message}`, '_blank');
-      }
-    </script>
+
 <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; margin-left: 60px; margin-right: 60px; background-color: #ffffff;">
 <h1 style="font-weight: bolder;">Solutions</h1><br><br>
     <h3>Windows and Doors Solutions</h3><br>
@@ -402,75 +397,122 @@ document.querySelector('.nav-links').classList.toggle('show');
     <!-- Grid Container -->
     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 10px 20px;">
         
-        <!-- Window Card 1 -->
-<!-- Card 1 -->
-<div style="width: 300px; text-align: center; cursor: pointer;" 
-     onclick="openModal('Anti-Pollution Doors and Windows Solution', 'images/ss1.png')">
-  <img src="images/ss1.png" alt="Anti-Pollution Doors and Windows Solution"
-       style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-  <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti-Pollution Doors and Windows Solution</p>
-</div>
+  
 
-<!-- Card 2 -->
-<div style="width: 300px; text-align: center; cursor: pointer;" 
-     onclick="openModal('Soundproof Doors and Windows', 'images/ss2.jpg')">
-  <img src="images/ss2.jpg" alt="Soundproof Doors and Windows"
-       style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-  <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof Doors and Windows</p>
-</div>
+      <!-- Card 1 -->
+      <div style="width: 300px; text-align: center; cursor: pointer;" 
+           onclick="showImageModal('images/ss1.png', 'Anti-Pollution Doors and Windows Solution')">
+        <img src="images/ss1.png" alt="Anti-Pollution Doors and Windows Solution"
+             style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+        <p style="margin-top: 8px; font-size: 14px; color: #444;">Anti-Pollution Doors and Windows Solution</p>
+      </div>
 
-<!-- Card 3 -->
-<div style="width: 300px; text-align: center; cursor: pointer;" 
-     onclick="openModal('Privacy Solution', 'images/ss3.png')">
-  <img src="images/ss3.png" alt="Privacy Solution"
-       style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-  <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Solution</p>
-</div>
+      <!-- Card 2 -->
+      <div style="width: 300px; text-align: center; cursor: pointer;" 
+           onclick="showImageModal('images/ss2.jpg', 'Soundproof Doors and Windows')">
+        <img src="images/ss2.jpg" alt="Soundproof Doors and Windows"
+             style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+        <p style="margin-top: 8px; font-size: 14px; color: #444;">Soundproof Doors and Windows</p>
+      </div>
 
-<!-- Card 4 -->
-<div style="width: 300px; text-align: center; cursor: pointer;" 
-     onclick="openModal('Energy Efficient Solution – Doors And Windows', 'images/ss4.jpg')">
-  <img src="images/ss4.jpg" alt="Energy Efficient Solution – Doors And Windows"
-       style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-  <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Solution – Doors And Windows</p>
-</div>
+      <!-- Card 3 -->
+      <div style="width: 300px; text-align: center; cursor: pointer;" 
+           onclick="showImageModal('images/ss3.png', 'Privacy Solution')">
+        <img src="images/ss3.png" alt="Privacy Solution"
+             style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+        <p style="margin-top: 8px; font-size: 14px; color: #444;">Privacy Solution</p>
+      </div>
 
-<!-- Card 5 -->
-<div style="width: 300px; text-align: center; cursor: pointer;" 
-     onclick="openModal('Security and Safety Door and Window Solutions', 'images/ss5.png')">
-  <img src="images/ss5.png" alt="Security and Safety Door and Window Solutions"
-       style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
-  <p style="margin-top: 8px; font-size: 14px; color: #444;">Security and Safety Door and Window Solutions</p>
-</div>
+      <!-- Card 4 -->
+      <div style="width: 300px; text-align: center; cursor: pointer;" 
+           onclick="showImageModal('images/ss4.jpg', 'Energy Efficient Solution – Doors And Windows')">
+        <img src="images/ss4.jpg" alt="Energy Efficient Solution – Doors And Windows"
+             style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+        <p style="margin-top: 8px; font-size: 14px; color: #444;">Energy Efficient Solution – Doors And Windows</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div style="width: 300px; text-align: center; cursor: pointer;" 
+           onclick="showImageModal('images/ss5.png', 'Security and Safety Door and Window Solutions')">
+        <img src="images/ss5.png" alt="Security and Safety Door and Window Solutions"
+             style="width: 300px; height: 200px; display: block; border: 1px solid #ddd;">
+        <p style="margin-top: 8px; font-size: 14px; color: #444;">Security and Safety Door and Window Solutions</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Modal -->
-<div id="productModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
-  <div style="background:white; padding:20px; border-radius:8px; width:90%; max-width:400px; position:relative;">
-    <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
-    <img id="modalImage" src="" style="width:100%; height:auto; border: 1px solid #ddd;">
-    <h2 id="modalTitle" style="margin-top:15px; font-size:18px; color:#333;"></h2>
-    <button onclick="openWhatsAppFromModal()" style="margin-top:20px; padding:10px 20px; background:green; color:white; border:none; border-radius:5px; cursor:pointer;">Interested</button>
+<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+  <div style="background:#fff; margin:10% auto; padding:20px; width:90%; max-width:500px; position:relative;">
+    <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer;">&times;</span>
+    <img id="modalImage" src="" style="width:100%; height:auto; margin-bottom:15px;">
+    <form>
+      <input type="text" id="customerName" placeholder="Your Name" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <input type="text" id="productName" placeholder="Product Name" readonly style="width:100%; margin-bottom:10px; padding:8px; background:#eee;">
+      <input type="number" id="quantity" placeholder="Quantity" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <textarea id="customMessage" placeholder="Additional Message (optional)" style="width:100%; margin-bottom:10px; padding:8px;"></textarea>
+      <button type="button" id="interestedButton" style="width:100%; padding:10px; background:#28a745; color:white; border:none;">Submit</button>
+    </form>
   </div>
 </div>
 
 <script>
-  function openModal(title, imagePath) {
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalImage').src = imagePath;
-    document.getElementById('productModal').style.display = 'flex';
-    window.currentInterestTitle = title;
+  function openWhatsApp(productName) {
+    const customerName = document.getElementById("customerName").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const quantity = document.getElementById("quantity").value;
+    const message = document.getElementById("customMessage").value;
+
+    if (!customerName || !phoneNumber || !quantity) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Submit data (can be enhanced to send via email or API)
+    console.log("Form submitted:");
+    console.log("Customer Name:", customerName);
+    console.log("Phone Number:", phoneNumber);
+    console.log("Product Name:", productName);
+    console.log("Quantity:", quantity);
+    console.log("Message:", message);
+
+    alert("Thank you! Your enquiry has been submitted.");
+    document.getElementById("imageModal").style.display = "none";
   }
 
-  function closeModal() {
-    document.getElementById('productModal').style.display = 'none';
+  function showImageModal(imgSrc, productName) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const productInput = document.getElementById("productName");
+
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+    productInput.value = productName;
+
+    const interestedBtn = document.getElementById("interestedButton");
+    interestedBtn.onclick = function () {
+      openWhatsApp(productName);
+    };
   }
 
-  function openWhatsAppFromModal() {
-    const message = encodeURIComponent(`I'm interested in: ${window.currentInterestTitle}`);
-    // Replace 91XXXXXXXXXX with your WhatsApp number
-    window.open(`https://wa.me/919393443333?text=${message}`, '_blank');
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const closeModal = document.getElementById("closeModal");
+
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
 </script>
+
 
     </section>
     <style>

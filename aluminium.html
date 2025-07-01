@@ -607,32 +607,80 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </style>
 
     <!-- Image Modal -->
-<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color: rgba(0,0,0,0.8);">
-  <span onclick="closeImageModal()" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;">&times;</span>
-  <img id="modalImage" style="margin:auto; display:block; max-width:90%; max-height:80%; margin-top:5%;">
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="whatsappOrder()" style="padding:10px 20px; font-size:16px; cursor:pointer;">Enquire on WhatsApp</button>
+<div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+  <div style="background:#fff; margin:10% auto; padding:20px; width:90%; max-width:500px; position:relative;">
+    <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:30px; cursor:pointer;">&times;</span>
+    <img id="modalImage" src="" style="width:100%; height:auto; margin-bottom:15px;">
+    <form>
+      <input type="text" id="customerName" placeholder="Your Name" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <input type="tel" id="phoneNumber" placeholder="Phone Number" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <input type="text" id="productName" placeholder="Product Name" readonly style="width:100%; margin-bottom:10px; padding:8px; background:#eee;">
+      <input type="number" id="quantity" placeholder="Quantity" required style="width:100%; margin-bottom:10px; padding:8px;">
+      <textarea id="customMessage" placeholder="Additional Message (optional)" style="width:100%; margin-bottom:10px; padding:8px;"></textarea>
+      <button type="button" id="interestedButton" style="width:100%; padding:10px; background:#28a745; color:white; border:none;">Submit</button>
+    </form>
   </div>
 </div>
 
+
 <script>
-  let currentProduct = '';
+  function openWhatsApp(productName) {
+    // Instead of opening WhatsApp, handle form submission here
+    const customerName = document.getElementById("customerName").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const quantity = document.getElementById("quantity").value;
+    const message = document.getElementById("customMessage").value;
 
-  function showImageModal(imageUrl, productName) {
-    document.getElementById('modalImage').src = imageUrl;
-    document.getElementById('imageModal').style.display = 'block';
-    currentProduct = productName;
+    if (!customerName || !phoneNumber || !quantity) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // You can replace this with an API call or local storage if needed
+    console.log("Form submitted:");
+    console.log("Customer Name:", customerName);
+    console.log("Phone Number:", phoneNumber);
+    console.log("Product Name:", productName);
+    console.log("Quantity:", quantity);
+    console.log("Message:", message);
+
+    alert("Thank you! Your enquiry has been submitted.");
+
+    // Optionally close the modal
+    document.getElementById("imageModal").style.display = "none";
   }
 
-  function closeImageModal() {
-    document.getElementById('imageModal').style.display = 'none';
+  function showImageModal(imgSrc, productName) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const productInput = document.getElementById("productName");
+
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+    productInput.value = productName;
+
+    const interestedBtn = document.getElementById("interestedButton");
+    interestedBtn.onclick = function () {
+      openWhatsApp(productName);
+    };
   }
 
-  function whatsappOrder() {
-    const message = encodeURIComponent('Hi, I am interested in ' + currentProduct);
-    window.open('https://wa.me/919393443333?text=' + message, '_blank'); // Replace with your WhatsApp number
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const closeModal = document.getElementById("closeModal");
+
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
 </script>
+
 
     <!-- gallery -->
 
