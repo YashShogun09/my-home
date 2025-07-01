@@ -1,9 +1,4 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -140,19 +135,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</a>
 		</div>
 		<ul class="nav-links">
-			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html" class="active">Home</a></li>
 			<li><a href="about.html">About</a></li>
-
 			<li class="dropdown">
 				<a href="products.html">Products</a>
 				<ul class="dropdown-menu">
 					<li><a href="windows.html">Windows</a></li>
 					<li><a href="doors.html">Doors</a></li>
-					<li><a href="frames.html">Frames</a></li>
+					<li><a href="profile.html">Sleek Profile</a></li>
+					<li><a href="aluminium.html">Aluminium Works</a></li>
 					<li><a href="solutions.html">Solutions</a></li>
 				</ul>
 			</li>
-			<li><a href="gallery.html" class="active">Portfolio</a></li>
+			
+			<li><a href="gallery.html">Portfolio</a></li>
 			<li><a href="contact.html">Contact</a></li>
 			<li><a href="https://wa.me/919393443333?text=Hello%2C%20I%20am%20interested%20in%20your%20Products%20and%20Services!" target="_blank"
 		>
@@ -163,8 +159,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</ul>
 		<div class="clearfix"> </div>
 	</div>
-	</div>
-	</div>
+
+	<script>
+		// Wait for 2 seconds before hiding the loader
+		window.addEventListener('load', function () {
+			setTimeout(() => {
+				const loading = document.getElementById('loading');
+				loading.classList.add('fade-out'); // Fade out the loading screen
+			}, 1500); // 2000 milliseconds = 2 seconds
+		});
+	</script>
+
+
+
 	<style>
 		.btn-modern {
 			margin: 10px;
@@ -188,6 +195,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			box-shadow: 0 6px 14px rgba(230, 115, 0, 0.6);
 			transform: translateY(-2px);
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 		.nav-links li a:hover {
 			color: rgb(255, 0, 0);
 			/* Change text color on hover */
@@ -252,16 +272,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 		.header-agileits {
-			z-index: 1002;
-			position: fixed;
 			display: flex;
 			align-items: center;
 
 		}
 
 		.nav-links {
-			position: fixed;
-			z-index: 9999;
 			display: flex;
 			/* Use flexbox to align items */
 			justify-content: flex-end;
@@ -357,7 +373,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		}
 
 	</script>
-	<!-- banner -->
+	<!-- header -->
+
+	<!-- //header -->
+	<!-- menu js-->
+	<script src="js/jquery-3.1.1.slim.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.trigger').click(function () {
+				var $this = $(this),
+					notThis = $this.hasClass('open'),
+					thisNav = $this.attr("rel");
+				//close if you click another menu trigger
+				if (!notThis) {
+					$('.triggered-area, .trigger').removeClass('open');
+					if ($('.trigger').hasClass("block-scroll")) {
+						$('html').removeClass('disable-scroll');
+						$('#overlay-mobile').removeClass('visible');
+					}
+				}
+				//open the nav
+				$this.toggleClass('open');
+				$("#" + thisNav).toggleClass('open');
+				if ($(this).hasClass("block-scroll")) {
+					$('html').toggleClass('disable-scroll');
+					$('#overlay-mobile').toggleClass('visible');
+				}
+			});
+		});
+	</script>
+	<!-- //menu js-->
+	<!-- banner-text -->
+
+
+
+
+	
+	<!-- //banner -->
+
 
 	<!-- header -->
 
